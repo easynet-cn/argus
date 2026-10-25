@@ -1,0 +1,21 @@
+[package]
+name = "argus-fingerprint"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+argus-core = { path = "../argus-core" }
+argus-scanner = { path = "../argus-scanner" }
+argus-engine = { path = "../argus-engine" }
+argus-portscanner = { path = "../argus-portscanner" }
+serde.workspace = true
+serde_json.workspace = true
+serde_yaml.workspace = true
+tokio.workspace = true
+async-trait.workspace = true
+tracing.workspace = true
+chrono.workspace = true
+uuid.workspace = true
+regex.workspace = true
+reqwest.workspace = true
+futures-util.workspace = true

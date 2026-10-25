@@ -1,0 +1,47 @@
+# Web 应用框架指纹
+- app: WordPress
+  categories: [CMS]
+  indicators:
+    - kind: body
+      pattern: "wp-content"
+    - kind: body
+      pattern: "wp-includes"
+  version_indicator: "WordPress "
+
+- app: Joomla
+  categories: [CMS]
+  indicators:
+    - kind: body
+      pattern: "joomla"
+  version_indicator: "Joomla! "
+
+- app: Drupal
+  categories: [CMS]
+  indicators:
+    - kind: body
+      pattern: "drupal"
+
+- app: Django
+  categories: [Framework]
+  indicators:
+    - kind: body
+      pattern: "csrfmiddlewaretoken"
+
+- app: Spring Boot
+  categories: [Framework]
+  indicators:
+    - kind: header
+      pattern: "x-application-context"
+
+- app: Apache Tomcat
+  categories: [Application Server]
+  indicators:
+    - kind: body
+      pattern: "apache tomcat"
+  version_indicator: "Apache Tomcat/"
+
+- app: Jenkins
+  categories: [CI/CD]
+  indicators:
+    - kind: body
+      pattern: "jenkins"

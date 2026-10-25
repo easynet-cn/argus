@@ -1,0 +1,71 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+env:
+  CARGO_TERM_COLOR: always
+  RUST_BACKTRACE: 1
+
+jobs:
+  # ===== 后端：Rust 格式化 / Lint / 构建 / 测试 =====
+  backend:
+    name: Backend (Rust)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 安装 Rust 工具链
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt, clippy
+
+      - name: 缓存 Cargo
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cargo/registry
+            ~/.cargo/git
+            target
+          key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-cargo-
+
+      - name: 代码格式检查
+        run: cargo fmt --all -- --check
+
+      - name: Clippy 静态检查
+        run: cargo clippy --all-targets --workspace -- -D warnings
+
+      - name: 编译（Release）
+        run: cargo build --release --workspace
+
+      - name: 单元测试
+        run: cargo test --workspace
+
+  # ===== 前端：安装依赖 / 类型检查 / 构建（pnpm） =====
+  frontend:
+    name: Frontend (Vue 3)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 安装 Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: 启用 pnpm
+        run: corepack enable
+
+      - name: 安装 pnpm 依赖
+        run: pnpm install --frozen-lockfile
+
+      - name: 构建（含类型检查）
+        run: pnpm build

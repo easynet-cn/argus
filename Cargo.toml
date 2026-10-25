@@ -1,0 +1,126 @@
+[workspace]
+members = [
+    "server/crates/argus-core",
+    "server/crates/argus-engine",
+    "server/crates/argus-api",
+    "server/crates/argus-scanner",
+    "server/crates/argus-cli",
+    "server/crates/argus-portscanner",
+    "server/crates/argus-bruteforce",
+    "server/crates/argus-baseline",
+    "server/crates/argus-fingerprint",
+    "server/crates/argus-vulndb",
+    "server/crates/argus-sysvuln",
+    "server/crates/argus-ics",
+    "server/crates/argus-node",
+    "server/crates/argus-webscan",
+    "server/crates/argus-container",
+    "server/crates/argus-mobile",
+    "server/crates/argus-vulnverify",
+]
+resolver = "2"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+authors = ["Argus Team"]
+license = "MIT"
+description = "Argus —— 纯 Rust 实现的安全扫描平台，覆盖系统/应用/数据库/基线/口令/移动/镜像/漏洞验证等扫描引擎"
+readme = "README.md"
+repository = "https://github.com/easynet-cn/argus"
+homepage = "https://github.com/easynet-cn/argus"
+documentation = "https://github.com/easynet-cn/argus/blob/main/docs/architecture.md"
+keywords = ["security", "scanner", "vulnerability", "rust", "pentest"]
+categories = ["security", "command-line-utilities"]
+
+[workspace.dependencies]
+# 异步运行时
+tokio = { version = "1", features = ["full"] }
+# Web 框架
+actix-web = "4"
+# ORM
+sea-orm = { version = "2", features = [
+    "sqlx-postgres",
+    "runtime-tokio-rustls",
+    "macros",
+    "with-chrono",
+    "with-json",
+] }
+# 数据库迁移
+sea-orm-migration = { version = "2", features = [
+    "sqlx-postgres",
+    "runtime-tokio-rustls",
+] }
+# 序列化
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+serde_yaml = "0.9"
+# 日志
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "json"] }
+# 错误处理
+thiserror = "2"
+anyhow = "1"
+# 时间
+chrono = { version = "0.4", features = ["serde"] }
+# UUID
+uuid = { version = "1", features = ["v4", "serde"] }
+# 配置
+config = "0.15"
+# CLI
+clap = { version = "4", features = ["derive"] }
+# 异步 trait
+futures-util = "0.3"
+# G5.1: chromiumoxide handler 需要 futures::StreamExt
+futures = "0.3"
+async-trait = "0.1"
+# JWT 认证
+jsonwebtoken = "11"
+# 密码哈希
+bcrypt = "0.19"
+regex = "1"
+# Web 扫描
+scraper = "0.20"
+url = "2"
+md-5 = "0.10"
+reqwest = { version = "0.13", features = ["json", "rustls", "rustls-native-certs", "form", "socks"], default-features = false }
+base64 = "0.23"
+# G5.1: 浏览器爬虫（headless Chrome CDP，需系统 Chrome）
+chromiumoxide = { version = "0.9", default-features = false, features = ["bytes"] }
+# G6.2: OPC UA 协议（Discovery + Browse）
+async-opcua = { version = "0.19", features = ["client"] }
+# ZIP/APK 解析
+zip = "2"
+# 字节序处理
+byteorder = "1"
+# X.509 证书解析（APK 签名）
+x509-parser = "0.16"
+# SHA-256 指纹
+sha2 = "0.11"
+# 十六进制编码
+hex = "0.4"
+# G7.1: Mach-O / ELF / PE 二进制解析（iOS IPA 主程序库依赖分析）
+goblin = "0.10"
+# Kafka 客户端 (R5.1: 真实 Kafka 消费，纯 Rust 实现无 C 依赖)
+rskafka = "0.6"
+# pcap 文件解析 (R5.2: 真实 pcap 流量镜像)
+pcap = "2"
+# HTTP 请求/响应解析 (R5.2: 从 pcap 提取 HTTP 事务)
+httparse = "1"
+# 数据链路层网络 (G6.1: PROFINET DCP 以太网层多播探测)
+pnet_datalink = "0.35"
+# 双因素认证 TOTP
+totp-rs = { version = "5", features = ["gen_secret", "otpauth"] }
+# 跨平台系统资源监控（CPU/内存/磁盘）
+sysinfo = "0.32"
+# 跨平台 tar.gz 解压（升级包）
+tar = "0.4"
+flate2 = "1"
+# 跨平台网络接口信息查询
+if-addrs = "0.13"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+strip = true

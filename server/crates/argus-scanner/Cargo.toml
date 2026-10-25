@@ -1,0 +1,14 @@
+[package]
+name = "argus-scanner"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+argus-core = { path = "../argus-core" }
+argus-engine = { path = "../argus-engine" }
+serde.workspace = true
+serde_json.workspace = true
+async-trait.workspace = true
+tokio.workspace = true
+tracing.workspace = true
+thiserror.workspace = true

@@ -1,0 +1,57 @@
+[package]
+name = "argus-api"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+argus-core = { path = "../argus-core" }
+argus-scanner = { path = "../argus-scanner" }
+argus-portscanner = { path = "../argus-portscanner" }
+argus-bruteforce = { path = "../argus-bruteforce" }
+argus-baseline = { path = "../argus-baseline" }
+argus-fingerprint = { path = "../argus-fingerprint" }
+argus-vulndb = { path = "../argus-vulndb" }
+argus-sysvuln = { path = "../argus-sysvuln" }
+argus-ics = { path = "../argus-ics" }
+argus-container = { path = "../argus-container" }
+argus-mobile = { path = "../argus-mobile" }
+argus-webscan = { path = "../argus-webscan" }
+argus-node = { path = "../argus-node" }
+argus-engine = { path = "../argus-engine" }
+actix-web.workspace = true
+sea-orm.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+chrono.workspace = true
+tracing.workspace = true
+tracing-subscriber.workspace = true
+tokio.workspace = true
+jsonwebtoken.workspace = true
+uuid.workspace = true
+futures-util.workspace = true
+totp-rs.workspace = true
+base64.workspace = true
+# 阶段8 第四批：诊断工具
+md-5 = "0.11"
+sha1 = "0.11"
+sha2 = "0.11"
+hex = "0.4"
+aes-gcm = "0.11"
+reqwest = { workspace = true }
+urlencoding = "2"
+rand_core = "0.6"
+calamine = "0.36"
+rust_xlsxwriter = "0.99"
+actix-multipart = "0.8"
+ldap3 = "0.11"
+# 跨平台系统监控
+sysinfo = { workspace = true }
+# 跨平台 tar.gz 解压
+tar = { workspace = true }
+flate2 = { workspace = true }
+# 跨平台网络接口信息查询
+if-addrs = { workspace = true }
+
+[dev-dependencies]
+sea-orm = { workspace = true, features = ["mock"] }
+actix-web = { workspace = true }

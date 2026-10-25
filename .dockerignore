@@ -1,0 +1,34 @@
+# Rust 构建产物
+/target
+**/*.rs.bk
+*.pdb
+
+# Git
+.git
+.gitignore
+
+# 编辑器
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# 前端（构建上下文不需要，Dockerfile 仅用 server/crates）
+/frontend
+
+# 文档
+docs/
+*.md
+
+# Docker
+docker/
+.dockerignore
+Dockerfile
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 日志
+*.log

@@ -1,0 +1,99 @@
+# 服务指纹签名库
+- service: ssh
+  product: OpenSSH
+  vendor: OpenBSD
+  banner_regex: "SSH-2\\.0-OpenSSH[\\._]([\\d.]+)"
+  version_regex: "OpenSSH[\\._]([\\d.]+)"
+  cpe_template: "cpe:2.3:a:openbsd:openssh:{version}:*:*:*:*:*:*:*"
+  ports: [22]
+
+- service: http
+  product: Apache HTTP Server
+  vendor: Apache
+  banner_regex: "Apache/([\\d.]+)"
+  version_regex: "Apache/([\\d.]+)"
+  cpe_template: "cpe:2.3:a:apache:http_server:{version}:*:*:*:*:*:*:*"
+  ports: [80, 8080]
+
+- service: http
+  product: nginx
+  vendor: Nginx
+  banner_regex: "nginx/([\\d.]+)"
+  version_regex: "nginx/([\\d.]+)"
+  cpe_template: "cpe:2.3:a:nginx:nginx:{version}:*:*:*:*:*:*:*"
+  ports: [80, 8080]
+
+- service: http
+  product: Microsoft IIS
+  vendor: Microsoft
+  banner_regex: "Microsoft-IIS/([\\d.]+)"
+  version_regex: "Microsoft-IIS/([\\d.]+)"
+  cpe_template: "cpe:2.3:a:microsoft:internet_information_server:{version}:*:*:*:*:*:*:*"
+  ports: [80, 443]
+
+- service: https
+  product: Apache HTTP Server
+  vendor: Apache
+  banner_regex: "Apache/([\\d.]+)"
+  version_regex: "Apache/([\\d.]+)"
+  cpe_template: "cpe:2.3:a:apache:http_server:{version}:*:*:*:*:*:*:*"
+  ports: [443, 8443]
+
+- service: https
+  product: nginx
+  vendor: Nginx
+  banner_regex: "nginx/([\\d.]+)"
+  version_regex: "nginx/([\\d.]+)"
+  cpe_template: "cpe:2.3:a:nginx:nginx:{version}:*:*:*:*:*:*:*"
+  ports: [443, 8443]
+
+- service: mysql
+  product: MySQL
+  vendor: Oracle
+  banner_regex: "([\\d.]+)[\\s\\-]*mysql"
+  version_regex: "([\\d.]+)[\\s\\-]*mysql"
+  cpe_template: "cpe:2.3:oracle:mysql:{version}:*:*:*:*:*:*:*"
+  ports: [3306]
+
+- service: redis
+  product: Redis
+  vendor: Redis
+  banner_regex: "redis"
+  version_regex: "redis_version:([\\d.]+)"
+  cpe_template: "cpe:2.3:redis:redis:{version}:*:*:*:*:*:*:*"
+  ports: [6379]
+
+- service: postgresql
+  product: PostgreSQL
+  vendor: PostgreSQL
+  banner_regex: "postgresql"
+  version_regex: "PostgreSQL ([\\d.]+)"
+  cpe_template: "cpe:2.3:postgresql:postgresql:{version}:*:*:*:*:*:*:*"
+  ports: [5432]
+
+- service: ftp
+  product: vsftpd
+  vendor: vsftpd
+  banner_regex: "vsftpd"
+  version_regex: "vsftpd\\s+([\\d.]+)"
+  ports: [21]
+
+- service: ftp
+  product: ProFTPD
+  vendor: ProFTPD
+  banner_regex: "ProFTPD"
+  version_regex: "ProFTPD\\s+([\\d.]+)"
+  ports: [21]
+
+- service: smtp
+  product: Postfix
+  vendor: Postfix
+  banner_regex: "Postfix"
+  version_regex: "Postfix\\s+([\\d.]+)"
+  ports: [25]
+
+- service: rdp
+  product: Microsoft Remote Desktop
+  vendor: Microsoft
+  banner_regex: "Microsoft Terminal Service"
+  ports: [3389]

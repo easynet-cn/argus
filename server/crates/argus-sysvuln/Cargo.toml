@@ -1,0 +1,28 @@
+[package]
+name = "argus-sysvuln"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+argus-core = { path = "../argus-core" }
+argus-engine = { path = "../argus-engine" }
+argus-scanner = { path = "../argus-scanner" }
+argus-vulndb = { path = "../argus-vulndb" }
+argus-fingerprint = { path = "../argus-fingerprint" }
+serde.workspace = true
+serde_json.workspace = true
+serde_yaml.workspace = true
+tokio.workspace = true
+async-trait.workspace = true
+tracing.workspace = true
+chrono.workspace = true
+uuid.workspace = true
+regex.workspace = true
+reqwest.workspace = true
+futures-util.workspace = true
+sea-orm.workspace = true
+thiserror.workspace = true
+base64 = "0.23"
+# G6.5 数据库登录扫描（认证后执行审计 SQL 查询）
+mysql = "26"
+tokio-postgres = "0.7"

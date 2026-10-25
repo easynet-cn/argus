@@ -1,0 +1,149 @@
+[
+  {
+    "cnnvd_id": "CNNVD-202112-1342",
+    "cve_id": "CVE-2021-44228",
+    "title": "Apache Log4j2 代码注入漏洞",
+    "description": "Apache Log4j2 2.0-beta9 到 2.14.1 版本存在 JNDI 注入漏洞。攻击者可通过构造特殊的日志消息利用此漏洞执行任意代码，该漏洞被称为 Log4Shell。",
+    "severity": "严重",
+    "publish_time": "2021-12-10",
+    "vendor": "Apache",
+    "product": "Log4j2"
+  },
+  {
+    "cnnvd_id": "CNNVD-202103-0243",
+    "cve_id": "CVE-2021-22986",
+    "title": "F5 BIG-IP iControl REST 远程代码执行漏洞",
+    "description": "F5 BIG-IP iControl REST 接口存在远程代码执行漏洞，未授权攻击者可利用此漏洞执行任意系统命令。",
+    "severity": "严重",
+    "publish_time": "2021-03-10",
+    "vendor": "F5",
+    "product": "BIG-IP"
+  },
+  {
+    "cnnvd_id": "CNNVD-201908-1055",
+    "cve_id": "CVE-2019-0193",
+    "title": "Apache Solr 远程代码执行漏洞",
+    "description": "Apache Solr DataImport Handler 存在远程代码执行漏洞，攻击者可通过构造特殊请求利用此漏洞执行任意代码。",
+    "severity": "高危",
+    "publish_time": "2019-08-01",
+    "vendor": "Apache",
+    "product": "Solr"
+  },
+  {
+    "cnnvd_id": "CNNVD-202003-058",
+    "cve_id": "CVE-2020-1943",
+    "title": "Apache Hadoop 远程代码执行漏洞",
+    "description": "Apache Hadoop YARN 存在远程代码执行漏洞，攻击者可通过 REST API 执行任意命令。",
+    "severity": "高危",
+    "publish_time": "2020-03-15",
+    "vendor": "Apache",
+    "product": "Hadoop"
+  },
+  {
+    "cnnvd_id": "CNNVD-201905-015",
+    "cve_id": "CVE-2019-3398",
+    "title": "Atlassian Confluence 路径遍历漏洞",
+    "description": "Atlassian Confluence Server 存在路径遍历漏洞，攻击者可通过 attachfile RPC API 写入任意文件。",
+    "severity": "高危",
+    "publish_time": "2019-05-01",
+    "vendor": "Atlassian",
+    "product": "Confluence"
+  },
+  {
+    "cnnvd_id": "CNNVD-202203-001",
+    "title": "ThinkPHP 框架远程代码执行漏洞",
+    "description": "ThinkPHP 5.x 框架存在远程代码执行漏洞，攻击者可通过构造特殊路由参数执行任意代码。",
+    "severity": "高危",
+    "publish_time": "2022-03-01",
+    "vendor": "ThinkPHP",
+    "product": "ThinkPHP"
+  },
+  {
+    "cnnvd_id": "CNNVD-201904-285",
+    "cve_id": "CVE-2019-2634",
+    "title": "Apache Shiro 反序列化漏洞",
+    "description": "Apache Shiro 1.x 版本存在反序列化漏洞，攻击者可通过构造特殊的 RememberMe Cookie 执行任意代码。",
+    "severity": "高危",
+    "publish_time": "2019-04-01",
+    "vendor": "Apache",
+    "product": "Shiro"
+  },
+  {
+    "cnnvd_id": "CNNVD-202012-068",
+    "cve_id": "CVE-2020-13959",
+    "title": "Apache OFBiz 反序列化漏洞",
+    "description": "Apache OFBiz 存在 Java 反序列化漏洞，攻击者可通过构造特殊请求执行任意代码。",
+    "severity": "高危",
+    "publish_time": "2020-12-01",
+    "vendor": "Apache",
+    "product": "OFBiz"
+  },
+  {
+    "cnnvd_id": "CNNVD-202001-012",
+    "title": "WebLogic IIOP 反序列化漏洞",
+    "description": "Oracle WebLogic Server 存在 IIOP 协议反序列化漏洞，攻击者可通过构造特殊 IIOP 请求执行任意代码。",
+    "severity": "严重",
+    "publish_time": "2020-01-15",
+    "vendor": "Oracle",
+    "product": "WebLogic"
+  },
+  {
+    "cnnvd_id": "CNNVD-202109-1234",
+    "cve_id": "CVE-2021-22054",
+    "title": "VMware vCenter Server 信息泄露漏洞",
+    "description": "VMware vCenter Server 存在信息泄露漏洞，攻击者可获取敏感配置信息。",
+    "severity": "中危",
+    "publish_time": "2021-09-01",
+    "vendor": "VMware",
+    "product": "vCenter"
+  },
+  {
+    "cnnvd_id": "CNNVD-202002-045",
+    "cve_id": "CVE-2020-0688",
+    "title": "Microsoft Exchange Server 远程代码执行漏洞",
+    "description": "Microsoft Exchange Server 存在远程代码执行漏洞，攻击者可通过构造特殊请求执行任意代码。",
+    "severity": "严重",
+    "publish_time": "2020-02-15",
+    "vendor": "Microsoft",
+    "product": "Exchange"
+  },
+  {
+    "cnnvd_id": "CNNVD-202103-058",
+    "cve_id": "CVE-2021-26855",
+    "title": "Microsoft Exchange Server SSRF 漏洞",
+    "description": "Microsoft Exchange Server 存在服务端请求伪造漏洞，该漏洞被称为 ProxyLogon。",
+    "severity": "严重",
+    "publish_time": "2021-03-10",
+    "vendor": "Microsoft",
+    "product": "Exchange"
+  },
+  {
+    "cnnvd_id": "CNNVD-202210-001",
+    "title": "FastJSON 反序列化漏洞",
+    "description": "Alibaba FastJSON 存在反序列化漏洞，攻击者可通过构造特殊 JSON 数据执行任意代码。",
+    "severity": "高危",
+    "publish_time": "2022-10-01",
+    "vendor": "Alibaba",
+    "product": "FastJSON"
+  },
+  {
+    "cnnvd_id": "CNNVD-202303-002",
+    "cve_id": "CVE-2023-23397",
+    "title": "Microsoft Outlook 权限提升漏洞",
+    "description": "Microsoft Outlook 存在权限提升漏洞，攻击者可通过特殊构造的邮件窃取 NetNTLM 哈希。",
+    "severity": "严重",
+    "publish_time": "2023-03-14",
+    "vendor": "Microsoft",
+    "product": "Outlook"
+  },
+  {
+    "cnnvd_id": "CNNVD-202107-012",
+    "cve_id": "CVE-2021-34527",
+    "title": "Windows Print Spooler 远程代码执行漏洞",
+    "description": "Windows Print Spooler 服务存在远程代码执行漏洞，该漏洞被称为 PrintNightmare。",
+    "severity": "严重",
+    "publish_time": "2021-07-01",
+    "vendor": "Microsoft",
+    "product": "Windows"
+  }
+]

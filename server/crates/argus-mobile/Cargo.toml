@@ -1,0 +1,24 @@
+[package]
+name = "argus-mobile"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+argus-core = { path = "../argus-core" }
+argus-scanner = { path = "../argus-scanner" }
+argus-engine = { path = "../argus-engine" }
+serde.workspace = true
+serde_json.workspace = true
+tokio.workspace = true
+async-trait.workspace = true
+tracing.workspace = true
+chrono.workspace = true
+regex.workspace = true
+thiserror.workspace = true
+zip.workspace = true
+byteorder.workspace = true
+x509-parser.workspace = true
+sha2.workspace = true
+hex.workspace = true
+# G7.1: Mach-O 二进制解析（iOS IPA 主程序库依赖分析）
+goblin.workspace = true

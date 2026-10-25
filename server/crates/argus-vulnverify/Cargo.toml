@@ -1,0 +1,22 @@
+[package]
+name = "argus-vulnverify"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+argus-core = { path = "../argus-core" }
+argus-scanner = { path = "../argus-scanner" }
+argus-engine = { path = "../argus-engine" }
+serde.workspace = true
+serde_json.workspace = true
+tokio.workspace = true
+async-trait.workspace = true
+tracing.workspace = true
+chrono.workspace = true
+regex.workspace = true
+thiserror.workspace = true
+reqwest.workspace = true
+url.workspace = true
+# G7.5: 浏览器验证模式（headless Chrome CDP，需系统 Chrome）
+chromiumoxide.workspace = true
+futures.workspace = true

@@ -1,0 +1,29 @@
+# OS 指纹签名
+- os: Linux
+  vendor: Linux
+  ttl_range: [1, 64]
+  banner_keywords:
+    - "openssh"
+    - "ubuntu"
+    - "centos"
+    - "debian"
+    - "fedora"
+    - "redhat"
+    - "linux"
+
+- os: Windows
+  vendor: Microsoft
+  ttl_range: [65, 128]
+  banner_keywords:
+    - "microsoft"
+    - "windows"
+    - "iis"
+
+- os: Network Device
+  vendor: null
+  ttl_range: [129, 255]
+  banner_keywords:
+    - "cisco"
+    - "juniper"
+    - "huawei"
+    - "fortinet"

@@ -1,0 +1,1310 @@
+# 信息泄露检测模板（自动生成）
+- id: INFO-LEAK-010
+  name: Git Config Exposure
+  severity: high
+  author: argus
+  description: "Git Config Exposure"
+  fix_advice: "限制 /.git/config 路径访问"
+  detection:
+    method: GET
+    path: /.git/config
+    match_rule:
+      match_type: Body
+      pattern: "[core]"
+  metadata:
+    category: info_leak
+    tags: ["leak", "git"]
+    service: git
+    port: 80
+- id: INFO-LEAK-011
+  name: Git HEAD Exposure
+  severity: medium
+  author: argus
+  description: "Git HEAD Exposure"
+  fix_advice: "限制 /.git/HEAD 路径访问"
+  detection:
+    method: GET
+    path: /.git/HEAD
+    match_rule:
+      match_type: Body
+      pattern: "ref:"
+  metadata:
+    category: info_leak
+    tags: ["leak", "git"]
+    service: git
+    port: 80
+- id: INFO-LEAK-012
+  name: Git Index Exposure
+  severity: high
+  author: argus
+  description: "Git Index Exposure"
+  fix_advice: "限制 /.git/index 路径访问"
+  detection:
+    method: GET
+    path: /.git/index
+    match_rule:
+      match_type: Status
+      pattern: "200"
+  metadata:
+    category: info_leak
+    tags: ["leak", "git"]
+    service: git
+    port: 80
+- id: INFO-LEAK-013
+  name: SVN Entries Exposure
+  severity: high
+  author: argus
+  description: "SVN Entries Exposure"
+  fix_advice: "限制 /.svn/entries 路径访问"
+  detection:
+    method: GET
+    path: /.svn/entries
+    match_rule:
+      match_type: Status
+      pattern: "200"
+  metadata:
+    category: info_leak
+    tags: ["leak", "svn"]
+    service: svn
+    port: 80
+- id: INFO-LEAK-014
+  name: SVN WC DB Exposure
+  severity: high
+  author: argus
+  description: "SVN WC DB Exposure"
+  fix_advice: "限制 /.svn/wc.db 路径访问"
+  detection:
+    method: GET
+    path: /.svn/wc.db
+    match_rule:
+      match_type: Status
+      pattern: "200"
+  metadata:
+    category: info_leak
+    tags: ["leak", "svn"]
+    service: svn
+    port: 80
+- id: INFO-LEAK-015
+  name: HG Store Exposure
+  severity: medium
+  author: argus
+  description: "HG Store Exposure"
+  fix_advice: "限制 /.hg/store 路径访问"
+  detection:
+    method: GET
+    path: /.hg/store
+    match_rule:
+      match_type: Status
+      pattern: "200"
+  metadata:
+    category: info_leak
+    tags: ["leak", "mercurial"]
+    service: mercurial
+    port: 80
+- id: INFO-LEAK-016
+  name: Bazaar Branch Exposure
+  severity: medium
+  author: argus
+  description: "Bazaar Branch Exposure"
+  fix_advice: "限制 /.bzr/branch 路径访问"
+  detection:
+    method: GET
+    path: /.bzr/branch
+    match_rule:
+      match_type: Status
+      pattern: "200"
+  metadata:
+    category: info_leak
+    tags: ["leak", "bazaar"]
+    service: bazaar
+    port: 80
+- id: INFO-LEAK-017
+  name: CVS Entries Exposure
+  severity: medium
+  author: argus
+  description: "CVS Entries Exposure"
+  fix_advice: "限制 /CVS/Entries 路径访问"
+  detection:
+    method: GET
+    path: /CVS/Entries
+    match_rule:
+      match_type: Status
+      pattern: "200"
+  metadata:
+    category: info_leak
+    tags: ["leak", "cvs"]
+    service: cvs
+    port: 80
+- id: INFO-LEAK-020
+  name: .env File Exposure
+  severity: critical
+  author: argus
+  description: ".env File Exposure"
+  fix_advice: "限制 /.env 路径访问"
+  detection:
+    method: GET
+    path: /.env
+    match_rule:
+      match_type: BodyRegex
+      pattern: "(?i)(DB_PASSWORD|SECRET|API_KEY)="
+  metadata:
+    category: info_leak
+    tags: ["leak", "env"]
+    service: env
+    port: 80
+- id: INFO-LEAK-021
+  name: .env.local File
+  severity: critical
+  author: argus
+  description: ".env.local File"
+  fix_advice: "限制 /.env.local 路径访问"
+  detection:
+    method: GET
+    path: /.env.local
+    match_rule:
+      match_type: BodyRegex
+      pattern: "(?i)(PASSWORD|SECRET|KEY)="
+  metadata:
+    category: info_leak
+    tags: ["leak", "env"]
+    service: env
+    port: 80
+- id: INFO-LEAK-022
+  name: .env.production File
+  severity: critical
+  author: argus
+  description: ".env.production File"
+  fix_advice: "限制 /.env.production 路径访问"
+  detection:
+    method: GET
+    path: /.env.production
+    match_rule:
+      match_type: BodyRegex
+      pattern: "(?i)(PASSWORD|SECRET|KEY)="
+  metadata:
+    category: info_leak
+    tags: ["leak", "env"]
+    service: env
+    port: 80
+- id: INFO-LEAK-023
+  name: config.php Exposure
+  severity: high
+  author: argus
+  description: "config.php Exposure"
+  fix_advice: "限制 /config.php 路径访问"
+  detection:
+    method: GET
+    path: /config.php
+    match_rule:
+      match_type: BodyRegex
+      pattern: "(?i)(DB_PASS|DB_USER)="
+  metadata:
+    category: info_leak
+    tags: ["leak", "php"]
+    service: php
+    port: 80
+- id: INFO-LEAK-024
+  name: wp-config.php Exposure
+  severity: critical
+  author: argus
+  description: "wp-config.php Exposure"
+  fix_advice: "限制 /wp-config.php 路径访问"
+  detection:
+    method: GET
+    path: /wp-config.php
+    match_rule:
+      match_type: BodyRegex
+      pattern: "(?i)(DB_PASSWORD|AUTH_KEY)="
+  metadata:
+    category: info_leak
+    tags: ["leak", "wordpress"]
+    service: wordpress
+    port: 80
+- id: INFO-LEAK-025
+  name: database.yml Exposure
+  severity: high
+  author: argus
+  description: "database.yml Exposure"
+  fix_advice: "限制 /config/database.yml 路径访问"
+  detection:
+    method: GET
+    path: /config/database.yml
+    match_rule:
+      match_type: BodyRegex
+      pattern: "(?i)(password|username)="
+  metadata:
+    category: info_leak
+    tags: ["leak", "ruby"]
+    service: ruby
+    port: 80
+- id: INFO-LEAK-026
+  name: settings.py Exposure
+  severity: high
+  author: argus
+  description: "settings.py Exposure"
+  fix_advice: "限制 /settings.py 路径访问"
+  detection:
+    method: GET
+    path: /settings.py
+    match_rule:
+      match_type: BodyRegex
+      pattern: "(?i)(SECRET_KEY|DATABASES)="
+  metadata:
+    category: info_leak
+    tags: ["leak", "django"]
+    service: django
+    port: 80
+- id: INFO-LEAK-027
+  name: application.properties
+  severity: high
+  author: argus
+  description: "application.properties"
+  fix_advice: "限制 /application.properties 路径访问"
+  detection:
+    method: GET
+    path: /application.properties
+    match_rule:
+      match_type: BodyRegex
+      pattern: "(?i)(password|secret)="
+  metadata:
+    category: info_leak
+    tags: ["leak", "spring"]
+    service: spring
+    port: 80
+- id: INFO-LEAK-028
+  name: application.yml
+  severity: high
+  author: argus
+  description: "application.yml"
+  fix_advice: "限制 /application.yml 路径访问"
+  detection:
+    method: GET
+    path: /application.yml
+    match_rule:
+      match_type: BodyRegex
+      pattern: "(?i)(password|secret)="
+  metadata:
+    category: info_leak
+    tags: ["leak", "spring"]
+    service: spring
+    port: 80
+- id: INFO-LEAK-029
+  name: config.json Exposure
+  severity: high
+  author: argus
+  description: "config.json Exposure"
+  fix_advice: "限制 /config.json 路径访问"
+  detection:
+    method: GET
+    path: /config.json
+    match_rule:
+      match_type: BodyRegex
+      pattern: "(?i)(password|secret|key)="
+  metadata:
+    category: info_leak
+    tags: ["leak", "nodejs"]
+    service: nodejs
+    port: 80
+- id: INFO-LEAK-030
+  name: docker-compose.yml
+  severity: high
+  author: argus
+  description: "docker-compose.yml"
+  fix_advice: "限制 /docker-compose.yml 路径访问"
+  detection:
+    method: GET
+    path: /docker-compose.yml
+    match_rule:
+      match_type: Body
+      pattern: "services:"
+  metadata:
+    category: info_leak
+    tags: ["leak", "docker"]
+    service: docker
+    port: 80
+- id: INFO-LEAK-031
+  name: Dockerfile Exposure
+  severity: medium
+  author: argus
+  description: "Dockerfile Exposure"
+  fix_advice: "限制 /Dockerfile 路径访问"
+  detection:
+    method: GET
+    path: /Dockerfile
+    match_rule:
+      match_type: Body
+      pattern: "FROM "
+  metadata:
+    category: info_leak
+    tags: ["leak", "docker"]
+    service: docker
+    port: 80
+- id: INFO-LEAK-032
+  name: package.json Exposure
+  severity: low
+  author: argus
+  description: "package.json Exposure"
+  fix_advice: "限制 /package.json 路径访问"
+  detection:
+    method: GET
+    path: /package.json
+    match_rule:
+      match_type: Body
+      pattern: "name:"
+  metadata:
+    category: info_leak
+    tags: ["leak", "nodejs"]
+    service: nodejs
+    port: 80
+- id: INFO-LEAK-033
+  name: composer.json Exposure
+  severity: low
+  author: argus
+  description: "composer.json Exposure"
+  fix_advice: "限制 /composer.json 路径访问"
+  detection:
+    method: GET
+    path: /composer.json
+    match_rule:
+      match_type: Body
+      pattern: "require:"
+  metadata:
+    category: info_leak
+    tags: ["leak", "php"]
+    service: php
+    port: 80
+- id: INFO-LEAK-034
+  name: Gemfile Exposure
+  severity: low
+  author: argus
+  description: "Gemfile Exposure"
+  fix_advice: "限制 /Gemfile 路径访问"
+  detection:
+    method: GET
+    path: /Gemfile
+    match_rule:
+      match_type: Body
+      pattern: "source 'https://rubygems.org'"
+  metadata:
+    category: info_leak
+    tags: ["leak", "ruby"]
+    service: ruby
+    port: 80
+- id: INFO-LEAK-035
+  name: requirements.txt
+  severity: low
+  author: argus
+  description: "requirements.txt"
+  fix_advice: "限制 /requirements.txt 路径访问"
+  detection:
+    method: GET
+    path: /requirements.txt
+    match_rule:
+      match_type: Status
+      pattern: "200"
+  metadata:
+    category: info_leak
+    tags: ["leak", "python"]
+    service: python
+    port: 80
+- id: INFO-LEAK-036
+  name: Pipfile Exposure
+  severity: low
+  author: argus
+  description: "Pipfile Exposure"
+  fix_advice: "限制 /Pipfile 路径访问"
+  detection:
+    method: GET
+    path: /Pipfile
+    match_rule:
+      match_type: Body
+      pattern: "[packages]"
+  metadata:
+    category: info_leak
+    tags: ["leak", "python"]
+    service: python
+    port: 80
+- id: INFO-LEAK-037
+  name: go.mod Exposure
+  severity: low
+  author: argus
+  description: "go.mod Exposure"
+  fix_advice: "限制 /go.mod 路径访问"
+  detection:
+    method: GET
+    path: /go.mod
+    match_rule:
+      match_type: Body
+      pattern: "module "
+  metadata:
+    category: info_leak
+    tags: ["leak", "go"]
+    service: go
+    port: 80
+- id: INFO-LEAK-038
+  name: Cargo.toml Exposure
+  severity: low
+  author: argus
+  description: "Cargo.toml Exposure"
+  fix_advice: "限制 /Cargo.toml 路径访问"
+  detection:
+    method: GET
+    path: /Cargo.toml
+    match_rule:
+      match_type: Body
+      pattern: "[package]"
+  metadata:
+    category: info_leak
+    tags: ["leak", "rust"]
+    service: rust
+    port: 80
+- id: INFO-LEAK-040
+  name: backup.zip Exposure
+  severity: medium
+  author: argus
+  description: "backup.zip Exposure"
+  fix_advice: "限制 /backup.zip 路径访问"
+  detection:
+    method: GET
+    path: /backup.zip
+    match_rule:
+      match_type: Status
+      pattern: "200"
+  metadata:
+    category: info_leak
+    tags: ["leak", "backup"]
+    service: backup
+    port: 80
+- id: INFO-LEAK-041
+  name: backup.tar.gz
+  severity: medium
+  author: argus
+  description: "backup.tar.gz"
+  fix_advice: "限制 /backup.tar.gz 路径访问"
+  detection:
+    method: GET
+    path: /backup.tar.gz
+    match_rule:
+      match_type: Status
+      pattern: "200"
+  metadata:
+    category: info_leak
+    tags: ["leak", "backup"]
+    service: backup
+    port: 80
+- id: INFO-LEAK-042
+  name: backup.sql Exposure
+  severity: high
+  author: argus
+  description: "backup.sql Exposure"
+  fix_advice: "限制 /backup.sql 路径访问"
+  detection:
+    method: GET
+    path: /backup.sql
+    match_rule:
+      match_type: Body
+      pattern: "CREATE TABLE"
+  metadata:
+    category: info_leak
+    tags: ["leak", "backup"]
+    service: backup
+    port: 80
+- id: INFO-LEAK-043
+  name: dump.sql Exposure
+  severity: high
+  author: argus
+  description: "dump.sql Exposure"
+  fix_advice: "限制 /dump.sql 路径访问"
+  detection:
+    method: GET
+    path: /dump.sql
+    match_rule:
+      match_type: Body
+      pattern: "INSERT INTO"
+  metadata:
+    category: info_leak
+    tags: ["leak", "backup"]
+    service: backup
+    port: 80
+- id: INFO-LEAK-044
+  name: database.sql
+  severity: high
+  author: argus
+  description: "database.sql"
+  fix_advice: "限制 /database.sql 路径访问"
+  detection:
+    method: GET
+    path: /database.sql
+    match_rule:
+      match_type: Body
+      pattern: "CREATE TABLE"
+  metadata:
+    category: info_leak
+    tags: ["leak", "backup"]
+    service: backup
+    port: 80
+- id: INFO-LEAK-045
+  name: backup.bak
+  severity: medium
+  author: argus
+  description: "backup.bak"
+  fix_advice: "限制 /backup.bak 路径访问"
+  detection:
+    method: GET
+    path: /backup.bak
+    match_rule:
+      match_type: Status
+      pattern: "200"
+  metadata:
+    category: info_leak
+    tags: ["leak", "backup"]
+    service: backup
+    port: 80
+- id: INFO-LEAK-046
+  name: web.zip
+  severity: medium
+  author: argus
+  description: "web.zip"
+  fix_advice: "限制 /web.zip 路径访问"
+  detection:
+    method: GET
+    path: /web.zip
+    match_rule:
+      match_type: Status
+      pattern: "200"
+  metadata:
+    category: info_leak
+    tags: ["leak", "backup"]
+    service: backup
+    port: 80
+- id: INFO-LEAK-047
+  name: site.zip
+  severity: medium
+  author: argus
+  description: "site.zip"
+  fix_advice: "限制 /site.zip 路径访问"
+  detection:
+    method: GET
+    path: /site.zip
+    match_rule:
+      match_type: Status
+      pattern: "200"
+  metadata:
+    category: info_leak
+    tags: ["leak", "backup"]
+    service: backup
+    port: 80
+- id: INFO-LEAK-048
+  name: www.zip
+  severity: medium
+  author: argus
+  description: "www.zip"
+  fix_advice: "限制 /www.zip 路径访问"
+  detection:
+    method: GET
+    path: /www.zip
+    match_rule:
+      match_type: Status
+      pattern: "200"
+  metadata:
+    category: info_leak
+    tags: ["leak", "backup"]
+    service: backup
+    port: 80
+- id: INFO-LEAK-049
+  name: html.zip
+  severity: medium
+  author: argus
+  description: "html.zip"
+  fix_advice: "限制 /html.zip 路径访问"
+  detection:
+    method: GET
+    path: /html.zip
+    match_rule:
+      match_type: Status
+      pattern: "200"
+  metadata:
+    category: info_leak
+    tags: ["leak", "backup"]
+    service: backup
+    port: 80
+- id: INFO-LEAK-050
+  name: error.log Exposure
+  severity: high
+  author: argus
+  description: "error.log Exposure"
+  fix_advice: "限制 /error.log 路径访问"
+  detection:
+    method: GET
+    path: /error.log
+    match_rule:
+      match_type: Body
+      pattern: "error"
+  metadata:
+    category: info_leak
+    tags: ["leak", "log"]
+    service: log
+    port: 80
+- id: INFO-LEAK-051
+  name: access.log
+  severity: medium
+  author: argus
+  description: "access.log"
+  fix_advice: "限制 /access.log 路径访问"
+  detection:
+    method: GET
+    path: /access.log
+    match_rule:
+      match_type: Body
+      pattern: "GET "
+  metadata:
+    category: info_leak
+    tags: ["leak", "log"]
+    service: log
+    port: 80
+- id: INFO-LEAK-052
+  name: debug.log
+  severity: high
+  author: argus
+  description: "debug.log"
+  fix_advice: "限制 /debug.log 路径访问"
+  detection:
+    method: GET
+    path: /debug.log
+    match_rule:
+      match_type: Body
+      pattern: "debug"
+  metadata:
+    category: info_leak
+    tags: ["leak", "log"]
+    service: log
+    port: 80
+- id: INFO-LEAK-053
+  name: app.log
+  severity: high
+  author: argus
+  description: "app.log"
+  fix_advice: "限制 /app.log 路径访问"
+  detection:
+    method: GET
+    path: /app.log
+    match_rule:
+      match_type: Body
+      pattern: "INFO"
+  metadata:
+    category: info_leak
+    tags: ["leak", "log"]
+    service: log
+    port: 80
+- id: INFO-LEAK-054
+  name: application.log
+  severity: high
+  author: argus
+  description: "application.log"
+  fix_advice: "限制 /application.log 路径访问"
+  detection:
+    method: GET
+    path: /application.log
+    match_rule:
+      match_type: Body
+      pattern: "INFO"
+  metadata:
+    category: info_leak
+    tags: ["leak", "log"]
+    service: log
+    port: 80
+- id: INFO-LEAK-055
+  name: nginx access.log
+  severity: medium
+  author: argus
+  description: "nginx access.log"
+  fix_advice: "限制 /var/log/nginx/access.log 路径访问"
+  detection:
+    method: GET
+    path: /var/log/nginx/access.log
+    match_rule:
+      match_type: Body
+      pattern: "GET "
+  metadata:
+    category: info_leak
+    tags: ["leak", "nginx"]
+    service: nginx
+    port: 80
+- id: INFO-LEAK-056
+  name: Apache error.log
+  severity: medium
+  author: argus
+  description: "Apache error.log"
+  fix_advice: "限制 /var/log/apache2/error.log 路径访问"
+  detection:
+    method: GET
+    path: /var/log/apache2/error.log
+    match_rule:
+      match_type: Body
+      pattern: "error"
+  metadata:
+    category: info_leak
+    tags: ["leak", "apache"]
+    service: apache
+    port: 80
+- id: INFO-LEAK-060
+  name: Apache server-status
+  severity: medium
+  author: argus
+  description: "Apache server-status"
+  fix_advice: "限制 /server-status 路径访问"
+  detection:
+    method: GET
+    path: /server-status
+    match_rule:
+      match_type: Body
+      pattern: "Apache Status"
+  metadata:
+    category: info_leak
+    tags: ["leak", "apache"]
+    service: apache
+    port: 80
+- id: INFO-LEAK-061
+  name: Apache server-info
+  severity: medium
+  author: argus
+  description: "Apache server-info"
+  fix_advice: "限制 /server-info 路径访问"
+  detection:
+    method: GET
+    path: /server-info
+    match_rule:
+      match_type: Body
+      pattern: "Server Settings"
+  metadata:
+    category: info_leak
+    tags: ["leak", "apache"]
+    service: apache
+    port: 80
+- id: INFO-LEAK-062
+  name: Nginx stub_status
+  severity: medium
+  author: argus
+  description: "Nginx stub_status"
+  fix_advice: "限制 /nginx_status 路径访问"
+  detection:
+    method: GET
+    path: /nginx_status
+    match_rule:
+      match_type: Body
+      pattern: "Active connections"
+  metadata:
+    category: info_leak
+    tags: ["leak", "nginx"]
+    service: nginx
+    port: 80
+- id: INFO-LEAK-063
+  name: PHP phpinfo()
+  severity: high
+  author: argus
+  description: "PHP phpinfo()"
+  fix_advice: "限制 /phpinfo.php 路径访问"
+  detection:
+    method: GET
+    path: /phpinfo.php
+    match_rule:
+      match_type: Body
+      pattern: "PHP Version"
+  metadata:
+    category: info_leak
+    tags: ["leak", "php"]
+    service: php
+    port: 80
+- id: INFO-LEAK-064
+  name: PHP test.php
+  severity: high
+  author: argus
+  description: "PHP test.php"
+  fix_advice: "限制 /test.php 路径访问"
+  detection:
+    method: GET
+    path: /test.php
+    match_rule:
+      match_type: Body
+      pattern: "PHP Version"
+  metadata:
+    category: info_leak
+    tags: ["leak", "php"]
+    service: php
+    port: 80
+- id: INFO-LEAK-065
+  name: PHP info.php
+  severity: high
+  author: argus
+  description: "PHP info.php"
+  fix_advice: "限制 /info.php 路径访问"
+  detection:
+    method: GET
+    path: /info.php
+    match_rule:
+      match_type: Body
+      pattern: "PHP Version"
+  metadata:
+    category: info_leak
+    tags: ["leak", "php"]
+    service: php
+    port: 80
+- id: INFO-LEAK-066
+  name: Spring Actuator env
+  severity: critical
+  author: argus
+  description: "Spring Actuator env"
+  fix_advice: "限制 /actuator/env 路径访问"
+  detection:
+    method: GET
+    path: /actuator/env
+    match_rule:
+      match_type: Body
+      pattern: "propertySources"
+  metadata:
+    category: info_leak
+    tags: ["leak", "spring"]
+    service: spring
+    port: 80
+- id: INFO-LEAK-067
+  name: Spring Actuator configprops
+  severity: high
+  author: argus
+  description: "Spring Actuator configprops"
+  fix_advice: "限制 /actuator/configprops 路径访问"
+  detection:
+    method: GET
+    path: /actuator/configprops
+    match_rule:
+      match_type: Body
+      pattern: "contexts"
+  metadata:
+    category: info_leak
+    tags: ["leak", "spring"]
+    service: spring
+    port: 80
+- id: INFO-LEAK-068
+  name: Spring Actuator mappings
+  severity: medium
+  author: argus
+  description: "Spring Actuator mappings"
+  fix_advice: "限制 /actuator/mappings 路径访问"
+  detection:
+    method: GET
+    path: /actuator/mappings
+    match_rule:
+      match_type: Body
+      pattern: "handler"
+  metadata:
+    category: info_leak
+    tags: ["leak", "spring"]
+    service: spring
+    port: 80
+- id: INFO-LEAK-069
+  name: Spring Actuator beans
+  severity: medium
+  author: argus
+  description: "Spring Actuator beans"
+  fix_advice: "限制 /actuator/beans 路径访问"
+  detection:
+    method: GET
+    path: /actuator/beans
+    match_rule:
+      match_type: Body
+      pattern: "bean"
+  metadata:
+    category: info_leak
+    tags: ["leak", "spring"]
+    service: spring
+    port: 80
+- id: INFO-LEAK-070
+  name: Spring Actuator dump
+  severity: high
+  author: argus
+  description: "Spring Actuator dump"
+  fix_advice: "限制 /actuator/dump 路径访问"
+  detection:
+    method: GET
+    path: /actuator/dump
+    match_rule:
+      match_type: Body
+      pattern: "threadName"
+  metadata:
+    category: info_leak
+    tags: ["leak", "spring"]
+    service: spring
+    port: 80
+- id: INFO-LEAK-071
+  name: Spring Actuator heapdump
+  severity: critical
+  author: argus
+  description: "Spring Actuator heapdump"
+  fix_advice: "限制 /actuator/heapdump 路径访问"
+  detection:
+    method: GET
+    path: /actuator/heapdump
+    match_rule:
+      match_type: Status
+      pattern: "200"
+  metadata:
+    category: info_leak
+    tags: ["leak", "spring"]
+    service: spring
+    port: 80
+- id: INFO-LEAK-072
+  name: Spring Actuator threaddump
+  severity: medium
+  author: argus
+  description: "Spring Actuator threaddump"
+  fix_advice: "限制 /actuator/threaddump 路径访问"
+  detection:
+    method: GET
+    path: /actuator/threaddump
+    match_rule:
+      match_type: Body
+      pattern: "threadName"
+  metadata:
+    category: info_leak
+    tags: ["leak", "spring"]
+    service: spring
+    port: 80
+- id: INFO-LEAK-073
+  name: Spring Actuator logfile
+  severity: high
+  author: argus
+  description: "Spring Actuator logfile"
+  fix_advice: "限制 /actuator/logfile 路径访问"
+  detection:
+    method: GET
+    path: /actuator/logfile
+    match_rule:
+      match_type: Status
+      pattern: "200"
+  metadata:
+    category: info_leak
+    tags: ["leak", "spring"]
+    service: spring
+    port: 80
+- id: INFO-LEAK-074
+  name: Eureka Dashboard
+  severity: medium
+  author: argus
+  description: "Eureka Dashboard"
+  fix_advice: "限制 /eureka/ 路径访问"
+  detection:
+    method: GET
+    path: /eureka/
+    match_rule:
+      match_type: Body
+      pattern: "Instances"
+  metadata:
+    category: info_leak
+    tags: ["leak", "eureka"]
+    service: eureka
+    port: 80
+- id: INFO-LEAK-075
+  name: Hystrix Dashboard
+  severity: medium
+  author: argus
+  description: "Hystrix Dashboard"
+  fix_advice: "限制 /hystrix 路径访问"
+  detection:
+    method: GET
+    path: /hystrix
+    match_rule:
+      match_type: Body
+      pattern: "Hystrix"
+  metadata:
+    category: info_leak
+    tags: ["leak", "hystrix"]
+    service: hystrix
+    port: 80
+- id: INFO-LEAK-076
+  name: Turbine Stream
+  severity: low
+  author: argus
+  description: "Turbine Stream"
+  fix_advice: "限制 /turbine.stream 路径访问"
+  detection:
+    method: GET
+    path: /turbine.stream
+    match_rule:
+      match_type: Status
+      pattern: "200"
+  metadata:
+    category: info_leak
+    tags: ["leak", "turbine"]
+    service: turbine
+    port: 80
+- id: INFO-LEAK-080
+  name: Source Map JS
+  severity: low
+  author: argus
+  description: "Source Map JS"
+  fix_advice: "限制 /app.js.map 路径访问"
+  detection:
+    method: GET
+    path: /app.js.map
+    match_rule:
+      match_type: Body
+      pattern: "sourceRoot"
+  metadata:
+    category: info_leak
+    tags: ["leak", "nodejs"]
+    service: nodejs
+    port: 80
+- id: INFO-LEAK-081
+  name: Source Map CSS
+  severity: low
+  author: argus
+  description: "Source Map CSS"
+  fix_advice: "限制 /style.css.map 路径访问"
+  detection:
+    method: GET
+    path: /style.css.map
+    match_rule:
+      match_type: Body
+      pattern: "sourceRoot"
+  metadata:
+    category: info_leak
+    tags: ["leak", "nodejs"]
+    service: nodejs
+    port: 80
+- id: INFO-LEAK-082
+  name: Webpack Bundle Source
+  severity: low
+  author: argus
+  description: "Webpack Bundle Source"
+  fix_advice: "限制 /bundle.js.map 路径访问"
+  detection:
+    method: GET
+    path: /bundle.js.map
+    match_rule:
+      match_type: Body
+      pattern: "sources"
+  metadata:
+    category: info_leak
+    tags: ["leak", "webpack"]
+    service: webpack
+    port: 80
+- id: INFO-LEAK-083
+  name: main.js.map
+  severity: low
+  author: argus
+  description: "main.js.map"
+  fix_advice: "限制 /main.js.map 路径访问"
+  detection:
+    method: GET
+    path: /main.js.map
+    match_rule:
+      match_type: Body
+      pattern: "sources"
+  metadata:
+    category: info_leak
+    tags: ["leak", "webpack"]
+    service: webpack
+    port: 80
+- id: INFO-LEAK-084
+  name: Source .csproj
+  severity: medium
+  author: argus
+  description: "Source .csproj"
+  fix_advice: "限制 /project.csproj 路径访问"
+  detection:
+    method: GET
+    path: /project.csproj
+    match_rule:
+      match_type: Body
+      pattern: "Project"
+  metadata:
+    category: info_leak
+    tags: ["leak", "csharp"]
+    service: csharp
+    port: 80
+- id: INFO-LEAK-085
+  name: Source .vbproj
+  severity: medium
+  author: argus
+  description: "Source .vbproj"
+  fix_advice: "限制 /project.vbproj 路径访问"
+  detection:
+    method: GET
+    path: /project.vbproj
+    match_rule:
+      match_type: Body
+      pattern: "Project"
+  metadata:
+    category: info_leak
+    tags: ["leak", "vb"]
+    service: vb
+    port: 80
+- id: INFO-LEAK-086
+  name: Source .sln
+  severity: medium
+  author: argus
+  description: "Source .sln"
+  fix_advice: "限制 /solution.sln 路径访问"
+  detection:
+    method: GET
+    path: /solution.sln
+    match_rule:
+      match_type: Body
+      pattern: "Visual Studio"
+  metadata:
+    category: info_leak
+    tags: ["leak", "vs"]
+    service: vs
+    port: 80
+- id: INFO-LEAK-087
+  name: Private Key .pem
+  severity: critical
+  author: argus
+  description: "Private Key .pem"
+  fix_advice: "限制 /server.pem 路径访问"
+  detection:
+    method: GET
+    path: /server.pem
+    match_rule:
+      match_type: Body
+      pattern: "BEGIN CERTIFICATE"
+  metadata:
+    category: info_leak
+    tags: ["leak", "cert"]
+    service: cert
+    port: 80
+- id: INFO-LEAK-088
+  name: Private Key .key
+  severity: critical
+  author: argus
+  description: "Private Key .key"
+  fix_advice: "限制 /private.key 路径访问"
+  detection:
+    method: GET
+    path: /private.key
+    match_rule:
+      match_type: Body
+      pattern: "BEGIN RSA PRIVATE KEY"
+  metadata:
+    category: info_leak
+    tags: ["leak", "cert"]
+    service: cert
+    port: 80
+- id: INFO-LEAK-089
+  name: SSH id_rsa
+  severity: critical
+  author: argus
+  description: "SSH id_rsa"
+  fix_advice: "限制 /.ssh/id_rsa 路径访问"
+  detection:
+    method: GET
+    path: /.ssh/id_rsa
+    match_rule:
+      match_type: Body
+      pattern: "BEGIN OPENSSH PRIVATE KEY"
+  metadata:
+    category: info_leak
+    tags: ["leak", "ssh"]
+    service: ssh
+    port: 80
+- id: INFO-LEAK-090
+  name: Swagger UI Exposure
+  severity: medium
+  author: argus
+  description: "Swagger UI Exposure"
+  fix_advice: "限制 /swagger-ui.html 路径访问"
+  detection:
+    method: GET
+    path: /swagger-ui.html
+    match_rule:
+      match_type: Body
+      pattern: "Swagger UI"
+  metadata:
+    category: info_leak
+    tags: ["leak", "swagger"]
+    service: swagger
+    port: 80
+- id: INFO-LEAK-091
+  name: Swagger JSON
+  severity: medium
+  author: argus
+  description: "Swagger JSON"
+  fix_advice: "限制 /v2/api-docs 路径访问"
+  detection:
+    method: GET
+    path: /v2/api-docs
+    match_rule:
+      match_type: Body
+      pattern: "swagger"
+  metadata:
+    category: info_leak
+    tags: ["leak", "swagger"]
+    service: swagger
+    port: 80
+- id: INFO-LEAK-092
+  name: OpenAPI Spec
+  severity: medium
+  author: argus
+  description: "OpenAPI Spec"
+  fix_advice: "限制 /openapi.json 路径访问"
+  detection:
+    method: GET
+    path: /openapi.json
+    match_rule:
+      match_type: Body
+      pattern: "openapi"
+  metadata:
+    category: info_leak
+    tags: ["leak", "http"]
+    service: http
+    port: 80
+- id: INFO-LEAK-093
+  name: GraphQL Playground
+  severity: medium
+  author: argus
+  description: "GraphQL Playground"
+  fix_advice: "限制 /graphql 路径访问"
+  detection:
+    method: GET
+    path: /graphql
+    match_rule:
+      match_type: Body
+      pattern: "GraphQL"
+  metadata:
+    category: info_leak
+    tags: ["leak", "graphql"]
+    service: graphql
+    port: 80
+- id: INFO-LEAK-094
+  name: Confluence Version
+  severity: low
+  author: argus
+  description: "Confluence Version"
+  fix_advice: "限制 / 路径访问"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Header
+      pattern: "X-Confluence"
+  metadata:
+    category: info_leak
+    tags: ["leak", "confluence"]
+    service: confluence
+    port: 8090
+- id: INFO-LEAK-095
+  name: Jenkins Version
+  severity: low
+  author: argus
+  description: "Jenkins Version"
+  fix_advice: "限制 / 路径访问"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Header
+      pattern: "X-Jenkins"
+  metadata:
+    category: info_leak
+    tags: ["leak", "jenkins"]
+    service: jenkins
+    port: 8080

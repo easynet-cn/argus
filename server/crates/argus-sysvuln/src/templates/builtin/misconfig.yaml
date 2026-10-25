@@ -1,0 +1,1259 @@
+# 配置错误检测模板（自动生成）
+- id: MISCFG-010
+  name: Directory Listing Root
+  severity: medium
+  author: argus
+  description: "Directory Listing Root"
+  fix_advice: "修复 http 配置错误"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Index of /"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "http"]
+    service: http
+    port: 80
+- id: MISCFG-011
+  name: Directory Listing /backup/
+  severity: medium
+  author: argus
+  description: "Directory Listing /backup/"
+  fix_advice: "修复 http 配置错误"
+  detection:
+    method: GET
+    path: /backup/
+    match_rule:
+      match_type: Body
+      pattern: "Index of /backup"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "http"]
+    service: http
+    port: 80
+- id: MISCFG-012
+  name: Directory Listing /admin/
+  severity: medium
+  author: argus
+  description: "Directory Listing /admin/"
+  fix_advice: "修复 http 配置错误"
+  detection:
+    method: GET
+    path: /admin/
+    match_rule:
+      match_type: Body
+      pattern: "Index of /admin"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "http"]
+    service: http
+    port: 80
+- id: MISCFG-013
+  name: Directory Listing /uploads/
+  severity: medium
+  author: argus
+  description: "Directory Listing /uploads/"
+  fix_advice: "修复 http 配置错误"
+  detection:
+    method: GET
+    path: /uploads/
+    match_rule:
+      match_type: Body
+      pattern: "Index of /uploads"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "http"]
+    service: http
+    port: 80
+- id: MISCFG-014
+  name: Directory Listing /files/
+  severity: medium
+  author: argus
+  description: "Directory Listing /files/"
+  fix_advice: "修复 http 配置错误"
+  detection:
+    method: GET
+    path: /files/
+    match_rule:
+      match_type: Body
+      pattern: "Index of /files"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "http"]
+    service: http
+    port: 80
+- id: MISCFG-015
+  name: Directory Listing /images/
+  severity: low
+  author: argus
+  description: "Directory Listing /images/"
+  fix_advice: "修复 http 配置错误"
+  detection:
+    method: GET
+    path: /images/
+    match_rule:
+      match_type: Body
+      pattern: "Index of /images"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "http"]
+    service: http
+    port: 80
+- id: MISCFG-016
+  name: Directory Listing /static/
+  severity: low
+  author: argus
+  description: "Directory Listing /static/"
+  fix_advice: "修复 http 配置错误"
+  detection:
+    method: GET
+    path: /static/
+    match_rule:
+      match_type: Body
+      pattern: "Index of /static"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "http"]
+    service: http
+    port: 80
+- id: MISCFG-017
+  name: Directory Listing /temp/
+  severity: medium
+  author: argus
+  description: "Directory Listing /temp/"
+  fix_advice: "修复 http 配置错误"
+  detection:
+    method: GET
+    path: /temp/
+    match_rule:
+      match_type: Body
+      pattern: "Index of /temp"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "http"]
+    service: http
+    port: 80
+- id: MISCFG-018
+  name: Directory Listing /logs/
+  severity: medium
+  author: argus
+  description: "Directory Listing /logs/"
+  fix_advice: "修复 http 配置错误"
+  detection:
+    method: GET
+    path: /logs/
+    match_rule:
+      match_type: Body
+      pattern: "Index of /logs"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "http"]
+    service: http
+    port: 80
+- id: MISCFG-019
+  name: Directory Listing /config/
+  severity: high
+  author: argus
+  description: "Directory Listing /config/"
+  fix_advice: "修复 http 配置错误"
+  detection:
+    method: GET
+    path: /config/
+    match_rule:
+      match_type: Body
+      pattern: "Index of /config"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "http"]
+    service: http
+    port: 80
+- id: MISCFG-020
+  name: HTTP TRACE Enabled
+  severity: low
+  author: argus
+  description: "HTTP TRACE Enabled"
+  fix_advice: "修复 http 配置错误"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "TRACE"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "http"]
+    service: http
+    port: 80
+- id: MISCFG-021
+  name: HTTP OPTIONS Disclosure
+  severity: info
+  author: argus
+  description: "HTTP OPTIONS Disclosure"
+  fix_advice: "修复 http 配置错误"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Header
+      pattern: "Allow:"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "http"]
+    service: http
+    port: 80
+- id: MISCFG-022
+  name: HTTP PUT Enabled
+  severity: medium
+  author: argus
+  description: "HTTP PUT Enabled"
+  fix_advice: "修复 http 配置错误"
+  detection:
+    method: GET
+    path: /test_put.txt
+    match_rule:
+      match_type: Body
+      pattern: "OK"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "http"]
+    service: http
+    port: 80
+- id: MISCFG-023
+  name: WebDAV Enabled
+  severity: medium
+  author: argus
+  description: "WebDAV Enabled"
+  fix_advice: "修复 http 配置错误"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "DAV/"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "http"]
+    service: http
+    port: 80
+- id: MISCFG-030
+  name: Missing X-Frame-Options
+  severity: low
+  author: argus
+  description: "Missing X-Frame-Options"
+  fix_advice: "修复 http 配置错误"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "<html"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "http"]
+    service: http
+    port: 80
+- id: MISCFG-031
+  name: Missing Strict-Transport-Security
+  severity: medium
+  author: argus
+  description: "Missing Strict-Transport-Security"
+  fix_advice: "修复 http 配置错误"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "<html"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "http"]
+    service: http
+    port: 80
+- id: MISCFG-032
+  name: Missing Content-Security-Policy
+  severity: medium
+  author: argus
+  description: "Missing Content-Security-Policy"
+  fix_advice: "修复 http 配置错误"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "<html"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "http"]
+    service: http
+    port: 80
+- id: MISCFG-033
+  name: Missing X-XSS-Protection
+  severity: low
+  author: argus
+  description: "Missing X-XSS-Protection"
+  fix_advice: "修复 http 配置错误"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "<html"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "http"]
+    service: http
+    port: 80
+- id: MISCFG-040
+  name: CORS Wildcard Origin
+  severity: medium
+  author: argus
+  description: "CORS Wildcard Origin"
+  fix_advice: "修复 http 配置错误"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Header
+      pattern: "Access-Control-Allow-Origin: *"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "http"]
+    service: http
+    port: 80
+- id: MISCFG-041
+  name: CORS Credentials Allowed
+  severity: high
+  author: argus
+  description: "CORS Credentials Allowed"
+  fix_advice: "修复 http 配置错误"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Header
+      pattern: "Access-Control-Allow-Credentials: true"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "http"]
+    service: http
+    port: 80
+- id: MISCFG-042
+  name: CORS Wildcard+Creds
+  severity: critical
+  author: argus
+  description: "CORS Wildcard+Creds"
+  fix_advice: "修复 http 配置错误"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Header
+      pattern: "Access-Control-Allow-Credentials: true"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "http"]
+    service: http
+    port: 80
+- id: MISCFG-050
+  name: Cookie Missing HttpOnly
+  severity: medium
+  author: argus
+  description: "Cookie Missing HttpOnly"
+  fix_advice: "修复 http 配置错误"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Header
+      pattern: "Set-Cookie"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "http"]
+    service: http
+    port: 80
+- id: MISCFG-051
+  name: Cookie Missing Secure Flag
+  severity: medium
+  author: argus
+  description: "Cookie Missing Secure Flag"
+  fix_advice: "修复 http 配置错误"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Header
+      pattern: "Set-Cookie"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "http"]
+    service: http
+    port: 80
+- id: MISCFG-052
+  name: Session ID in URL
+  severity: medium
+  author: argus
+  description: "Session ID in URL"
+  fix_advice: "修复 php 配置错误"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "PHPSESSID="
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "php"]
+    service: php
+    port: 80
+- id: MISCFG-053
+  name: JSESSIONID in URL
+  severity: medium
+  author: argus
+  description: "JSESSIONID in URL"
+  fix_advice: "修复 java 配置错误"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "JSESSIONID="
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "java"]
+    service: java
+    port: 80
+- id: MISCFG-060
+  name: SSLv3 Enabled
+  severity: high
+  author: argus
+  description: "SSLv3 Enabled"
+  fix_advice: "修复 https 配置错误"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "SSL"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "https"]
+    service: https
+    port: 443
+- id: MISCFG-061
+  name: TLS 1.0 Enabled
+  severity: medium
+  author: argus
+  description: "TLS 1.0 Enabled"
+  fix_advice: "修复 https 配置错误"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "TLS"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "https"]
+    service: https
+    port: 443
+- id: MISCFG-062
+  name: Weak Cipher Suite RC4
+  severity: high
+  author: argus
+  description: "Weak Cipher Suite RC4"
+  fix_advice: "修复 https 配置错误"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "RC4"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "https"]
+    service: https
+    port: 443
+- id: MISCFG-063
+  name: Self-signed Certificate
+  severity: low
+  author: argus
+  description: "Self-signed Certificate"
+  fix_advice: "修复 https 配置错误"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "SSL"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "https"]
+    service: https
+    port: 443
+- id: MISCFG-070
+  name: Server Header Disclosure
+  severity: info
+  author: argus
+  description: "Server Header Disclosure"
+  fix_advice: "修复 http 配置错误"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Header
+      pattern: "Server:"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "http"]
+    service: http
+    port: 80
+- id: MISCFG-071
+  name: X-Powered-By Disclosure
+  severity: info
+  author: argus
+  description: "X-Powered-By Disclosure"
+  fix_advice: "修复 http 配置错误"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Header
+      pattern: "X-Powered-By:"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "http"]
+    service: http
+    port: 80
+- id: MISCFG-072
+  name: X-AspNet-Version
+  severity: info
+  author: argus
+  description: "X-AspNet-Version"
+  fix_advice: "修复 iis 配置错误"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Header
+      pattern: "X-AspNet-Version:"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "iis"]
+    service: iis
+    port: 80
+- id: MISCFG-073
+  name: Open Redirect
+  severity: medium
+  author: argus
+  description: "Open Redirect"
+  fix_advice: "修复 http 配置错误"
+  detection:
+    method: GET
+    path: /redirect?url=http://evil.com
+    match_rule:
+      match_type: Header
+      pattern: "Location:"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "http"]
+    service: http
+    port: 80
+- id: MISCFG-074
+  name: Clickjacking No XFO
+  severity: medium
+  author: argus
+  description: "Clickjacking No XFO"
+  fix_advice: "修复 http 配置错误"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "<html"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "http"]
+    service: http
+    port: 80
+- id: MISCFG-075
+  name: User Enumeration Login
+  severity: low
+  author: argus
+  description: "User Enumeration Login"
+  fix_advice: "修复 http 配置错误"
+  detection:
+    method: GET
+    path: /login
+    match_rule:
+      match_type: Body
+      pattern: "Invalid user"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "http"]
+    service: http
+    port: 80
+- id: MISCFG-076
+  name: API Version Disclosure
+  severity: info
+  author: argus
+  description: "API Version Disclosure"
+  fix_advice: "修复 http 配置错误"
+  detection:
+    method: GET
+    path: /api/
+    match_rule:
+      match_type: Body
+      pattern: "version"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "http"]
+    service: http
+    port: 80
+- id: MISCFG-077
+  name: Eureka Service List
+  severity: medium
+  author: argus
+  description: "Eureka Service List"
+  fix_advice: "修复 eureka 配置错误"
+  detection:
+    method: GET
+    path: /eureka/apps
+    match_rule:
+      match_type: Body
+      pattern: "applications"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "eureka"]
+    service: eureka
+    port: 80
+- id: MISCFG-078
+  name: Spring Actuator Health
+  severity: low
+  author: argus
+  description: "Spring Actuator Health"
+  fix_advice: "修复 spring 配置错误"
+  detection:
+    method: GET
+    path: /actuator/health
+    match_rule:
+      match_type: Body
+      pattern: "status"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "spring"]
+    service: spring
+    port: 80
+- id: MISCFG-079
+  name: Spring Actuator Info
+  severity: low
+  author: argus
+  description: "Spring Actuator Info"
+  fix_advice: "修复 spring 配置错误"
+  detection:
+    method: GET
+    path: /actuator/info
+    match_rule:
+      match_type: Body
+      pattern: "app"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "spring"]
+    service: spring
+    port: 80
+- id: MISCFG-080
+  name: Spring Actuator Metrics
+  severity: medium
+  author: argus
+  description: "Spring Actuator Metrics"
+  fix_advice: "修复 spring 配置错误"
+  detection:
+    method: GET
+    path: /actuator/metrics
+    match_rule:
+      match_type: Body
+      pattern: "names"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "spring"]
+    service: spring
+    port: 80
+- id: MISCFG-081
+  name: Druid Console Unauth
+  severity: high
+  author: argus
+  description: "Druid Console Unauth"
+  fix_advice: "修复 druid 配置错误"
+  detection:
+    method: GET
+    path: /druid/index.html
+    match_rule:
+      match_type: Body
+      pattern: "Apache Druid"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "druid"]
+    service: druid
+    port: 8888
+- id: MISCFG-082
+  name: Solr Admin Unauth
+  severity: medium
+  author: argus
+  description: "Solr Admin Unauth"
+  fix_advice: "修复 solr 配置错误"
+  detection:
+    method: GET
+    path: /solr/
+    match_rule:
+      match_type: Body
+      pattern: "Solr Admin"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "solr"]
+    service: solr
+    port: 8983
+- id: MISCFG-083
+  name: Elasticsearch Unauth
+  severity: high
+  author: argus
+  description: "Elasticsearch Unauth"
+  fix_advice: "修复 elasticsearch 配置错误"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "cluster_name"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "elasticsearch"]
+    service: elasticsearch
+    port: 9200
+- id: MISCFG-084
+  name: Kibana Unauth Dashboard
+  severity: low
+  author: argus
+  description: "Kibana Unauth Dashboard"
+  fix_advice: "修复 kibana 配置错误"
+  detection:
+    method: GET
+    path: /app/kibana
+    match_rule:
+      match_type: Body
+      pattern: "kibana"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "kibana"]
+    service: kibana
+    port: 5601
+- id: MISCFG-085
+  name: Grafana Unauth Login
+  severity: low
+  author: argus
+  description: "Grafana Unauth Login"
+  fix_advice: "修复 grafana 配置错误"
+  detection:
+    method: GET
+    path: /login
+    match_rule:
+      match_type: Body
+      pattern: "Grafana"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "grafana"]
+    service: grafana
+    port: 3000
+- id: MISCFG-086
+  name: Jenkins Unauth Build
+  severity: high
+  author: argus
+  description: "Jenkins Unauth Build"
+  fix_advice: "修复 jenkins 配置错误"
+  detection:
+    method: GET
+    path: /build
+    match_rule:
+      match_type: Body
+      pattern: "Jenkins"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "jenkins"]
+    service: jenkins
+    port: 8080
+- id: MISCFG-087
+  name: Airflow Unauth Admin
+  severity: high
+  author: argus
+  description: "Airflow Unauth Admin"
+  fix_advice: "修复 airflow 配置错误"
+  detection:
+    method: GET
+    path: /admin/
+    match_rule:
+      match_type: Body
+      pattern: "Airflow"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "airflow"]
+    service: airflow
+    port: 8080
+- id: MISCFG-088
+  name: Superset Unauth Dashboard
+  severity: low
+  author: argus
+  description: "Superset Unauth Dashboard"
+  fix_advice: "修复 superset 配置错误"
+  detection:
+    method: GET
+    path: /superset/dashboard
+    match_rule:
+      match_type: Body
+      pattern: "Superset"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "superset"]
+    service: superset
+    port: 8088
+- id: MISCFG-089
+  name: CouchDB Unauth
+  severity: high
+  author: argus
+  description: "CouchDB Unauth"
+  fix_advice: "修复 couchdb 配置错误"
+  detection:
+    method: GET
+    path: /_all_dbs
+    match_rule:
+      match_type: Body
+      pattern: "db_name"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "couchdb"]
+    service: couchdb
+    port: 5984
+- id: MISCFG-090
+  name: MongoDB Unauth
+  severity: critical
+  author: argus
+  description: "MongoDB Unauth"
+  fix_advice: "修复 mongodb 配置错误"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "listDatabases"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "mongodb"]
+    service: mongodb
+    port: 27017
+- id: MISCFG-091
+  name: Redis Unauth
+  severity: critical
+  author: argus
+  description: "Redis Unauth"
+  fix_advice: "修复 redis 配置错误"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "redis_version"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "redis"]
+    service: redis
+    port: 6379
+- id: MISCFG-092
+  name: Docker API Unauth
+  severity: critical
+  author: argus
+  description: "Docker API Unauth"
+  fix_advice: "修复 docker 配置错误"
+  detection:
+    method: GET
+    path: /containers/json
+    match_rule:
+      match_type: Body
+      pattern: "Id"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "docker"]
+    service: docker
+    port: 2375
+- id: MISCFG-093
+  name: Kubernetes API Unauth
+  severity: critical
+  author: argus
+  description: "Kubernetes API Unauth"
+  fix_advice: "修复 k8s 配置错误"
+  detection:
+    method: GET
+    path: /api/v1/namespaces
+    match_rule:
+      match_type: Body
+      pattern: "metadata"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "k8s"]
+    service: k8s
+    port: 6443
+- id: MISCFG-094
+  name: Zabbix Unauth Dashboard
+  severity: high
+  author: argus
+  description: "Zabbix Unauth Dashboard"
+  fix_advice: "修复 zabbix 配置错误"
+  detection:
+    method: GET
+    path: /zabbix/
+    match_rule:
+      match_type: Body
+      pattern: "Zabbix"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "zabbix"]
+    service: zabbix
+    port: 80
+- id: MISCFG-095
+  name: Nagios Unauth
+  severity: high
+  author: argus
+  description: "Nagios Unauth"
+  fix_advice: "修复 nagios 配置错误"
+  detection:
+    method: GET
+    path: /nagios/
+    match_rule:
+      match_type: Body
+      pattern: "Nagios"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "nagios"]
+    service: nagios
+    port: 80
+- id: MISCFG-096
+  name: phpMyAdmin Unauth
+  severity: high
+  author: argus
+  description: "phpMyAdmin Unauth"
+  fix_advice: "修复 phpmyadmin 配置错误"
+  detection:
+    method: GET
+    path: /phpmyadmin/
+    match_rule:
+      match_type: Body
+      pattern: "phpMyAdmin"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "phpmyadmin"]
+    service: phpmyadmin
+    port: 80
+- id: MISCFG-097
+  name: phpinfo Without Auth
+  severity: high
+  author: argus
+  description: "phpinfo Without Auth"
+  fix_advice: "修复 php 配置错误"
+  detection:
+    method: GET
+    path: /phpinfo.php
+    match_rule:
+      match_type: Body
+      pattern: "PHP Version"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "php"]
+    service: php
+    port: 80
+- id: MISCFG-098
+  name: Druid Unauth Datasources
+  severity: high
+  author: argus
+  description: "Druid Unauth Datasources"
+  fix_advice: "修复 druid 配置错误"
+  detection:
+    method: GET
+    path: /druid/datasources
+    match_rule:
+      match_type: Body
+      pattern: "name"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "druid"]
+    service: druid
+    port: 8888
+- id: MISCFG-099
+  name: Solr Unauth Core Admin
+  severity: high
+  author: argus
+  description: "Solr Unauth Core Admin"
+  fix_advice: "修复 solr 配置错误"
+  detection:
+    method: GET
+    path: /solr/admin/cores
+    match_rule:
+      match_type: Body
+      pattern: "status"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "solr"]
+    service: solr
+    port: 8983
+- id: MISCFG-100
+  name: Spring Actuator Restart
+  severity: high
+  author: argus
+  description: "Spring Actuator Restart"
+  fix_advice: "修复 spring 配置错误"
+  detection:
+    method: GET
+    path: /actuator/restart
+    match_rule:
+      match_type: Status
+      pattern: "200"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "spring"]
+    service: spring
+    port: 80
+- id: MISCFG-101
+  name: Spring Actuator Shutdown
+  severity: high
+  author: argus
+  description: "Spring Actuator Shutdown"
+  fix_advice: "修复 spring 配置错误"
+  detection:
+    method: GET
+    path: /actuator/shutdown
+    match_rule:
+      match_type: Status
+      pattern: "200"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "spring"]
+    service: spring
+    port: 80
+- id: MISCFG-102
+  name: Spring Actuator Refresh
+  severity: high
+  author: argus
+  description: "Spring Actuator Refresh"
+  fix_advice: "修复 spring 配置错误"
+  detection:
+    method: GET
+    path: /actuator/refresh
+    match_rule:
+      match_type: Status
+      pattern: "200"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "spring"]
+    service: spring
+    port: 80
+- id: MISCFG-103
+  name: Druid Unauth Segments
+  severity: medium
+  author: argus
+  description: "Druid Unauth Segments"
+  fix_advice: "修复 druid 配置错误"
+  detection:
+    method: GET
+    path: /druid/segments
+    match_rule:
+      match_type: Body
+      pattern: "segment"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "druid"]
+    service: druid
+    port: 8888
+- id: MISCFG-104
+  name: Druid Unauth Tasks
+  severity: medium
+  author: argus
+  description: "Druid Unauth Tasks"
+  fix_advice: "修复 druid 配置错误"
+  detection:
+    method: GET
+    path: /druid/indexer/v1/tasks
+    match_rule:
+      match_type: Body
+      pattern: "id"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "druid"]
+    service: druid
+    port: 8888
+- id: MISCFG-105
+  name: Consul Unauth KV
+  severity: high
+  author: argus
+  description: "Consul Unauth KV"
+  fix_advice: "修复 consul 配置错误"
+  detection:
+    method: GET
+    path: /v1/kv
+    match_rule:
+      match_type: Body
+      pattern: "Key"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "consul"]
+    service: consul
+    port: 8500
+- id: MISCFG-106
+  name: Vault Unauth Secrets
+  severity: critical
+  author: argus
+  description: "Vault Unauth Secrets"
+  fix_advice: "修复 vault 配置错误"
+  detection:
+    method: GET
+    path: /v1/secret
+    match_rule:
+      match_type: Body
+      pattern: "data"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "vault"]
+    service: vault
+    port: 8200
+- id: MISCFG-107
+  name: Nomad Unauth Jobs
+  severity: medium
+  author: argus
+  description: "Nomad Unauth Jobs"
+  fix_advice: "修复 nomad 配置错误"
+  detection:
+    method: GET
+    path: /v1/jobs
+    match_rule:
+      match_type: Body
+      pattern: "ID"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "nomad"]
+    service: nomad
+    port: 4646
+- id: MISCFG-108
+  name: ETCD Unauth Keys
+  severity: critical
+  author: argus
+  description: "ETCD Unauth Keys"
+  fix_advice: "修复 etcd 配置错误"
+  detection:
+    method: GET
+    path: /v2/keys
+    match_rule:
+      match_type: Body
+      pattern: "action"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "etcd"]
+    service: etcd
+    port: 2379
+- id: MISCFG-109
+  name: ZooKeeper Unauth
+  severity: high
+  author: argus
+  description: "ZooKeeper Unauth"
+  fix_advice: "修复 zookeeper 配置错误"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "zookeeper"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "zookeeper"]
+    service: zookeeper
+    port: 2181
+- id: MISCFG-110
+  name: Memcached Unauth
+  severity: high
+  author: argus
+  description: "Memcached Unauth"
+  fix_advice: "修复 memcached 配置错误"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "VERSION"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "memcached"]
+    service: memcached
+    port: 11211
+- id: MISCFG-111
+  name: Hadoop Unauth
+  severity: high
+  author: argus
+  description: "Hadoop Unauth"
+  fix_advice: "修复 hadoop 配置错误"
+  detection:
+    method: GET
+    path: /dfshealth.html
+    match_rule:
+      match_type: Body
+      pattern: "Hadoop"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "hadoop"]
+    service: hadoop
+    port: 50070
+- id: MISCFG-112
+  name: Spark Unauth
+  severity: high
+  author: argus
+  description: "Spark Unauth"
+  fix_advice: "修复 spark 配置错误"
+  detection:
+    method: GET
+    path: /
+    match_rule:
+      match_type: Body
+      pattern: "Spark"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "spark"]
+    service: spark
+    port: 8080
+- id: MISCFG-113
+  name: Flink Unauth
+  severity: high
+  author: argus
+  description: "Flink Unauth"
+  fix_advice: "修复 flink 配置错误"
+  detection:
+    method: GET
+    path: /config
+    match_rule:
+      match_type: Body
+      pattern: "flink"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "flink"]
+    service: flink
+    port: 8081
+- id: MISCFG-114
+  name: Spring Actuator Gateway Routes
+  severity: medium
+  author: argus
+  description: "Spring Actuator Gateway Routes"
+  fix_advice: "修复 spring 配置错误"
+  detection:
+    method: GET
+    path: /actuator/gateway/routes
+    match_rule:
+      match_type: Body
+      pattern: "route_id"
+  metadata:
+    category: misconfig
+    tags: ["misconfig", "spring"]
+    service: spring
+    port: 80

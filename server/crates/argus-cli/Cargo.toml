@@ -1,0 +1,29 @@
+[package]
+name = "argus-cli"
+version.workspace = true
+edition.workspace = true
+
+[[bin]]
+name = "argus"
+path = "src/main.rs"
+
+[dependencies]
+argus-core = { path = "../argus-core" }
+argus-scanner = { path = "../argus-scanner" }
+argus-api = { path = "../argus-api" }
+argus-vulndb = { path = "../argus-vulndb" }
+argus-webscan = { path = "../argus-webscan" }
+argus-container = { path = "../argus-container" }
+argus-ics = { path = "../argus-ics" }
+argus-sysvuln = { path = "../argus-sysvuln" }
+argus-node = { path = "../argus-node" }
+sea-orm.workspace = true
+chrono.workspace = true
+clap.workspace = true
+tokio.workspace = true
+tracing.workspace = true
+tracing-subscriber.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+anyhow.workspace = true
+uuid.workspace = true

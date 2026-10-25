@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    "PingFang SC",
+    "Hiragino Sans GB",
+    "Microsoft YaHei",
+    sans-serif;
+  background-color: #0a0e1a;
+  color: #e2e8f0;
+}
+
+/* Element Plus 深色主题覆写 */
+.el-button--primary {
+  --el-button-bg-color: #06b6d4;
+  --el-button-border-color: #06b6d4;
+  --el-button-hover-bg-color: #0891b2;
+  --el-button-hover-border-color: #0891b2;
+  --el-button-active-bg-color: #0e7490;
+  --el-button-active-border-color: #0e7490;
+}
+
+/* 滚动条 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.5);
+}

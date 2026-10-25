@@ -1,0 +1,47 @@
+[package]
+name = "argus-bruteforce"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+argus-core = { path = "../argus-core" }
+argus-scanner = { path = "../argus-scanner" }
+argus-engine = { path = "../argus-engine" }
+tokio.workspace = true
+futures-util.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+chrono.workspace = true
+tracing.workspace = true
+async-trait.workspace = true
+rand = "0.10"
+
+# 离线 Hash 破解
+md-5 = "0.11"
+sha1 = "0.11"
+sha2 = "0.11"
+digest = "0.11"
+hex = "0.4"
+
+# SCRAM-SHA-256 / caching_sha2_password 认证支持
+hmac = "0.13"
+pbkdf2 = { version = "0.13", default-features = false, features = ["hmac"] }
+base64 = "0.23"
+rsa = "0.10.0-rc.18"  # encoding 特性（默认启用）提供 from_pkcs1_der
+
+# SSH 纯 Rust 客户端（替代 sshpass）
+russh = "0.63"
+
+# 中文拼音转换（社工字典拼音首字母）
+pinyin = "0.9"
+
+# R2.3: HTTP 协议连接器
+reqwest = { version = "0.13", features = ["json", "rustls", "rustls-native-certs", "form"], default-features = false }
+
+# R2.3: SMB NTLM 认证（MD4 用于 NT Hash）
+md4 = "0.11"
+
+# G2.2: VNC 认证（DES challenge-response）
+des = "0.8"
+# G2.2: RDP 证书解析
+x509-parser.workspace = true

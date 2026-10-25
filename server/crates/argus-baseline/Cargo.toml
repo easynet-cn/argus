@@ -1,0 +1,32 @@
+[package]
+name = "argus-baseline"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+argus-core = { path = "../argus-core" }
+argus-scanner = { path = "../argus-scanner" }
+argus-engine = { path = "../argus-engine" }
+tokio.workspace = true
+futures-util.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+serde_yaml.workspace = true
+chrono.workspace = true
+tracing.workspace = true
+async-trait.workspace = true
+thiserror.workspace = true
+
+# SSH 远程登录采集（复用 argus-bruteforce 的 russh 经验）
+russh = "0.63"
+
+# 配置规则 DSL 引擎
+rhai = "1"
+
+# 正则匹配
+regex = "1"
+
+# WinRM 远程命令采集（Windows 配置采集，HTTP+SOAP）
+reqwest = { version = "0.13", default-features = false, features = ["rustls", "rustls-native-certs", "json", "form"] }
+base64 = "0.22"
+uuid = { version = "1", features = ["v4"] }

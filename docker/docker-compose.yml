@@ -1,0 +1,76 @@
+# Argus 全栈部署：API 服务 + PostgreSQL + Redis
+# 使用方式：
+#   1. 复制 .env.example 为 .env 并修改其中的口令/密钥
+#   2. podman compose --env-file .env up -d
+#   3. 首次启动后调用 POST /api/v1/auth/setup 创建管理员账号
+#
+# ⚠️ 安全提示：下方均为本地开发默认值，禁止直接用于生产环境。
+#    生产部署务必通过 .env 设置强随机 POSTGRES_PASSWORD 与 JWT_SECRET，
+#    并以 ARGUS_ENV=production 启动（缺失 JWT_SECRET 时服务会启动失败）。
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: argus-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-argus}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-argus}
+      POSTGRES_DB: ${POSTGRES_DB:-argus}
+    ports:
+      - "5433:5432"   # 主机端口 5433 避免与已有 5432 冲突
+    volumes:
+      - argus-pg-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-argus}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    container_name: argus-redis
+    restart: unless-stopped
+    ports:
+      - "6380:6379"   # 主机端口 6380 避免冲突
+    volumes:
+      - argus-redis-data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  argus:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: argus-api
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    environment:
+      # 运行环境：development（允许默认密钥）/ production（缺失 JWT_SECRET 则启动失败）
+      ARGUS_ENV: ${ARGUS_ENV:-development}
+      # 数据库连接（指向 compose 内的 postgres 服务）
+      DATABASE_URL: "postgresql://${POSTGRES_USER:-argus}:${POSTGRES_PASSWORD:-argus}@postgres:5432/${POSTGRES_DB:-argus}"
+      DATABASE_MAX_CONNECTIONS: "20"
+      # Redis
+      REDIS_URL: "redis://redis:6379"
+      # JWT（生产环境必须设置强随机值）
+      JWT_SECRET: "${JWT_SECRET:-argus-dev-secret-change-in-production}"
+      JWT_EXPIRATION_HOURS: "24"
+      # 许可证签名密钥（可选，生产环境建议设置）
+      ARGUS_LICENSE_SECRET: "${ARGUS_LICENSE_SECRET:-}"
+    ports:
+      - "8080:8080"
+    volumes:
+      - argus-logs:/app/logs
+
+volumes:
+  argus-pg-data:
+  argus-redis-data:
+  argus-logs:

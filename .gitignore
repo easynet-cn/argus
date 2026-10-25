@@ -1,0 +1,38 @@
+# ===== 构建产物 =====
+/target
+**/target
+
+# ===== 前端依赖与构建输出 =====
+node_modules
+dist
+**/dist
+.vite
+*.tsbuildinfo
+
+# ===== 环境变量与密钥（保留 .env.example 作为模板）=====
+.env
+.env.*
+!.env.example
+
+# ===== 日志 =====
+*.log
+/logs
+/log
+
+# ===== 编辑器与系统文件 =====
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# ===== 本地参考原型（含个人数据，不进入公开仓库）=====
+aistudio/
+
+# ===== 运行时数据 =====
+*.db
+*.sqlite
+*.sqlite3
+
+# ===== 工具与编辑器内部状态（不进入公开仓库）=====
+.workbuddy/

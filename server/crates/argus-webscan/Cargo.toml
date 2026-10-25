@@ -1,0 +1,42 @@
+[package]
+name = "argus-webscan"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+argus-core = { path = "../argus-core" }
+argus-scanner = { path = "../argus-scanner" }
+argus-engine = { path = "../argus-engine" }
+serde.workspace = true
+serde_json.workspace = true
+serde_yaml.workspace = true
+tokio.workspace = true
+async-trait.workspace = true
+tracing.workspace = true
+chrono.workspace = true
+reqwest.workspace = true
+thiserror.workspace = true
+regex.workspace = true
+scraper.workspace = true
+url.workspace = true
+md-5 = { workspace = true, features = ["oid"] }
+# R5.1: 真实 Kafka 消费（纯 Rust 客户端）
+rskafka.workspace = true
+# R5.2: 真实 pcap 文件解析
+pcap.workspace = true
+httparse.workspace = true
+# R5.2: 数据包解析
+etherparse = "0.16"
+# G5.1: 浏览器爬虫（headless Chrome CDP）
+chromiumoxide.workspace = true
+futures.workspace = true
+# G5.9: Agent 模式采集 HTTP 日志
+# (无需额外依赖，复用 reqwest/tokio)
+# G5.10: SOCKS5 代理支持
+fast-socks5 = "1"
+# G5.12: 国密 SM2/SM3/SM4 密码学原语
+sm2 = { version = "0.13", features = ["dsa"] }
+sm3 = "0.5"
+sm4 = "0.6"
+# 国密密钥生成所需的随机数
+rand_core = { version = "0.6", features = ["getrandom"] }
